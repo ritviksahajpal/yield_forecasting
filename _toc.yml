@@ -19,7 +19,7 @@ chapters:
     - file: machine_learning/scikit-learn
     - file: machine_learning/validation
     - file: machine_learning/cross_validation
-- file: agmet  # Data Preprocessing
+- file: data_preprocessing  # Data Preprocessing
   sections:
     - file: data_preprocessing/eo_data_plot_components
     - file: data_preprocessing/ndvi
@@ -29,5 +29,6 @@ chapters:
     - file: data_preprocessing/evaporative_stress_index
     - file: data_preprocessing/example
 - file: geoprepare
+- file: agmet
 - file: geocif
 
