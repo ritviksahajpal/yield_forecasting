@@ -8,26 +8,25 @@ chapters:
 - file: introduction  # Introduction to Yield Forecasting
 - file: technical_overview  # Technical Overview
   sections:
-    - file: technical_overview/python
-    - file: technical_overview/numpy
-    - file: technical_overview/matplotlib
-    - file: technical_overview/pandas
-    - file: technical_overview/seaborn
+  - file: python
+  - file: numpy
+  - file: matplotlib
+  - file: pandas
+  - file: seaborn
 - file: machine_learning  # Machine Learning
   sections:
-    - file: machine_learning/machine_learning_intro
-    - file: machine_learning/scikit-learn
-    - file: machine_learning/validation
-    - file: machine_learning/cross_validation
+  - file: machine_learning_intro
+  - file: scikit-learn
+  - file: validation
 - file: data_preprocessing  # Data Preprocessing
   sections:
-    - file: data_preprocessing/eo_data_plot_components
-    - file: data_preprocessing/ndvi
-    - file: data_preprocessing/precipitation
-    - file: data_preprocessing/temperature
-    - file: data_preprocessing/soil_moisture
-    - file: data_preprocessing/evaporative_stress_index
-    - file: data_preprocessing/example
+  - file: eo_data_plot_components
+  - file: ndvi
+  - file: precipitation
+  - file: temperature
+  - file: soil_moisture
+  - file: evaporative_stress_index
+  - file: examples
 - file: geoprepare
 - file: agmet
 - file: geocif
