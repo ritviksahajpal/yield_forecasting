@@ -8,6 +8,8 @@ chapters:
 - file: introduction  # Introduction to Yield Forecasting
 - file: technical_overview  # Technical Overview
   sections:
+  - file: installation
+  sections:
   - file: python
   - file: numpy
   - file: matplotlib
