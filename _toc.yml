@@ -6,9 +6,8 @@ root: intro
 chapters:
 - file: overview
 - file: introduction  # Introduction to Yield Forecasting
+- file: installation
 - file: technical_overview  # Technical Overview
-  sections:
-  - file: installation
   sections:
   - file: python
   - file: numpy
