@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Yield Forecasting</title>
+    <title>Installation &#8212; Yield Forecasting</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -371,7 +371,17 @@ title="Print to PDF"
         <i class="fas fa-list"></i> Contents
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="simple visible nav section-nav flex-column">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modis-ndvi">
+   MODIS NDVI
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#agera5">
+   AgERA5
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -381,7 +391,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1><no title></h1>
+                <h1>Installation</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -390,7 +400,17 @@ title="Print to PDF"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="simple visible nav section-nav flex-column">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modis-ndvi">
+   MODIS NDVI
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#agera5">
+   AgERA5
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -401,7 +421,38 @@ title="Print to PDF"
                 
               <div>
                 
-  
+  <div class="tex2jax_ignore mathjax_ignore section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h1>
+<div class="section" id="modis-ndvi">
+<h2>MODIS NDVI<a class="headerlink" href="#modis-ndvi" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Create an account on the <a class="reference external" href="https://ladsweb.modaps.eosdis.nasa.gov/">NASA LAADS DAAC</a> website</p></li>
+<li><p>Follow the instructions <a class="reference external" href="https://ladsweb.modaps.eosdis.nasa.gov/learn/download-files-using-laads-daac-tokens/">here</a>
+to request a token for your account.</p>
+<ul class="simple">
+<li><p>Login by going to Profile -&gt; Earthdata Login</p></li>
+<li><p>Select Profile -&gt; Generate Token from the top menu</p></li>
+<li><p>Copy the token from this window and store it somewhere safe and secure</p></li>
+</ul>
+</li>
+<li><p>On your local machine/cluster, iIf not already installed,
+install octvi: <a class="reference external" href="https://pypi.org/project/octvi/">https://pypi.org/project/octvi/</a></p></li>
+<li><p>On the command prompt type <code class="docutils literal notranslate"><span class="pre">octviconfig</span></code> and at the place it asks for a token,
+paste the token you copied earlier.</p></li>
+</ol>
+</div>
+<div class="section" id="agera5">
+<h2>AgERA5<a class="headerlink" href="#agera5" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Create an account on the <a class="reference external" href="https://cds.climate.copernicus.eu">CDS</a> website</p></li>
+<li><p>Follow the instructions <a class="reference external" href="https://cds.climate.copernicus.eu/cds-client-web/user-guide/tokens/">here</a>
+to install the CDS API key on your local machine/cluster</p></li>
+<li><p>If not already installed, install the <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> python library by typing <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">cdsapi</span></code> in
+the command prompt.</p></li>
+</ol>
+</div>
+</div>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
