@@ -97,7 +97,7 @@ paste the token you copied earlier.
 
 ### AgERA5
 1. Create an account on the [CDS](https://cds.climate.copernicus.eu) website 
-2. Follow the instructions [here](https://cds.climate.copernicus.eu/cds-client-web/user-guide/tokens/)
+2. Follow the instructions [here](https://cds.climate.copernicus.eu/api-how-to/)
 to install the CDS API key on your local machine/cluster
 3. If not already installed, install the `cdsapi` python library by typing `pip install cdsapi` in 
 the command prompt.
