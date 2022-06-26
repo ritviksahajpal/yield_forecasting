@@ -109,7 +109,7 @@ to install the CDS API key on your local machine/cluster
     # 1. For Windows users: 
     
       (i)Login to [CDS](https://cds.climate.copernicus.eu/user/143426/)      
-        <img src="C:\Users\ishaa\Desktop\Tanzania_Rice\yield_forecasting\images\AGRE5_Step2_CDSLogin.png" alt="CDSLogin" class="bg-primary" width="500px">
+        <img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_CDSLogin.png" alt="CDSLogin" class="bg-primary" width="500px">
         
       (ii)Copy a 2 line code, which shows a url and your own uid:API key details as followed:
         
