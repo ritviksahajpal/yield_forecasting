@@ -93,7 +93,8 @@ to request a token for your account.
    * Enter your login credentials or register  
    <img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img2.png" alt="login" class="bg-primary" width="500px">
    
-   * Select Profile -> Generate Token from the top menu <img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img3.png" alt="generate token" class="bg-primary" width="500px">
+   * Select Profile -> Generate Token from the top menu 
+   * <img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img3.png" alt="generate token" class="bg-primary" width="500px">
    
    * Copy the token from this window and store it somewhere safe and secure <img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img4.png" alt="token" class="bg-primary" width="500px">
 3. On your local machine/cluster, iIf not already installed, 
