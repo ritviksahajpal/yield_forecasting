@@ -102,7 +102,7 @@ install octvi: https://pypi.org/project/octvi/
 paste the token you copied earlier.
 
 ### AgERA5
-1. Create an account on the [CDS](https://cds.climate.copernicus.eu) website 
+1. Create an account on the [CDS](https://cds.climate.copernicus.eu/#!/home) website 
 2. Follow the instructions [here](https://cds.climate.copernicus.eu/api-how-to/)
 to install the CDS API key on your local machine/cluster
 3. Follow these instructions to install the CDS API Key on your local machine/cluster
