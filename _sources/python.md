@@ -14,7 +14,7 @@ data[0, :10]
 
 <html>
     <p>output:</p>
-       <img src ="C:\Users\ishaa\Desktop\Tanzania_Rice\yield_forecasting\images\Sample_code1_output.png", alt = "output1" , width = "700px">
+       <img src ="https://github.com/Isha9a/yield_forecasting/blob/master/images/Sample_code1_output.png", alt = "output1" , width = "700px">
 </html>
 
 
@@ -25,6 +25,6 @@ plt.scatter(data[0],data[1],c=data[2], s=100*np.abs(c))
 ```
 <html>
     <p>output:</p>
-       <img src ="C:\Users\ishaa\Desktop\Tanzania_Rice\yield_forecasting\images\Sample_code2_output.png", alt = "output2" , width = "500px">
+       <img src ="https://github.com/Isha9a/yield_forecasting/blob/master/images/Sample_code2_output.png", alt = "output2" , width = "500px">
 </html>
 
