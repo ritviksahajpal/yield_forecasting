@@ -4,9 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-    <title>Python &#8212; Yield Forecasting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agrometeorological Earth Observation Indicators &#8212; Yield Forecasting</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +51,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="sample.html" />
-    <link rel="prev" title="Technical overview" href="technical_overview.html" />
+    <link rel="next" title="Content with notebooks" href="notebooks.html" />
+    <link rel="prev" title="Yield Forecasting" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -114,93 +113,19 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="installation.html">
-   Installation
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="technical_overview.html">
-   Technical overview
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="numpy.html">
-     Numpy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="matplotlib.html">
-     Matplotlib
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="pandas.html">
-     Pandas
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="seaborn.html">
-     Seaborn
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="data_preprocessing.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Agrometeorological Earth Observation Indicators
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ndvi.html">
-     Normalized Difference Vegetation Index (NDVI):
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="precipitation.html">
-     Precipitation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="temperature.html">
-     Temperature
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="soil_moisture.html">
-     Soil Moisture (Surface):
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="geoprepare.html">
-   Downloading and Processing EO Data
+  <a class="reference internal" href="notebooks.html">
+   Content with notebooks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="agmet.html">
-   AgMet Graphics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="geocif.html">
-   GEOCIF
+  <a class="reference internal" href="markdown-notebooks.html">
+   Notebooks with MyST Markdown
   </a>
  </li>
 </ul>
@@ -293,7 +218,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpython.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmarkdown.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -321,7 +246,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/python.md"
+        <a href="_sources/markdown.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -380,21 +305,36 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Python
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#agmet-eo-indicators-explained">
+   AgMet EO Indicators Explained
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#some-python-code">
-     some python code
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eo-data-plot-components">
+   EO data plot components
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-components">
+     Basic components:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crop-calendars">
+     Crop Calendars:
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-plot">
-   A plot
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#citations">
+   Citations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learn-more">
+   Learn more
   </a>
  </li>
 </ul>
@@ -406,7 +346,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Python</h1>
+                <h1>Agrometeorological Earth Observation Indicators</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -416,21 +356,36 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Python
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#agmet-eo-indicators-explained">
+   AgMet EO Indicators Explained
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#some-python-code">
-     some python code
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eo-data-plot-components">
+   EO data plot components
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-components">
+     Basic components:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crop-calendars">
+     Crop Calendars:
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-plot">
-   A plot
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#citations">
+   Citations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learn-more">
+   Learn more
   </a>
  </li>
 </ul>
@@ -443,35 +398,84 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="python">
-<h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">#</a></h1>
-<section id="some-python-code">
-<h2>some python code<a class="headerlink" href="#some-python-code" title="Permalink to this headline">#</a></h2>
-<div class="highlight-{code notranslate"><div class="highlight"><pre><span></span>import numpy as np
-import pandas as pd
-data = np.random.randn(3,100)
-data[0, :10]
-</pre></div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="agrometeorological-earth-observation-indicators">
+<h1>Agrometeorological Earth Observation Indicators<a class="headerlink" href="#agrometeorological-earth-observation-indicators" title="Permalink to this headline">#</a></h1>
+<p>The Agrometeorological (AGMET) Earth Observations (EO) Indicators bring together a variety
+of Earth Observation (EO) data products on the sub-national scale, each of which provides
+valuable insights on in-season crop development and current crop conditions. Combined, the
+different EO data plots help tell the story of in-season crop conditions thought the use of
+different climate, environmental, and vegetative variables</p>
+<div class="section" id="agmet-eo-indicators-explained">
+<h2>AgMet EO Indicators Explained<a class="headerlink" href="#agmet-eo-indicators-explained" title="Permalink to this headline">#</a></h2>
+<p>The GEOGLAM-NASA Harvest Agrometeorological (AGMET) Earth Observation (EO) Indicators bring
+together a variety of Earth Observation (EO) data products on the sub-national scale, each of
+which provides valuable insights on in-season crop development and current crop conditions.
+Combined, each EO data plot helps tell the story of in-season crop conditions through the
+use of different climate, environmental, and vegetative variables. Detailed descriptions of
+the different components within the crop condition plots can be found below and in the
+corresponding NASA Harvest article.</p>
+<p>Further in-depth discussion on different EO data products for crop monitoring see
+<a class="reference external" href="https://cropmonitor.org/index.php/eodatatools/eodata/">EO Data</a>.</p>
 </div>
-<html>
-    <p>output:</p>
-       <img src ="C:\Users\ishaa\Desktop\Tanzania_Rice\yield_forecasting\images\Sample_code1_output.png", alt = "output1" , width = "700px">
-</html>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="a-plot">
-<h1>A plot<a class="headerlink" href="#a-plot" title="Permalink to this headline">#</a></h1>
-<div class="highlight-{code notranslate"><div class="highlight"><pre><span></span>import matplotlib.pyplot as plt
-plt.scatter(data[0],data[1],c=data[2], s=100*np.abs(c))
-</pre></div>
+<div class="section" id="eo-data-plot-components">
+<h2>EO data plot components<a class="headerlink" href="#eo-data-plot-components" title="Permalink to this headline">#</a></h2>
+<div class="section" id="basic-components">
+<h3>Basic components:<a class="headerlink" href="#basic-components" title="Permalink to this headline">#</a></h3>
+<p>Within each plot, there are several main components. The light gray area shows the span of
+most recent 10-year minimum and maximum values across the season in order to provide a better
+understanding of the particular EO data product’s variability over time. The black lines
+show the most recent 5-year mean values across the season in order to demonstrate what
+average conditions usually represent. The purple lines show what the values were across
+the previous season. The blue lines show what the values are for the current season in
+near real-time as the season progresses.</p>
+<p><img alt="" src="_images/basic_component_ndvi.jpg" /></p>
 </div>
-<html>
-    <p>output:</p>
-       <img src ="C:\Users\ishaa\Desktop\Tanzania_Rice\yield_forecasting\images\Sample_code2_output.png", alt = "output2" , width = "500px">
-</html>
-<div class="toctree-wrapper compound">
+<div class="section" id="crop-calendars">
+<h3>Crop Calendars:<a class="headerlink" href="#crop-calendars" title="Permalink to this headline">#</a></h3>
+<p>Each plot consists of four vertical lines to provide a reference for where crops are in
+the development stage, based on the GEOGLAM Crop Monitor crop calendars. The brown dotted
+line represents the planting stage, the green solid line represents greenup
+(the beginning of plant growth), the brown solid line represents senescence
+(late development stage), and the red dotted line represents the end of harvest.
+By examining the main components of each plot within the context of where crops are in
+their development cycle, analysts can better interpret how current conditions may impact
+the remainder of the season and final crop outcomes.</p>
+<p>For more information, please see
+<a class="reference external" href="https://cropmonitor.org/index.php/eodatatools/baseline-data/">crop calendars</a>.</p>
+<p><img alt="" src="_images/basic_component_crop_calendar.jpg" /></p>
+<p>Here is a “note” directive:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here is a note</p>
 </div>
-</section>
+<p>It will be rendered in a special box when you build your book.</p>
+<p>Here is an inline directive to refer to a document: <a class="reference internal" href="markdown-notebooks.html"><span class="doc">Notebooks with MyST Markdown</span></a>.</p>
+</div>
+</div>
+<div class="section" id="citations">
+<h2>Citations<a class="headerlink" href="#citations" title="Permalink to this headline">#</a></h2>
+<p>You can also cite references that are stored in a <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For example,
+the following syntax: <code class="docutils literal notranslate"><span class="pre">{cite}`holdgraf_evidence_2014`</span></code> will render like
+this: <span id="id1">[<a class="reference internal" href="#id3" title="Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In International Conference on Cognitive Neuroscience. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.">HdHPK14</a>]</span>.</p>
+<p>Moreover, you can insert a bibliography into your page with this syntax:
+The <code class="docutils literal notranslate"><span class="pre">{bibliography}</span></code> directive must be used for all the <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> roles to
+render properly.
+For example, if the references for your book are stored in <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>,
+then the bibliography is inserted with:</p>
+<div class="docutils container" id="id2">
+<dl class="citation">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">HdHPK14</a></span></dt>
+<dd><p>Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In <em>International Conference on Cognitive Neuroscience</em>. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="learn-more">
+<h2>Learn more<a class="headerlink" href="#learn-more" title="Permalink to this headline">#</a></h2>
+<p>This is just a simple starter to get you started.
+You can learn a lot more at <a class="reference external" href="https://jupyterbook.org">jupyterbook.org</a>.</p>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -500,17 +504,17 @@ plt.scatter(data[0],data[1],c=data[2], s=100*np.abs(c))
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="technical_overview.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Technical overview</p>
+            <p class="prev-next-title">Yield Forecasting</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="sample.html" title="next page">
+    <a class='right-next' id="next-link" href="notebooks.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Content with notebooks</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -521,7 +525,7 @@ plt.scatter(data[0],data[1],c=data[2], s=100*np.abs(c))
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By NASA Harvest<br/>
+    By Ritvik Sahajpal<br/>
   
       &copy; Copyright 2022.<br/>
 </p>
