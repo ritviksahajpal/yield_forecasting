@@ -11,7 +11,7 @@ green or red to indicate if the forecast will place the cumulative precipitation
 below the 5-year mean. The second plot shows the daily precipitation events for the season 
 across time, helping to identify the evenness of rainfall over time or major rainfall events.
 
-![](images/precipitation.jpg)
+![](images/agmet/precipitation.jpg)
 
 During the course of the season, the timing and the amount of rainfall surpluses or deficits can 
 have different effects. As an example, too much rainfall during sowing can prevent farms from 

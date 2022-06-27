@@ -9,7 +9,7 @@ to germinate and grow. Mid-range soil moisture values during the season help pro
 and root depth. However, lower values typically any time before senescence can cause stress in 
 the crops and stunt development.
 
-![](images/soil_moisture.jpg)
+![](images/agmet/soil_moisture.jpg)
 
 For more information on using soil moisture data for crop monitoring please see the Soil Moisture 
 section of the EO Data.

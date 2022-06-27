@@ -1,4 +1,4 @@
-# Normalized Difference Vegetation Index (NDVI):
+# Normalized Difference Vegetation Index (NDVI)
 
 There are two plots for NDVI. The first plot shows the NDVI values for the current season in 
 comparison to the 5-year mean, values from the previous season, and the 10-year minimum and 
@@ -10,6 +10,6 @@ course of the season and the individual peak values can help predict the product
 crops. The second NDVI plot shows the comparison of the current season NDVI values with the 
 previous five seasons along with the resulting average crop yields from those seasons.
 
-![](images/ndvi.jpg)
+![](images/agmet/ndvi.jpg)
 
 For more information on using NDVI data for crop monitoring please see the NDVI section of the EO Data.

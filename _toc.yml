@@ -26,15 +26,14 @@ parts:
     - file: content/background/machine_learning/scikit-learn
     - file: content/background/machine_learning/validation
 
-- caption: AgMet graphics
+- caption: Crop Condition Assessment
   chapters:
-  - file: content/agmet/agmet.md  # Data Preprocessing
+  - file: content/condition/agmet.md  # Data Preprocessing
     sections:
-    - file: content/agmet/eo_data_plot_components.md
-    - file: content/agmet/ndvi.md
-    - file: content/agmet/precipitation.md
-    - file: content/agmet/temperature.md
-    - file: content/agmet/soil_moisture.md
-    - file: content/agmet/evaporative_stress_index.md
-    - file: content/agmet/examples.md
-
+    - file: content/condition/eo_data_plot_components.md
+    - file: content/condition/ndvi.md
+    - file: content/condition/precipitation.md
+    - file: content/condition/temperature.md
+    - file: content/condition/soil_moisture.md
+    - file: content/condition/evaporative_stress_index.md
+    - file: content/condition/examples.md

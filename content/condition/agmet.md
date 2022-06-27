@@ -31,7 +31,7 @@ average conditions usually represent. The purple lines show what the values were
 the previous season. The blue lines show what the values are for the current season in 
 near real-time as the season progresses.
 
-![](images/basic_component_ndvi.jpg)
+![](images/agmet/basic_component_ndvi.jpg)
 
 ### Crop Calendars:
 
@@ -47,5 +47,5 @@ the remainder of the season and final crop outcomes.
 For more information, please see
 [crop calendars](https://cropmonitor.org/index.php/eodatatools/baseline-data/).
 
-![](images/basic_component_crop_calendar.jpg)
+![](images/agmet/basic_component_crop_calendar.jpg)
 
