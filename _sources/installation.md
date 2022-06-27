@@ -11,42 +11,37 @@ On a non-UMD cluster or local machine, download and install the latest anaconda 
 `bash Anaconda3-2022.05-Linux-x86_64.sh`
 <br><br>
 2. Next copy-paste the following commands into the terminal:<br>
-`conda init bash`<br>
 `conda activate UMD`<br>
-`conda update anaconda`<br>
-`conda install gdal`<br>
-`conda install rasterio`<br>
-`conda install numpy`<br>
-`conda install pandas`<br>
-`conda install geopandas`<br>
-`conda install scikit-learn`<br>
-`conda install jupyterlab`<br>
-`conda install matplotlib`<br>
-`conda install seaborn`<br>
-`conda install xarray`<br>
-`conda install rasterstats`<br>
-`conda install tqdm`<br>
-`conda install pytest`<br>
-`conda install sqlalchemy`<br>
-`conda install scikit-image`<br>
-`conda install scipy`<br>
-`conda install pysal`<br>
-`conda install beautifulsoup4`<br>
-`conda install boto3`<br>
-`conda install cython`<br>
-`conda install statsmodels`<br>
-`conda install future`<br>
-`conda install graphviz`<br>
-`conda install pylint`<br>
-`conda install mlxtend`<br>
-`conda install line_profiler`<br>
-`conda install nodejs`<br>
-`conda install sphinx`<br>
-`conda install nbsphinx`<br>
-`conda install catboost`<br>
-`conda install arrow`<br>
-`conda install contextily`<br>
-`conda install openpyxl`<br>
+`conda install -c conda-forge gdal`<br>
+`conda install -c conda-forge rasterio`<br>
+`conda install -c conda-forge geopandas`<br>
+`conda install -c conda-forge scikit-learn`<br>
+`conda install -c conda-forge jupyterlab`<br>
+`conda install -c conda-forge seaborn`<br>
+`conda install -c conda-forge xarray`<br>
+`conda install -c conda-forge rasterstats`<br>
+`conda install -c conda-forge tqdm`<br>
+`conda install -c conda-forge pytest`<br>
+`conda install -c conda-forge sqlalchemy`<br>
+`conda install -c conda-forge scikit-image`<br>
+`conda install -c conda-forge scipy`<br>
+`conda install -c conda-forge pysal`<br>
+`conda install -c conda-forge beautifulsoup4`<br>
+`conda install -c conda-forge boto3`<br>
+`conda install -c conda-forge cython`<br>
+`conda install -c conda-forge statsmodels`<br>
+`conda install -c conda-forge future`<br>
+`conda install -c conda-forge graphviz`<br>
+`conda install -c conda-forge pylint`<br>
+`conda install -c conda-forge mlxtend`<br>
+`conda install -c conda-forge line_profiler`<br>
+`conda install -c conda-forge nodejs`<br>
+`conda install -c conda-forge sphinx`<br>
+`conda install -c conda-forge nbsphinx`<br>
+`conda install -c conda-forge catboost`<br>
+`conda install -c conda-forge arrow`<br>
+`conda install -c conda-forge contextily`<br>
+`conda install -c conda-forge openpyxl`<br>
 `conda install -c conda-forge eemont`<br>
 `conda install -c conda-forge logzero`<br>
 `conda install -c conda-forge tinydb`<br>
