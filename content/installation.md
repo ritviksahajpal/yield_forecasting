@@ -45,7 +45,7 @@ You can replace UMD with a different environment name of your choice
 2. Follow the instructions [here](https://ladsweb.modaps.eosdis.nasa.gov/learn/download-files-using-laads-daac-tokens/) 
 to request a token for your account.
    * Login by going to Profile -> Earthdata Login
-   <img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img1.png" alt="profile" class="bg-primary" width="700px">
+   <img src="../images/NDVI_Step2_img1.png" alt="profile" class="bg-primary" width="700px">
    
    * Enter your login credentials or register  
    <img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img2.png" alt="login" class="bg-primary" width="500px">
