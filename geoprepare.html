@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Downloading and Processing EO Data &#8212; Yield Forecasting</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -52,8 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="AgMet Graphics" href="agmet.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="examples.html" />
+    <link rel="prev" title="Agrometeorological Earth Observation Indicators" href="data_preprocessing.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -114,93 +112,21 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="installation.html">
-   Installation
-  </a>
- </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="technical_overview.html">
-   Technical overview
+  <a class="reference internal" href="data_preprocessing.html">
+   Agrometeorological Earth Observation Indicators
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="python.html">
-     Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="numpy.html">
-     Numpy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="matplotlib.html">
-     Matplotlib
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="pandas.html">
-     Pandas
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="seaborn.html">
-     Seaborn
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="data_preprocessing.html">
-   Agrometeorological Earth Observation Indicators
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ndvi.html">
-     Normalized Difference Vegetation Index (NDVI):
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="precipitation.html">
-     Precipitation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="temperature.html">
-     Temperature
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="soil_moisture.html">
-     Soil Moisture (Surface):
-    </a>
-   </li>
+  <ul class="simple">
   </ul>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Downloading and Processing EO Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="agmet.html">
-   AgMet Graphics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="geocif.html">
-   GEOCIF
   </a>
  </li>
 </ul>
@@ -439,19 +365,19 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="downloading-and-processing-eo-data">
+  <div class="tex2jax_ignore mathjax_ignore section" id="downloading-and-processing-eo-data">
 <h1>Downloading and Processing EO Data<a class="headerlink" href="#downloading-and-processing-eo-data" title="Permalink to this headline">#</a></h1>
 <p>A Python package to prepare (download, extract, process input data) for GEOCIF and related models</p>
-<section id="installation">
+<div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">--no-deps</span> <span class="pre">--force-reinstall</span> <span class="pre">git+https://github.com/ritviksahajpal/geoprepare.git</span></code></p>
-</section>
-<section id="usage">
+</div>
+<div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">geoprepare.geoprepare</span> <span class="pre">as</span> <span class="pre">gprp</span></code><br>
 <code class="docutils literal notranslate"><span class="pre">gprp.run(PATH_TO_CONFIG_FILE)</span></code></p>
-</section>
-<section id="configuration-file">
+</div>
+<div class="section" id="configuration-file">
 <h2>Configuration File<a class="headerlink" href="#configuration-file" title="Permalink to this headline">#</a></h2>
 <p>`[DATASETS]<br>
 datasets = [‘CHIRPS’]<br>
@@ -462,8 +388,8 @@ parallel_process = True<br>
 fraction_cpus = 0.5<br>
 start_year = 1982<br>
 end_year = 2022`<br></p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -492,19 +418,12 @@ end_year = 2022`<br></p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="examples.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="data_preprocessing.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">&lt;no title&gt;</p>
+            <p class="prev-next-title">Agrometeorological Earth Observation Indicators</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="agmet.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">AgMet Graphics</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
