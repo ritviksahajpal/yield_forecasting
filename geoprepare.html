@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Downloading and Processing EO Data &#8212; Yield Forecasting</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -190,12 +191,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  AgMet graphics
+  Crop Condition Assessment
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="content/agmet/agmet.html">
+  <a class="reference internal" href="content/condition/agmet.html">
    Agrometeorological Earth Observation Indicators
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -205,22 +206,22 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="content/agmet/ndvi.html">
-     Normalized Difference Vegetation Index (NDVI):
+    <a class="reference internal" href="content/condition/ndvi.html">
+     Normalized Difference Vegetation Index (NDVI)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="content/agmet/precipitation.html">
+    <a class="reference internal" href="content/condition/precipitation.html">
      Precipitation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="content/agmet/temperature.html">
+    <a class="reference internal" href="content/condition/temperature.html">
      Temperature
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="content/agmet/soil_moisture.html">
+    <a class="reference internal" href="content/condition/soil_moisture.html">
      Soil Moisture (Surface):
     </a>
    </li>
@@ -462,19 +463,19 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="downloading-and-processing-eo-data">
+  <section class="tex2jax_ignore mathjax_ignore" id="downloading-and-processing-eo-data">
 <h1>Downloading and Processing EO Data<a class="headerlink" href="#downloading-and-processing-eo-data" title="Permalink to this headline">#</a></h1>
 <p>A Python package to prepare (download, extract, process input data) for GEOCIF and related models</p>
-<div class="section" id="installation">
+<section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">--no-deps</span> <span class="pre">--force-reinstall</span> <span class="pre">git+https://github.com/ritviksahajpal/geoprepare.git</span></code></p>
-</div>
-<div class="section" id="usage">
+</section>
+<section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">geoprepare.geoprepare</span> <span class="pre">as</span> <span class="pre">gprp</span></code><br>
 <code class="docutils literal notranslate"><span class="pre">gprp.run(PATH_TO_CONFIG_FILE)</span></code></p>
-</div>
-<div class="section" id="configuration-file">
+</section>
+<section id="configuration-file">
 <h2>Configuration File<a class="headerlink" href="#configuration-file" title="Permalink to this headline">#</a></h2>
 <p>`[DATASETS]<br>
 datasets = [‘CHIRPS’]<br>
@@ -485,8 +486,8 @@ parallel_process = True<br>
 fraction_cpus = 0.5<br>
 start_year = 1982<br>
 end_year = 2022`<br></p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

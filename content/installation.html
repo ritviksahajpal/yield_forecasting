@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Installation &#8212; Yield Forecasting</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -192,12 +193,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  AgMet graphics
+  Crop Condition Assessment
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="agmet/agmet.html">
+  <a class="reference internal" href="condition/agmet.html">
    Agrometeorological Earth Observation Indicators
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -207,22 +208,22 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="agmet/ndvi.html">
-     Normalized Difference Vegetation Index (NDVI):
+    <a class="reference internal" href="condition/ndvi.html">
+     Normalized Difference Vegetation Index (NDVI)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="agmet/precipitation.html">
+    <a class="reference internal" href="condition/precipitation.html">
      Precipitation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="agmet/temperature.html">
+    <a class="reference internal" href="condition/temperature.html">
      Temperature
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="agmet/soil_moisture.html">
+    <a class="reference internal" href="condition/soil_moisture.html">
      Soil Moisture (Surface):
     </a>
    </li>
@@ -508,9 +509,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="installation">
+  <section class="tex2jax_ignore mathjax_ignore" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h1>
-<div class="section" id="setting-up-python-environment">
+<section id="setting-up-python-environment">
 <h2>Setting up Python Environment<a class="headerlink" href="#setting-up-python-environment" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>On the UMD cluster, first load the anaconda module and create a clone environment by typing the
@@ -551,8 +552,8 @@ On a non-UMD cluster or local machine, download and install the latest anaconda 
 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">wget</span> <span class="pre">pyModis</span> <span class="pre">merf</span> <span class="pre">tsfresh</span> <span class="pre">pyshp</span> <span class="pre">palettable</span> <span class="pre">geopy</span> <span class="pre">geocoder</span> <span class="pre">palettable</span> <span class="pre">forestci</span> <span class="pre">pangres</span> <span class="pre">sklearn-contrib-lightning</span> <span class="pre">wget</span> <span class="pre">pangres</span> <span class="pre">pycountry</span> <span class="pre">matplotlib-scalebar</span></code><br>
 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">git+https://github.com/ritviksahajpal/pygeoutil.git</span></code> <br></p></li>
 </ol>
-</div>
-<div class="section" id="modis-ndvi">
+</section>
+<section id="modis-ndvi">
 <h2>MODIS NDVI<a class="headerlink" href="#modis-ndvi" title="Permalink to this headline">#</a></h2>
 <ol>
 <li><p>Create an account on the <a class="reference external" href="https://ladsweb.modaps.eosdis.nasa.gov/">NASA LAADS DAAC</a> website</p></li>
@@ -560,22 +561,22 @@ On a non-UMD cluster or local machine, download and install the latest anaconda 
 to request a token for your account.</p>
 <ul>
 <li><p>Login by going to Profile -&gt; Earthdata Login
-<img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img1.png" alt="profile" class="bg-primary" width="700px"></p></li>
+<a class="bg-primary reference internal" href="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img1.png"><img alt="profile" class="bg-primary" src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img1.png" style="width: 700px;" /></a></p></li>
 <li><p>Enter your login credentials or register<br />
-<img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img2.png" alt="login" class="bg-primary" width="500px"></p></li>
+<a class="bg-primary reference internal" href="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img2.png"><img alt="login" class="bg-primary" src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img2.png" style="width: 500px;" /></a></p></li>
 <li><p>Select Profile -&gt; Generate Token from the top menu</p></li>
-<li><img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img3.png" alt="generate token" class="bg-primary" width="500px">
+<li><a class="bg-primary reference internal image-reference" href="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img3.png"><img alt="generate token" class="bg-primary" src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img3.png" style="width: 500px;" /></a>
 </li>
-<li><p>Copy the token from this window and store it somewhere safe and secure <img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img4.png" alt="token" class="bg-primary" width="500px"></p></li>
+<li><p>Copy the token from this window and store it somewhere safe and secure <a class="bg-primary reference internal" href="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img4.png"><img alt="token" class="bg-primary" src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img4.png" style="width: 500px;" /></a></p></li>
 </ul>
 </li>
 <li><p>On your local machine/cluster, iIf not already installed,
-install octvi: <a class="reference external" href="https://pypi.org/project/octvi/">https://pypi.org/project/octvi/</a></p></li>
+install octvi: https://pypi.org/project/octvi/</p></li>
 <li><p>On the command prompt type <code class="docutils literal notranslate"><span class="pre">octviconfig</span></code> and at the place it asks for a token,
 paste the token you copied earlier.</p></li>
 </ol>
-</div>
-<div class="section" id="agera5">
+</section>
+<section id="agera5">
 <h2>AgERA5<a class="headerlink" href="#agera5" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Create an account on the <a class="reference external" href="https://cds.climate.copernicus.eu">CDS</a> website</p></li>
@@ -585,52 +586,52 @@ to install the CDS API key on your local machine/cluster</p></li>
 <li><p>If not already installed, install the <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> python library by typing <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">cdsapi</span></code> in
 the command prompt.</p></li>
 </ol>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="for-windows-users">
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="for-windows-users">
 <h1>1. For Windows users:<a class="headerlink" href="#for-windows-users" title="Permalink to this headline">#</a></h1>
 <p>(i)Login to <a class="reference external" href="https://cds.climate.copernicus.eu/user/143426/">CDS</a><br />
-<img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_CDSLogin.png" alt="CDSLogin" class="bg-primary" width="500px"></p>
+<a class="bg-primary reference internal" href="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_CDSLogin.png"><img alt="CDSLogin" class="bg-primary" src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_CDSLogin.png" style="width: 500px;" /></a></p>
 <p>(ii)Copy a 2 line code, which shows a url and your own uid:API key details as followed:</p>
 <p>A.For CDS users, Go to <a class="reference external" href="https://cds.climate.copernicus.eu/api-how-to/">this</a> page and copy the 2 line code                     displayed in the black box in the “Install the CDS API key” section as shown below:<br />
-<img src = "https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_CDSAPIUrl.png" alt="CDSurl" class="bg-primary" width="700px"></p>
+<a class="bg-primary reference internal" href="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_CDSAPIUrl.png"><img alt="CDSurl" class="bg-primary" src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_CDSAPIUrl.png" style="width: 700px;" /></a></p>
 <p>B.For ADS users, Go to <a class="reference external" href="https://ads.atmosphere.copernicus.eu/api-how-to/">this</a>page and copy the 2 line code                   displayed in the black box in the “Install the CDS API key” section as shown below:<br />
-<img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_ADSAPIUrl.png" alt="ADSurl" class="bg-primary" width="700px"></p>
+<a class="bg-primary reference internal" href="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_ADSAPIUrl.png"><img alt="ADSurl" class="bg-primary" src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_ADSAPIUrl.png" style="width: 700px;" /></a></p>
 <p>(iii)Paste the 2 line code into a  %USERPROFILE%.cdsapirc file, where in your windows environment, %USERPROFILE% is             usually located at C:\Users\Username folder). The CDS API expects to find the .cdsapirc file in your home                   directory.</p>
 <p>(iv)Install the CDS API client by running the following command in a Command Prompt window:
 a. pip install cdsapi # for Python 2.7<br>
 b. pip3 install cdsapi # for Python 3<br />
-<img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_installcdsapi.png" alt="installcds" class="bg-primary" width="500px"></p>
+<a class="bg-primary reference internal" href="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_installcdsapi.png"><img alt="installcds" class="bg-primary" src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_installcdsapi.png" style="width: 500px;" /></a></p>
 <p>(v)Once the CDS API client is installed, it can be used to request data from the datasets listed in the CDS and ADS             catalogues. It is necessary to agree to the Terms of Use of every datasets that you intend to download. Attached             to each dataset download form, the “Show API request” button displays the python code to be used.</p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="for-mac-users">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="for-mac-users">
 <h1>2. For Mac users:<a class="headerlink" href="#for-mac-users" title="Permalink to this headline">#</a></h1>
 <p>(i)Login to <a class="reference external" href="https://cds.climate.copernicus.eu/user/143426/">CDS</a>
-<img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_CDSLogin.png" alt="CDSLogin" class="bg-primary" width="700px"></p>
+<a class="bg-primary reference internal" href="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_CDSLogin.png"><img alt="CDSLogin" class="bg-primary" src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_CDSLogin.png" style="width: 700px;" /></a></p>
 <p>(ii)Copy a 2 line code, which shows a url and your own uid:API key details as followed:</p>
 <p>A.For CDS users, Go to <a class="reference external" href="https://cds.climate.copernicus.eu/api-how-to/">this</a> page and copy the 2 line code                     displayed in the black box in the “Install the CDS API key” section as shown:
-<img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_CDSAPIUrl.png" alt="CDSurl" class="bg-primary" width="700px"></p>
+<a class="bg-primary reference internal" href="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_CDSAPIUrl.png"><img alt="CDSurl" class="bg-primary" src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_CDSAPIUrl.png" style="width: 700px;" /></a></p>
 <p>B.For ADS users, Go to <a class="reference external" href="https://ads.atmosphere.copernicus.eu/api-how-to/">this</a>page and copy the 2 line code                   displayed in the black box in the “Install the CDS API key” section as shown:
-<img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_ADSAPIUrl.png" alt="ADSurl" class="bg-primary" width="700px"></p>
+<a class="bg-primary reference internal" href="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_ADSAPIUrl.png"><img alt="ADSurl" class="bg-primary" src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_ADSAPIUrl.png" style="width: 700px;" /></a></p>
 <p>(iii)Create your key file in your home directory in your Terminal window as follows:
 <b><i>touch ~/.cdsapirc</i></b></p>
 <p>(iv)Edit your key file and paste the two lines you copied in Step 2 above to your .cdsapirc key file.</p>
 <p>(v)Install the CDS API client using pip, by running the following command in your Terminal window:
 <b><i>pip install cdsapi</i></b></p>
 <p>(vi)Once the CDS API client is installed, it can be used to request data from the datasets listed in the CDS and ADS             catalogues. It is necessary to agree to the Terms of Use of every datasets that you intend to download. Attached             to each dataset download form, the “Show API request” button displays the python code to be used.</p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="for-linux-users">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="for-linux-users">
 <h1>3. For Linux users:<a class="headerlink" href="#for-linux-users" title="Permalink to this headline">#</a></h1>
 <p><b>Install the API Key</b></p>
 <p>(i)If you don’t have an account, please self register at the <a class="reference external" href="https://cds.climate.copernicus.eu/user/register?destination=%2F%23%21%2Fhome/">CDS registration page</a></p>
 <p>(ii)If you are not logged, please <a class="reference external" href="https://cds.climate.copernicus.eu/user/login?destination=%2F%23%21%2Fhome">login</a> and           go to the step below.</p>
-<p>(iii)Copy the code displayed into HOME/.cdsapirc file (in your Unix/Linux environment).<img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_LinuxAPIKeyUrl.png" alt="LinuxAPIKey" class="bg-primary" width="700px"></p>
+<p>(iii)Copy the code displayed into HOME/.cdsapirc file (in your Unix/Linux environment).<a class="bg-primary reference internal" href="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_LinuxAPIKeyUrl.png"><img alt="LinuxAPIKey" class="bg-primary" src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_LinuxAPIKeyUrl.png" style="width: 700px;" /></a></p>
 <p><b>Install the API Client</b></p>
-<p>(i)The CDS API client is a python based library. It provides support for both Python 2.7.x and Python 3.You can                Install the CDS API client via the package management system pip, by running on Unix/Linux the command shown in the          box beside <img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_LinuxAPIClient.png" alt="LinuxAPIClient" class="bg-primary" width="700px"></p>
+<p>(i)The CDS API client is a python based library. It provides support for both Python 2.7.x and Python 3.You can                Install the CDS API client via the package management system pip, by running on Unix/Linux the command shown in the          box beside <a class="bg-primary reference internal" href="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_LinuxAPIClient.png"><img alt="LinuxAPIClient" class="bg-primary" src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_LinuxAPIClient.png" style="width: 700px;" /></a></p>
 <p><b>Use the CDS API client for data access</b></p>
 <p>(i)Once the CDS API client is installed, it can be used to request data from the datasets listed in the CDS catalogue.          It is necessary to agree to the Terms of Use of every datasets that you intend to download.</p>
-<p>(ii)Attached to each dataset download form, the following button[show API Request]displays the python code to be used.           The request can be formatted using the interactive form. The api call must follow the syntax:<img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_APICallSyntax.png" alt="APICall" class="bg-primary" width="700px"></p>
-</div>
+<p>(ii)Attached to each dataset download form, the following button[show API Request]displays the python code to be used.           The request can be formatted using the interactive form. The api call must follow the syntax:<a class="bg-primary reference internal" href="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_APICallSyntax.png"><img alt="APICall" class="bg-primary" src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_APICallSyntax.png" style="width: 700px;" /></a></p>
+</section>
 
     <script type="text/x-thebe-config">
     {
