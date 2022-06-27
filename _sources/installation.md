@@ -19,71 +19,26 @@ You can replace UMD with a different environment name of your choice
 
 2. Next copy-paste the following commands into the terminal:<br>
 `conda activate UMD`<br>
+`conda install -c conda-forge logzero` <br>
+`conda install -c conda-forge netcdf4` <br>
 `conda install -c conda-forge gdal`<br>
 `conda install -c conda-forge rasterio`<br>
+`conda install -c conda-forge pyresample`<br>
+`conda install -c conda-forge cdsapi`<br>
 `conda install -c conda-forge geopandas`<br>
-`conda install -c conda-forge scikit-learn`<br>
-`conda install -c conda-forge jupyterlab`<br>
 `conda install -c conda-forge seaborn`<br>
 `conda install -c conda-forge xarray`<br>
 `conda install -c conda-forge rasterstats`<br>
 `conda install -c conda-forge tqdm`<br>
-`conda install -c conda-forge pytest`<br>
-`conda install -c conda-forge sqlalchemy`<br>
-`conda install -c conda-forge scikit-image`<br>
-`conda install -c conda-forge scipy`<br>
-`conda install -c conda-forge pysal`<br>
-`conda install -c conda-forge beautifulsoup4`<br>
-`conda install -c conda-forge boto3`<br>
-`conda install -c conda-forge cython`<br>
-`conda install -c conda-forge statsmodels`<br>
-`conda install -c conda-forge future`<br>
-`conda install -c conda-forge graphviz`<br>
-`conda install -c conda-forge pylint`<br>
-`conda install -c conda-forge mlxtend`<br>
-`conda install -c conda-forge line_profiler`<br>
-`conda install -c conda-forge nodejs`<br>
-`conda install -c conda-forge sphinx`<br>
-`conda install -c conda-forge nbsphinx`<br>
+`conda install -c conda-forge scikit-learn`<br>
+`conda install -c conda-forge jupyterlab`<br>
 `conda install -c conda-forge catboost`<br>
 `conda install -c conda-forge arrow`<br>
-`conda install -c conda-forge contextily`<br>
-`conda install -c conda-forge openpyxl`<br>
-`conda install -c conda-forge eemont`<br>
-`conda install -c conda-forge logzero`<br>
-`conda install -c conda-forge tinydb`<br>
 `conda install -c anaconda netcdf4`<br>
-`conda install -c conda-forge cachetools`<br>
-`conda install -c conda-forge pygeoprocessing`<br>
-`conda install -c conda-forge pygmt`<br>
-`conda install -c conda-forge dataset`<br>
-`conda install -c conda-forge pyresample`<br>
 `conda install -c conda-forge cartopy`<br>
-`conda install -c conda-forge eli5`<br>
-`conda install -c conda-forge lime`<br>
-`conda install -c conda-forge skrebate`<br>
-`conda install -c conda-forge neptune-client`<br>
-`conda install -c conda-forge xgboost`<br>
-`conda install -c conda-forge pandas-profiling`<br>
-`conda install -c conda-forge bottleneck`<br>
-`conda install -c conda-forge chardet`<br>
-`conda install -c conda-forge sentinelhub`<br>
-`conda install -c conda-forge pygam`<br>
-`conda install -c conda-forge watchdog`<br>
-`conda install -c conda-forge retrying`<br>
-`conda install -c conda-forge fiona`<br>
-`conda install -c conda-forge tpot`<br>
-`conda install -c conda-forge cdsapi`<br>
-`conda install -c conda-forge scikit-garden`<br>
-`conda install -c conda-forge neptune-client`<br>
-`conda install -c conda-forge urllib3`<br>
-`conda install -c ncar pynio`<br>
-`conda install -c conda-forge mpi4py`<br>
-`conda install -c conda-forge scikit-optimize`<br>
-`conda install -c conda-forge requests`<br>
-`pip install --upgrade git+https://github.com/ritviksahajpal/pygeoutil.git`   
-`pip install merf tsfresh pyshp palettable geopy geocoder palettable forestci pangres sklearn-contrib-lightning wget pangres pycountry matplotlib-scalebar`<br>
-`pip install git+https://github.com/GeoscienceAustralia/uncover-ml.git`
+`pip install wget pyModis merf tsfresh pyshp palettable geopy geocoder palettable forestci pangres sklearn-contrib-lightning wget pangres pycountry matplotlib-scalebar`<br>
+`pip install --upgrade git+https://github.com/ritviksahajpal/pygeoutil.git` <br>
+
 
 ### MODIS NDVI
 1. Create an account on the [NASA LAADS DAAC](https://ladsweb.modaps.eosdis.nasa.gov/) website
