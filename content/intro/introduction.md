@@ -1,4 +1,4 @@
-# Yield Forecasting
+# Introduction
 
 Yield forecasting and estimation is key to almost all food security and agricultural 
 analysis, including ensuring market transparency, trade decisions, triggering anticipatory 

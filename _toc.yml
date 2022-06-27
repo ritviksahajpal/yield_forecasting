@@ -2,35 +2,40 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
-chapters:
-- file: overview
-- file: introduction  # Introduction to Yield Forecasting
-- file: installation
-- file: technical_overview  # Technical Overview
-  sections:
-  - file: python
+root: content/intro/introduction.md
+
+parts:
+- caption: Install
+  chapters:
+  - file: content/installation.md
+
+- caption: Background
+  chapters:
+  - file: content/background/scientific_python/scientific_python.md  # Scientific Python
     sections:
-    - file : sample
-  - file: numpy
-  - file: matplotlib
-  - file: pandas
-  - file: seaborn
-- file: machine_learning  # Machine Learning
-  sections:
-  - file: machine_learning_intro
-  - file: scikit-learn
-  - file: validation
-- file: data_preprocessing  # Data Preprocessing
-  sections:
-  - file: eo_data_plot_components
-  - file: ndvi
-  - file: precipitation
-  - file: temperature
-  - file: soil_moisture
-  - file: evaporative_stress_index
-  - file: examples
-- file: geoprepare
-- file: agmet
-- file: geocif
+    - file: content/background/scientific_python/python.md
+      sections:
+      - file : content/background/scientific_python/sample.md
+    - file: content/background/scientific_python/numpy.md
+    - file: content/background/scientific_python/matplotlib.md
+    - file: content/background/scientific_python/pandas.md
+    - file: content/background/scientific_python/seaborn.md
+
+  - file: content/background/machine_learning/machine_learning.md  # Machine Learning
+    sections:
+    - file: content/background/machine_learning/scikit-learn
+    - file: content/background/machine_learning/validation
+
+- caption: Data Prep
+  chapters:
+  - file: data_preprocessing  # Data Preprocessing
+    sections:
+    - file: eo_data_plot_components
+    - file: ndvi
+    - file: precipitation
+    - file: temperature
+    - file: soil_moisture
+    - file: evaporative_stress_index
+    - file: examples
+
 
