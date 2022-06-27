@@ -491,10 +491,18 @@ title="Print to PDF"
 following commands on the terminal:<br>
 <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">python/3.8/anaconda</span></code><br>
 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">-n</span> <span class="pre">UMD</span> <span class="pre">--clone=/apps/python/3.8/anaconda</span></code> <br><br>
-On a non-UMD cluster or local machine, download and install the latest anaconda package
+On a non-UMD cluster or local machine, download and install the latest anaconda package <br>
 <code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">-c</span> <span class="pre">https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh</span></code> <br>
-<code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">Anaconda3-2022.05-Linux-x86_64.sh</span></code>
-<br><br></p></li>
+<code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">Anaconda3-2022.05-Linux-x86_64.sh</span></code> <br>
+<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">--name</span> <span class="pre">UMD</span></code>
+<br></p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can replace UMD with a different environment name of your choice</p>
+</div>
+<br>
+<ol class="simple">
 <li><p>Next copy-paste the following commands into the terminal:<br>
 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">UMD</span></code><br>
 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">gdal</span></code><br>

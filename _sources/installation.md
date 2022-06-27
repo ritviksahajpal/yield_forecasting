@@ -6,10 +6,17 @@
 following commands on the terminal:<br>
 `module load python/3.8/anaconda`<br>
 `conda create -n UMD --clone=/apps/python/3.8/anaconda` <br><br>
-On a non-UMD cluster or local machine, download and install the latest anaconda package
+On a non-UMD cluster or local machine, download and install the latest anaconda package <br>
 `wget -c https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh` <br>
-`bash Anaconda3-2022.05-Linux-x86_64.sh`
-<br><br>
+`bash Anaconda3-2022.05-Linux-x86_64.sh` <br>
+`conda create --name UMD`
+<br> 
+
+```{note}
+You can replace UMD with a different environment name of your choice
+```
+<br>
+
 2. Next copy-paste the following commands into the terminal:<br>
 `conda activate UMD`<br>
 `conda install -c conda-forge gdal`<br>
