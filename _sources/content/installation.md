@@ -45,15 +45,15 @@ You can replace UMD with a different environment name of your choice
 2. Follow the instructions [here](https://ladsweb.modaps.eosdis.nasa.gov/learn/download-files-using-laads-daac-tokens/) 
 to request a token for your account.
    * Login by going to Profile -> Earthdata Login
-   <img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img1.png" alt="profile" class="bg-primary" width="700px">
+   <img src="../images/NDVI_Step2_img1.png" alt="profile" class="bg-primary" width="700px">
    
    * Enter your login credentials or register  
-   <img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img2.png" alt="login" class="bg-primary" width="500px">
+   <img src="../images/NDVI_Step2_img2.png" alt="login" class="bg-primary" width="500px">
    
    * Select Profile -> Generate Token from the top menu 
-   * <img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img3.png" alt="generate token" class="bg-primary" width="500px">
+   * <img src="../images/NDVI_Step2_img3.png" alt="generate token" class="bg-primary" width="500px">
    
-   * Copy the token from this window and store it somewhere safe and secure <img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/NDVI_Step2_img4.png" alt="token" class="bg-primary" width="500px">
+   * Copy the token from this window and store it somewhere safe and secure <img src="../images/NDVI_Step2_img4.png" alt="token" class="bg-primary" width="500px">
 3. On your local machine/cluster, iIf not already installed, 
 install octvi: https://pypi.org/project/octvi/
 4. On the command prompt type `octviconfig` and at the place it asks for a token, 
@@ -64,10 +64,13 @@ paste the token you copied earlier.
 2. Follow the instructions [here](https://cds.climate.copernicus.eu/api-how-to/)
 to install the CDS API key on your local machine/cluster
 3. Follow these instructions to install the CDS API Key on your local machine/cluster
-    # 1. For Windows users: 
+
+     <b><u>A. For Windows users:</u></b> 
+     
+     
     
       (i)Login to [CDS](https://cds.climate.copernicus.eu/user/143426/)      
-        <img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_CDSLogin.png" alt="CDSLogin" class="bg-primary" width="500px">
+        <img src="../images/AGRE5_Step2_CDSLogin.png" alt="CDSLogin" class="bg-primary" width="500px">
         
       (ii)Copy a 2 line code, which shows a url and your own uid:API key details as followed:
         
@@ -86,7 +89,9 @@ to install the CDS API key on your local machine/cluster
                 
       (v)Once the CDS API client is installed, it can be used to request data from the datasets listed in the CDS and ADS             catalogues. It is necessary to agree to the Terms of Use of every datasets that you intend to download. Attached             to each dataset download form, the "Show API request" button displays the python code to be used.
       
-   # 2. For Mac users: 
+    <b><u>B. For Mac users:</u></b> 
+    
+    
        
       (i)Login to [CDS](https://cds.climate.copernicus.eu/user/143426/)
         <img src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_CDSLogin.png" alt="CDSLogin" class="bg-primary" width="700px">
@@ -109,7 +114,9 @@ to install the CDS API key on your local machine/cluster
             
       (vi)Once the CDS API client is installed, it can be used to request data from the datasets listed in the CDS and ADS             catalogues. It is necessary to agree to the Terms of Use of every datasets that you intend to download. Attached             to each dataset download form, the "Show API request" button displays the python code to be used.
             
-   # 3. For Linux users: 
+    <b><u>C. For Linux users:</u></b> 
+      
+      
       
      <b>Install the API Key</b>
      
