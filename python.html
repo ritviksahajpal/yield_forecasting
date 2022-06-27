@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Agrometeorological Earth Observation Indicators" href="data_preprocessing.html" />
+    <link rel="next" title="&lt;no title&gt;" href="sample.html" />
     <link rel="prev" title="Technical overview" href="technical_overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -113,6 +113,11 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="installation.html">
+   Installation
+  </a>
+ </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="technical_overview.html">
    Technical overview
@@ -128,6 +133,26 @@ const thebe_selector_output = ".output, .cell_output"
      Python
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="numpy.html">
+     Numpy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matplotlib.html">
+     Matplotlib
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pandas.html">
+     Pandas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="seaborn.html">
+     Seaborn
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -139,12 +164,42 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ndvi.html">
+     Normalized Difference Vegetation Index (NDVI):
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="precipitation.html">
+     Precipitation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="temperature.html">
+     Temperature
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="soil_moisture.html">
+     Soil Moisture (Surface):
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="geoprepare.html">
    Downloading and Processing EO Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="agmet.html">
+   AgMet Graphics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="geocif.html">
+   GEOCIF
   </a>
  </li>
 </ul>
@@ -302,12 +357,48 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Python
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-python-code">
+     some python code
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-plot">
+   A plot
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -319,6 +410,31 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Python
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-python-code">
+     some python code
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-plot">
+   A plot
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -328,6 +444,32 @@ title="Print to PDF"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="python">
 <h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">#</a></h1>
+<div class="section" id="some-python-code">
+<h2>some python code<a class="headerlink" href="#some-python-code" title="Permalink to this headline">#</a></h2>
+<div class="highlight-{code notranslate"><div class="highlight"><pre><span></span>import numpy as np
+import pandas as pd
+data = np.random.randn(3,100)
+data[0, :10]
+</pre></div>
+</div>
+<html>
+    <p>output:</p>
+       <img src ="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/Sample_code1_output.png", alt = "output1" , width = "700px">
+</html>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="a-plot">
+<h1>A plot<a class="headerlink" href="#a-plot" title="Permalink to this headline">#</a></h1>
+<div class="highlight-{code notranslate"><div class="highlight"><pre><span></span>import matplotlib.pyplot as plt
+plt.scatter(data[0],data[1],c=data[2], s=100*np.abs(c))
+</pre></div>
+</div>
+<html>
+    <p>output:</p>
+       <img src ="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/Sample_code2_output.png", alt = "output2" , width = "500px">
+</html>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -364,10 +506,10 @@ title="Print to PDF"
             <p class="prev-next-title">Technical overview</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="data_preprocessing.html" title="next page">
+    <a class='right-next' id="next-link" href="sample.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Agrometeorological Earth Observation Indicators</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -378,7 +520,7 @@ title="Print to PDF"
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By NASA Harvest<br/>
+    By NASA  Harvest<br/>
   
       &copy; Copyright 2022.<br/>
 </p>
