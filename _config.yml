@@ -30,3 +30,9 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  
+parse:
+  myst_enable_extensions:
+    # this extension is to parse raw html image syntax
+    #
+    - html_image
