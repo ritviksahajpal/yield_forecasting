@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Yield Forecasting
-author: NASA Harvest
+author: [NASA Harvest](https://nasaharvest.org/)
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
