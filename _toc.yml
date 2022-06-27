@@ -26,16 +26,15 @@ parts:
     - file: content/background/machine_learning/scikit-learn
     - file: content/background/machine_learning/validation
 
-- caption: Data Prep
+- caption: AgMet graphics
   chapters:
-  - file: data_preprocessing  # Data Preprocessing
+  - file: content/agmet/agmet.md  # Data Preprocessing
     sections:
-    - file: eo_data_plot_components
-    - file: ndvi
-    - file: precipitation
-    - file: temperature
-    - file: soil_moisture
-    - file: evaporative_stress_index
-    - file: examples
-
+    - file: content/agmet/eo_data_plot_components.md
+    - file: content/agmet/ndvi.md
+    - file: content/agmet/precipitation.md
+    - file: content/agmet/temperature.md
+    - file: content/agmet/soil_moisture.md
+    - file: content/agmet/evaporative_stress_index.md
+    - file: content/agmet/examples.md
 
