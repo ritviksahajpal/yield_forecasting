@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Installation &#8212; Yield Forecasting</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -464,9 +465,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="installation">
+  <section class="tex2jax_ignore mathjax_ignore" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h1>
-<div class="section" id="setting-up-python-environment">
+<section id="setting-up-python-environment">
 <h2>Setting up Python Environment<a class="headerlink" href="#setting-up-python-environment" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>On the UMD cluster, first load the anaconda module and create a clone environment by typing the
@@ -507,113 +508,84 @@ On a non-UMD cluster or local machine, download and install the latest anaconda 
 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">wget</span> <span class="pre">pyModis</span> <span class="pre">merf</span> <span class="pre">tsfresh</span> <span class="pre">pyshp</span> <span class="pre">palettable</span> <span class="pre">geopy</span> <span class="pre">geocoder</span> <span class="pre">palettable</span> <span class="pre">forestci</span> <span class="pre">pangres</span> <span class="pre">sklearn-contrib-lightning</span> <span class="pre">wget</span> <span class="pre">pangres</span> <span class="pre">pycountry</span> <span class="pre">matplotlib-scalebar</span></code><br>
 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">git+https://github.com/ritviksahajpal/pygeoutil.git</span></code> <br></p></li>
 </ol>
-</div>
-<div class="section" id="modis-ndvi">
+</section>
+<section id="modis-ndvi">
 <h2>MODIS NDVI<a class="headerlink" href="#modis-ndvi" title="Permalink to this headline">#</a></h2>
 <ol>
 <li><p>Create an account on the <a class="reference external" href="https://ladsweb.modaps.eosdis.nasa.gov/">NASA LAADS DAAC</a> website</p></li>
 <li><p>Follow the instructions <a class="reference external" href="https://ladsweb.modaps.eosdis.nasa.gov/learn/download-files-using-laads-daac-tokens/">here</a>
-to request a token for your account.
-(i) Login by going to Profile -&gt; Earthdata Login
-<br>
-<a class="bg-primary reference internal" href="../_images/NDVI_Step2_img1.png"><img alt="profile" class="bg-primary" src="../_images/NDVI_Step2_img1.png" style="width: 700px;" /></a>
-<br></p>
-<p>(ii) Enter your login credentials or register<br />
-<a class="bg-primary reference internal" href="../_images/NDVI_Step2_img2.png"><img alt="login" class="bg-primary" src="../_images/NDVI_Step2_img2.png" style="width: 500px;" /></a>
-<br></p>
-<p>(iii) Select Profile -&gt; Generate Token from the top menu
-<br>
-<a class="bg-primary reference internal" href="../_images/NDVI_Step2_img3.png"><img alt="generate token" class="bg-primary" src="../_images/NDVI_Step2_img3.png" style="width: 500px;" /></a>
-<br></p>
-<p>(iv)Copy the token from this window and store it somewhere safe and secure <a class="bg-primary reference internal" href="../_images/NDVI_Step2_img4.png"><img alt="token" class="bg-primary" src="../_images/NDVI_Step2_img4.png" style="width: 500px;" /></a>
-<br></p>
+to request a token for your account.</p>
+<ul>
+<li><p>Login by going to Profile -&gt; Earthdata Login
+<a class="bg-primary reference internal" href="../_images/NDVI_Step2_img1.png"><img alt="profile" class="bg-primary" src="../_images/NDVI_Step2_img1.png" style="width: 700px;" /></a></p></li>
+<li><p>Enter your login credentials or register<br />
+<a class="bg-primary reference internal" href="../_images/NDVI_Step2_img2.png"><img alt="login" class="bg-primary" src="../_images/NDVI_Step2_img2.png" style="width: 500px;" /></a></p></li>
+<li><p>Select Profile -&gt; Generate Token from the top menu</p></li>
+<li><a class="bg-primary reference internal image-reference" href="../_images/NDVI_Step2_img3.png"><img alt="generate token" class="bg-primary" src="../_images/NDVI_Step2_img3.png" style="width: 500px;" /></a>
+</li>
+<li><p>Copy the token from this window and store it somewhere safe and secure <a class="bg-primary reference internal" href="../_images/NDVI_Step2_img4.png"><img alt="token" class="bg-primary" src="../_images/NDVI_Step2_img4.png" style="width: 500px;" /></a></p></li>
+</ul>
 </li>
 <li><p>On your local machine/cluster, iIf not already installed,
-install <a class="reference external" href="https://pypi.org/project/octvi/">octvi</a>
-<br></p></li>
+install octvi: https://pypi.org/project/octvi/</p></li>
 <li><p>On the command prompt type <code class="docutils literal notranslate"><span class="pre">octviconfig</span></code> and at the place it asks for a token,
 paste the token you copied earlier.</p></li>
 </ol>
-</div>
-<div class="section" id="agera5">
+</section>
+<section id="agera5">
 <h2>AgERA5<a class="headerlink" href="#agera5" title="Permalink to this headline">#</a></h2>
 <ol>
 <li><p>Create an account on the <a class="reference external" href="https://cds.climate.copernicus.eu">CDS</a> website</p></li>
 <li><p>Follow the instructions <a class="reference external" href="https://cds.climate.copernicus.eu/api-how-to/">here</a>
 to install the CDS API key on your local machine/cluster</p></li>
 <li><p>Follow these instructions to install the CDS API Key on your local machine/cluster</p>
-<p><b><u>A. For Windows users:</u></b>
-<br>
-(i)Login to <a class="reference external" href="https://cds.climate.copernicus.eu/user/143426/">CDS</a><br />
+<p><b><u>A. For Windows users:</u></b></p>
+<p>(i)Login to <a class="reference external" href="https://cds.climate.copernicus.eu/user/143426/">CDS</a><br />
 <a class="bg-primary reference internal" href="../_images/AGRE5_Step2_CDSLogin.png"><img alt="CDSLogin" class="bg-primary" src="../_images/AGRE5_Step2_CDSLogin.png" style="width: 500px;" /></a></p>
-</li>
-</ol>
-<br>        
-  (ii)Copy a 2 line code, which shows a url and your own uid:API key details as followed:
-<p>a. For CDS users, Go to <a class="reference external" href="https://cds.climate.copernicus.eu/api-how-to/">this</a> page and copy the 2 line code                     displayed in the black box  as shown below:
-<br>
-<code class="docutils literal notranslate"><span class="pre">url:https://cds.climate.copernicus.eu/api/v2</span></code><br><code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">{uid}:{api-key}</span></code>
-<br></p>
-<p>b. For ADS users, Go to <a class="reference external" href="https://ads.atmosphere.copernicus.eu/api-how-to/">this</a>page and copy the 2 line code                   displayed in the black box in the “Install the CDS API key” section as shown below:
-<code class="docutils literal notranslate"><span class="pre">url:https://ads.atmosphere.copernicus.eu/api/v2</span></code> <br> <code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">{uid}:{api-key}</span></code>
-<br><br />
-(iii)Paste the 2 line code into a  %USERPROFILE%.cdsapirc file, where in your windows environment, %USERPROFILE% is             usually located at C:\Users\Username folder). The CDS API expects to find the .cdsapirc file in your home                   directory.
-<br><br />
-(iv)Install the CDS API client by running the following command in a Command Prompt window:
-a. For python 2.7
-<br>
-<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">cdsapi</span></code>
-<br>
-b.For Python 3
-<br>
-<code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">cdsapi</span></code>
-<br></p>
+<p>(ii)Copy a 2 line code, which shows a url and your own uid:API key details as followed:</p>
+<p>A.For CDS users, Go to <a class="reference external" href="https://cds.climate.copernicus.eu/api-how-to/">this</a> page and copy the 2 line code                     displayed in the black box in the “Install the CDS API key” section as shown below:<br />
+<a class="bg-primary reference internal" href="../_images/AGRE5_Step2_CDSAPIUrl.png"><img alt="CDSurl" class="bg-primary" src="../_images/AGRE5_Step2_CDSAPIUrl.png" style="width: 700px;" /></a></p>
+<p>B.For ADS users, Go to <a class="reference external" href="https://ads.atmosphere.copernicus.eu/api-how-to/">this</a>page and copy the 2 line code                   displayed in the black box in the “Install the CDS API key” section as shown below:<br />
+<a class="bg-primary reference internal" href="../_images/AGRE5_Step2_ADSAPIUrl.png"><img alt="ADSurl" class="bg-primary" src="../_images/AGRE5_Step2_ADSAPIUrl.png" style="width: 700px;" /></a></p>
+<p>(iii)Paste the 2 line code into a  %USERPROFILE%.cdsapirc file, where in your windows environment, %USERPROFILE% is             usually located at C:\Users\Username folder). The CDS API expects to find the .cdsapirc file in your home                   directory.</p>
+<p>(iv)Install the CDS API client by running the following command in a Command Prompt window:
+a. pip install cdsapi # for Python 2.7<br>
+b. pip3 install cdsapi # for Python 3<br />
+<a class="bg-primary reference internal" href="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_installcdsapi.png"><img alt="installcds" class="bg-primary" src="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/AGRE5_Step2_installcdsapi.png" style="width: 500px;" /></a></p>
 <p>(v)Once the CDS API client is installed, it can be used to request data from the datasets listed in the CDS and ADS             catalogues. It is necessary to agree to the Terms of Use of every datasets that you intend to download. Attached             to each dataset download form, the “Show API request” button displays the python code to be used.</p>
-<br>      
-   <b><u>B. For Mac users:</u></b> 
-<p>(i)Login to <a class="reference external" href="https://cds.climate.copernicus.eu/user/143426/">CDS</a></p>
-<a class="bg-primary reference internal image-reference" href="../_images/AGRE5_Step2_CDSLogin.png"><img alt="CDSLogin" class="bg-primary" src="../_images/AGRE5_Step2_CDSLogin.png" style="width: 700px;" /></a>
-<br>        
-   (ii)Copy a 2 line code, which shows a url and your own uid:API key details as followed:
-<p>a. For CDS users, Go to <a class="reference external" href="https://cds.climate.copernicus.eu/api-how-to/">this</a> page and copy the 2 line code                     displayed in the black box as shown:<br><code class="docutils literal notranslate"><span class="pre">url:https://cds.climate.copernicus.eu/api/v2</span></code><br><code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">{uid}:{api-key}</span></code>
-<br>
-b. For ADS users, Go to <a class="reference external" href="https://ads.atmosphere.copernicus.eu/api-how-to/">this</a>page and copy the 2 line code                   displayed in the black box as shown:
-<br>
-<code class="docutils literal notranslate"><span class="pre">url:https://ads.atmosphere.copernicus.eu/api/v2</span></code> <br> <code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">{uid}:{api-key}</span></code>
-<br><br />
-(iii)Create your key file in your home directory in your Terminal window as follows:<br>
-<code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">~/.cdsapirc</span></code>
-<br><br />
-(iv)Edit your key file and paste the two lines you copied in Step 2 above to your .cdsapirc key file.
-<br><br />
-(v)Install the CDS API client using pip, by running the following command in your Terminal window:
-<br>
-<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">cdsapi</span></code> <br></p>
-<p>(vi)Once the CDS API client is installed, it can be used to request data from the datasets listed in the CDS and ADS             catalogues. It is necessary to agree to the Terms of Use of every datasets that you intend to download. Attached             to each dataset download form, the “Show API request” button displays the python code to be used.
-<br></p>
-<p><b><u>C. For Linux users:</u></b>
-<br>
-<code class="docutils literal notranslate"><span class="pre">Install</span> <span class="pre">the</span> <span class="pre">API</span> <span class="pre">Key</span></code>
-<br>
-(i)If you don’t have an account, please self register at the <a class="reference external" href="https://cds.climate.copernicus.eu/user/register?destination=%2F%23%21%2Fhome/">CDS registration page</a></p>
+<p><b><u>B. For Mac users:</u></b></p>
+<p>(i)Login to <a class="reference external" href="https://cds.climate.copernicus.eu/user/143426/">CDS</a>
+<a class="bg-primary reference internal" href="../_images/AGRE5_Step2_CDSLogin.png"><img alt="CDSLogin" class="bg-primary" src="../_images/AGRE5_Step2_CDSLogin.png" style="width: 700px;" /></a></p>
+<p>(ii)Copy a 2 line code, which shows a url and your own uid:API key details as followed:</p>
+<p>A.For CDS users, Go to <a class="reference external" href="https://cds.climate.copernicus.eu/api-how-to/">this</a> page and copy the 2 line code                     displayed in the black box in the “Install the CDS API key” section as shown:
+<a class="bg-primary reference internal" href="../_images/AGRE5_Step2_CDSAPIUrl.png"><img alt="CDSurl" class="bg-primary" src="../_images/AGRE5_Step2_CDSAPIUrl.png" style="width: 700px;" /></a></p>
+<p>B.For ADS users, Go to <a class="reference external" href="https://ads.atmosphere.copernicus.eu/api-how-to/">this</a>page and copy the 2 line code                   displayed in the black box in the “Install the CDS API key” section as shown:
+<a class="bg-primary reference internal" href="../_images/AGRE5_Step2_ADSAPIUrl.png"><img alt="ADSurl" class="bg-primary" src="../_images/AGRE5_Step2_ADSAPIUrl.png" style="width: 700px;" /></a></p>
+<p>(iii)Create your key file in your home directory in your Terminal window as follows:
+<b><i>touch ~/.cdsapirc</i></b></p>
+<p>(iv)Edit your key file and paste the two lines you copied in Step 2 above to your .cdsapirc key file.</p>
+<p>(v)Install the CDS API client using pip, by running the following command in your Terminal window:
+<b><i>pip install cdsapi</i></b></p>
+<p>(vi)Once the CDS API client is installed, it can be used to request data from the datasets listed in the CDS and ADS             catalogues. It is necessary to agree to the Terms of Use of every datasets that you intend to download. Attached             to each dataset download form, the “Show API request” button displays the python code to be used.</p>
+<p><b><u>C. For Linux users:</u></b></p>
+<p><b>Install the API Key</b></p>
+<p>(i)If you don’t have an account, please self register at the <a class="reference external" href="https://cds.climate.copernicus.eu/user/register?destination=%2F%23%21%2Fhome/">CDS registration page</a></p>
 <p>(ii)If you are not logged, please <a class="reference external" href="https://cds.climate.copernicus.eu/user/login?destination=%2F%23%21%2Fhome">login</a> and           go to the step below.</p>
-<p>(iii)Copy the code displayed into HOME/.cdsapirc file (in your Unix/Linux environment).<br>
-<code class="docutils literal notranslate"><span class="pre">url:https://cds.climate.copernicus.eu/api/v2</span></code> <br><code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">{uid}:{api-key}</span></code>
-<br><br />
-<b>Install the API Client</b><br></p>
-<p>(i)The CDS API client is a python based library. It provides support for both Python 2.7.x and Python 3.You can                Install the CDS API client via the package management system pip, by running on Unix/Linux the command shown in the          box beside <br>
-<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">cdsapi</span></code><br />
-<br><br />
-<b>Use the CDS API client for data access</b><br></p>
-<p>(i)Once the CDS API client is installed, it can be used to request data from the datasets listed in the CDS catalogue.          It is necessary to agree to the Terms of Use of every datasets that you intend to download.
-<br>
-(ii)Attached to each dataset download form, the following button[show API Request]displays the python code to be used.           The request can be formatted using the interactive form. The api call must follow the syntax:
-<br>
-<code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">cdsapi</span></code><br><code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">=</span> <span class="pre">cdsapi.Client()</span></code><br><code class="docutils literal notranslate"><span class="pre">c.retrieve(&quot;dataset-short-name&quot;,</span> <span class="pre">{...</span> <span class="pre">sub-selection</span> <span class="pre">request</span> <span class="pre">...},&quot;target-file&quot;)</span></code> <br></p>
-<p>(iii)If not already installed, install the <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> python library by typing <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">cdsapi</span></code> in
-the command prompt.</p>
-</div>
-</div>
+<p>(iii)Copy the code displayed into HOME/.cdsapirc file (in your Unix/Linux environment).<a class="bg-primary reference internal" href="../_images/AGRE5_Step2_LinuxAPIKeyUrl.png"><img alt="LinuxAPIKey" class="bg-primary" src="../_images/AGRE5_Step2_LinuxAPIKeyUrl.png" style="width: 700px;" /></a></p>
+<p><b>Install the API Client</b></p>
+<p>(i)The CDS API client is a python based library. It provides support for both Python 2.7.x and Python 3.You can                Install the CDS API client via the package management system pip, by running on Unix/Linux the command shown in the          box beside
+<p style="padding: 10px; border: 2px solid red;">url: https://cds.climate.copernicus.eu/api/v2
+key: {uid}:{api-key}</p>
+<a class="bg-primary reference internal" href="../_images/AGRE5_Step2_LinuxAPIClient.png"><img alt="LinuxAPIClient" class="bg-primary" src="../_images/AGRE5_Step2_LinuxAPIClient.png" style="width: 700px;" /></a></p>
+<p><b>Use the CDS API client for data access</b></p>
+<p>(i)Once the CDS API client is installed, it can be used to request data from the datasets listed in the CDS catalogue.          It is necessary to agree to the Terms of Use of every datasets that you intend to download.</p>
+<p>(ii)Attached to each dataset download form, the following button[show API Request]displays the python code to be used.           The request can be formatted using the interactive form. The api call must follow the syntax:<a class="bg-primary reference internal" href="../_images/AGRE5_Step2_APICallSyntax.png"><img alt="APICall" class="bg-primary" src="../_images/AGRE5_Step2_APICallSyntax.png" style="width: 700px;" /></a></p>
+</li>
+<li><p>If not already installed, install the <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> python library by typing <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">cdsapi</span></code> in
+the command prompt.</p></li>
+</ol>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
