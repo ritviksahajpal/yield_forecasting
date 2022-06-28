@@ -24,7 +24,13 @@ parts:
   - file: content/background/machine_learning/machine_learning.md  # Machine Learning
     sections:
     - file: content/background/machine_learning/scikit-learn
+    - file: content/background/machine_learning/model_tuning
     - file: content/background/machine_learning/validation
+
+  - file: content/background/mlops/overview.md  # Machine Learning Ops
+    sections:
+      - file: content/background/mlops/code_versioning.md
+      - file: content/background/mlops/model_tracking.md
 
 - caption: Crop Condition Assessment
   chapters:
@@ -37,3 +43,9 @@ parts:
     - file: content/condition/soil_moisture.md
     - file: content/condition/evaporative_stress_index.md
     - file: content/condition/examples.md
+
+- caption: Crop Yield Forecasting
+  chapters:
+  - file: content/yield/introduction.md  # introduction
+  - file: content/yield/basic.md  # simple crop model
+  - file: content/yield/geocif.md  # geocif crop model
