@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Precipitation &#8212; Yield Forecasting</title>
+    <title>&lt;no title&gt; &#8212; Yield Forecasting</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -51,8 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Temperature" href="temperature.html" />
-    <link rel="prev" title="Normalized Difference Vegetation Index (NDVI)" href="ndvi.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="basic.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -195,34 +194,34 @@ const thebe_selector_output = ".output, .cell_output"
   Crop Condition Assessment
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="agmet.html">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../condition/agmet.html">
    Agrometeorological Earth Observation Indicators
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="ndvi.html">
+    <a class="reference internal" href="../condition/ndvi.html">
      Normalized Difference Vegetation Index (NDVI)
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../condition/precipitation.html">
      Precipitation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="temperature.html">
+    <a class="reference internal" href="../condition/temperature.html">
      Temperature
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="soil_moisture.html">
+    <a class="reference internal" href="../condition/soil_moisture.html">
      Soil Moisture (Surface):
     </a>
    </li>
@@ -318,7 +317,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/condition/precipitation.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/yield/geocif.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -346,7 +345,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/content/condition/precipitation.md"
+        <a href="../../_sources/content/yield/geocif.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -383,23 +382,50 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Precipitation</h1>
+                <h1><no title></h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -407,27 +433,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="precipitation">
-<h1>Precipitation<a class="headerlink" href="#precipitation" title="Permalink to this headline">#</a></h1>
-<p>There are two plots for precipitation, both of which are measured in millimeters. The first
-plot shows the current season’s cumulative precipitation compared to the 5-year mean. When the
-cumulative precipitation goes above the 5-year mean, the area between the current values and
-the 5-year mean is colored in green to indicate above cumulative average rainfall. When the
-cumulative precipitation goes below the 5-year mean, the area between the current values and
-the 5-year mean is colored in red to indicate below average cumulative rainfall. In addition
-to recorded precipitation, the chart shows the 15-day forecast precipitation as a dot, either
-green or red to indicate if the forecast will place the cumulative precipitation up above or
-below the 5-year mean. The second plot shows the daily precipitation events for the season
-across time, helping to identify the evenness of rainfall over time or major rainfall events.</p>
-<p><img alt="" src="content/condition/images/agmet/precipitation.jpg" /></p>
-<p>During the course of the season, the timing and the amount of rainfall surpluses or deficits can
-have different effects. As an example, too much rainfall during sowing can prevent farms from
-planting crops and flooding events can cause dramatic yield reductions. Alternatively, not enough
-rainfall early in the season can prevent sown crops from emerging and properly developing.</p>
-<p>For more information on using precipitation data for crop monitoring please see the Precipitation
-section of the EO Data.</p>
-</div>
-
+  
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -441,7 +447,7 @@ section of the EO Data.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content\condition"
+            path: "./content\yield"
         },
         predefinedOutput: true
     }
@@ -455,19 +461,12 @@ section of the EO Data.</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="ndvi.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="basic.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Normalized Difference Vegetation Index (NDVI)</p>
+            <p class="prev-next-title">&lt;no title&gt;</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="temperature.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Temperature</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>

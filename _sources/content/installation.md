@@ -1,4 +1,4 @@
-# Installation
+# Install 
 
 
 ### Setting up the Python environment
@@ -73,10 +73,12 @@ install [octvi](https://pypi.org/project/octvi/)
 paste the token you copied earlier.
 
 ### Creating a Copernicus account to download AgERA5
-1. Create an account on the [CDS](https://cds.climate.copernicus.eu) website 
-2. Follow the instructions [here](https://cds.climate.copernicus.eu/api-how-to/)
+1. If not already installed, install the `cdsapi` python library by typing `pip install cdsapi` in 
+the command prompt.
+3. Create an account on the [CDS](https://cds.climate.copernicus.eu) website 
+3. Follow the instructions [here](https://cds.climate.copernicus.eu/api-how-to/)
 to install the CDS API key on your local machine/cluster
-3. Follow these instructions to install the CDS API Key on your local machine/cluster
+4. Follow these instructions to install the CDS API Key on your local machine/cluster
 
      * <b>For Windows users:</b> 
      <br>
@@ -109,5 +111,3 @@ to install the CDS API key on your local machine/cluster
      by running on Unix/Linux the command <br>
            `pip install cdsapi`   
 
-* If not already installed, install the `cdsapi` python library by typing `pip install cdsapi` in 
-the command prompt.
