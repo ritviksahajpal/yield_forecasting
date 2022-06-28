@@ -406,18 +406,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setting-up-python-environment">
-   Setting up Python Environment
+  <a class="reference internal nav-link" href="#setting-up-the-python-environment">
+   Setting up the Python environment
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modis-ndvi">
-   MODIS NDVI
+  <a class="reference internal nav-link" href="#creating-a-nasa-account-to-download-modis-ndvi">
+   Creating a NASA account to download MODIS NDVI
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#agera5">
-   AgERA5
+  <a class="reference internal nav-link" href="#creating-a-copernicus-account-to-download-agera5">
+   Creating a Copernicus account to download AgERA5
   </a>
  </li>
 </ul>
@@ -440,18 +440,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setting-up-python-environment">
-   Setting up Python Environment
+  <a class="reference internal nav-link" href="#setting-up-the-python-environment">
+   Setting up the Python environment
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modis-ndvi">
-   MODIS NDVI
+  <a class="reference internal nav-link" href="#creating-a-nasa-account-to-download-modis-ndvi">
+   Creating a NASA account to download MODIS NDVI
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#agera5">
-   AgERA5
+  <a class="reference internal nav-link" href="#creating-a-copernicus-account-to-download-agera5">
+   Creating a Copernicus account to download AgERA5
   </a>
  </li>
 </ul>
@@ -466,67 +466,69 @@ title="Print to PDF"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h1>
-<div class="section" id="setting-up-python-environment">
-<h2>Setting up Python Environment<a class="headerlink" href="#setting-up-python-environment" title="Permalink to this headline">#</a></h2>
-<ol class="simple">
-<li><p>On the UMD cluster, first load the anaconda module and create a clone environment by typing the
-following commands on the terminal:<br>
-<code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">python/3.8/anaconda</span></code><br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">-n</span> <span class="pre">UMD</span> <span class="pre">--clone=/apps/python/3.7/anaconda</span></code> <br><br>
-On a non-UMD cluster or local machine, download and install the latest anaconda package <br>
-<code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">-c</span> <span class="pre">https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh</span></code> <br>
-<code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">Anaconda3-2022.05-Linux-x86_64.sh</span></code> <br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">--name</span> <span class="pre">UMD</span></code>
-<br></p></li>
-</ol>
+<div class="section" id="setting-up-the-python-environment">
+<h2>Setting up the Python environment<a class="headerlink" href="#setting-up-the-python-environment" title="Permalink to this headline">#</a></h2>
+<p>On the UMD cluster, first load the anaconda module and create a clone environment by typing the
+following commands on the terminal:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="n">python</span><span class="o">/</span><span class="mf">3.8</span><span class="o">/</span><span class="n">anaconda</span>
+<span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">UMD</span> <span class="o">--</span><span class="n">clone</span><span class="o">=/</span><span class="n">apps</span><span class="o">/</span><span class="n">python</span><span class="o">/</span><span class="mf">3.7</span><span class="o">/</span><span class="n">anaconda</span>
+</pre></div>
+</div>
+<p>On a non-UMD cluster or local machine, download and install the latest anaconda package:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">c</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="o">.</span><span class="n">anaconda</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">Anaconda3</span><span class="o">-</span><span class="mf">2022.05</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">bash</span> <span class="n">Anaconda3</span><span class="o">-</span><span class="mf">2022.05</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">UMD</span>
+</pre></div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You can replace UMD with a different environment name of your choice</p>
 </div>
-<br>
-<ol class="simple">
-<li><p>Next copy-paste the following commands into the terminal:<br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">UMD</span></code><br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">logzero</span></code> <br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">netcdf4</span></code> <br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">gdal</span></code><br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">rasterio</span></code><br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">pyresample</span></code><br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">cdsapi</span></code><br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">geopandas</span></code><br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">seaborn</span></code><br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">xarray</span></code><br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">rasterstats</span></code><br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">tqdm</span></code><br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">scikit-learn</span></code><br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">jupyterlab</span></code><br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">catboost</span></code><br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">arrow</span></code><br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">anaconda</span> <span class="pre">netcdf4</span></code><br>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">cartopy</span></code><br>
-<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">wget</span> <span class="pre">pyModis</span> <span class="pre">merf</span> <span class="pre">tsfresh</span> <span class="pre">pyshp</span> <span class="pre">palettable</span> <span class="pre">geopy</span> <span class="pre">geocoder</span> <span class="pre">palettable</span> <span class="pre">forestci</span> <span class="pre">pangres</span> <span class="pre">sklearn-contrib-lightning</span> <span class="pre">wget</span> <span class="pre">pangres</span> <span class="pre">pycountry</span> <span class="pre">matplotlib-scalebar</span></code><br>
-<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">git+https://github.com/ritviksahajpal/pygeoutil.git</span></code> <br></p></li>
-</ol>
+<p>Next copy-paste the following commands into the terminal for both UMD and non-UMD machines:<br></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>conda activate UMD
+conda install -c conda-forge logzero
+conda install -c conda-forge netcdf4
+conda install -c conda-forge gdal
+conda install -c conda-forge rasterio
+conda install -c conda-forge pyresample
+conda install -c conda-forge cdsapi
+conda install -c conda-forge geopandas
+conda install -c conda-forge seaborn
+conda install -c conda-forge xarray
+conda install -c conda-forge rasterstats
+conda install -c conda-forge tqdm
+conda install -c conda-forge scikit-learn
+conda install -c conda-forge jupyterlab
+conda install -c conda-forge catboost
+conda install -c conda-forge arrow
+conda install -c anaconda netcdf4
+conda install -c conda-forge cartopy
+pip install wget pyModis merf tsfresh pyshp palettable geopy geocoder palettable forestci pangres sklearn-contrib-lightning wget pangres pycountry matplotlib-scalebar
+pip install --upgrade git+https://github.com/ritviksahajpal/pygeoutil.git` &lt;br&gt;
+</pre></div>
 </div>
-<div class="section" id="modis-ndvi">
-<h2>MODIS NDVI<a class="headerlink" href="#modis-ndvi" title="Permalink to this headline">#</a></h2>
-<ol>
+</div>
+<div class="section" id="creating-a-nasa-account-to-download-modis-ndvi">
+<h2>Creating a NASA account to download MODIS NDVI<a class="headerlink" href="#creating-a-nasa-account-to-download-modis-ndvi" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
 <li><p>Create an account on the <a class="reference external" href="https://ladsweb.modaps.eosdis.nasa.gov/">NASA LAADS DAAC</a> website</p></li>
 <li><p>Follow the instructions <a class="reference external" href="https://ladsweb.modaps.eosdis.nasa.gov/learn/download-files-using-laads-daac-tokens/">here</a>
-to request a token for your account.
-(i) Login by going to Profile -&gt; Earthdata Login
+to request a token for your account <br></p>
+<ul class="simple">
+<li><p>Login by going to Profile -&gt; Earthdata Login
 <br>
 <a class="bg-primary reference internal" href="../_images/NDVI_Step2_img1.png"><img alt="profile" class="bg-primary" src="../_images/NDVI_Step2_img1.png" style="width: 700px;" /></a>
-<br></p>
-<p>(ii) Enter your login credentials or register<br />
+<br></p></li>
+<li><p>Enter your login credentials or register<br />
 <a class="bg-primary reference internal" href="../_images/NDVI_Step2_img2.png"><img alt="login" class="bg-primary" src="../_images/NDVI_Step2_img2.png" style="width: 500px;" /></a>
-<br></p>
-<p>(iii) Select Profile -&gt; Generate Token from the top menu
+<br></p></li>
+<li><p>Select Profile -&gt; Generate Token from the top menu
 <br>
 <a class="bg-primary reference internal" href="../_images/NDVI_Step2_img3.png"><img alt="generate token" class="bg-primary" src="../_images/NDVI_Step2_img3.png" style="width: 500px;" /></a>
-<br></p>
-<p>(iv)Copy the token from this window and store it somewhere safe and secure <a class="bg-primary reference internal" href="../_images/NDVI_Step2_img4.png"><img alt="token" class="bg-primary" src="../_images/NDVI_Step2_img4.png" style="width: 500px;" /></a>
-<br></p>
+<br></p></li>
+<li><p>Copy the token from this window and store it somewhere safe and secure <a class="bg-primary reference internal" href="../_images/NDVI_Step2_img4.png"><img alt="token" class="bg-primary" src="../_images/NDVI_Step2_img4.png" style="width: 500px;" /></a>
+<br></p></li>
+</ul>
 </li>
 <li><p>On your local machine/cluster, iIf not already installed,
 install <a class="reference external" href="https://pypi.org/project/octvi/">octvi</a>
@@ -535,83 +537,53 @@ install <a class="reference external" href="https://pypi.org/project/octvi/">oct
 paste the token you copied earlier.</p></li>
 </ol>
 </div>
-<div class="section" id="agera5">
-<h2>AgERA5<a class="headerlink" href="#agera5" title="Permalink to this headline">#</a></h2>
-<ol>
+<div class="section" id="creating-a-copernicus-account-to-download-agera5">
+<h2>Creating a Copernicus account to download AgERA5<a class="headerlink" href="#creating-a-copernicus-account-to-download-agera5" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
 <li><p>Create an account on the <a class="reference external" href="https://cds.climate.copernicus.eu">CDS</a> website</p></li>
 <li><p>Follow the instructions <a class="reference external" href="https://cds.climate.copernicus.eu/api-how-to/">here</a>
 to install the CDS API key on your local machine/cluster</p></li>
 <li><p>Follow these instructions to install the CDS API Key on your local machine/cluster</p>
-<p><b><u>A. For Windows users:</u></b>
-<br>
-(i)Login to <a class="reference external" href="https://cds.climate.copernicus.eu/user/143426/">CDS</a><br />
-<a class="bg-primary reference internal" href="../_images/AGRE5_Step2_CDSLogin.png"><img alt="CDSLogin" class="bg-primary" src="../_images/AGRE5_Step2_CDSLogin.png" style="width: 500px;" /></a></p>
+<ul class="simple">
+<li><p><b>For Windows users:</b>
+<br></p>
+<ul>
+<li><p>Login to <a class="reference external" href="https://cds.climate.copernicus.eu/user/143426/">CDS</a><br />
+<a class="bg-primary reference internal" href="../_images/AGRE5_Step2_CDSLogin.png"><img alt="CDSLogin" class="bg-primary" src="../_images/AGRE5_Step2_CDSLogin.png" style="width: 500px;" /></a>
+<br></p></li>
+<li><p>Copy a 2 line code, which shows a url and your own uid:API key details as followed:</p></li>
+<li><p>For CDS users, Go to <a class="reference external" href="https://cds.climate.copernicus.eu/api-how-to/">this</a> page and copy the 2 line code
+displayed in the black box  as shown below: <br>
+<code class="docutils literal notranslate"><span class="pre">url:https://cds.climate.copernicus.eu/api/v2</span></code><br><code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">{uid}:{api-key}</span></code></p></li>
+<li><p>Paste the 2 line code into a  %USERPROFILE%.cdsapirc file, where in your windows environment, %USERPROFILE% is</p></li>
+<li><p>usually located at C:\Users\Username folder). The CDS API expects to find the .cdsapirc file in your home                   directory.
+<br></p></li>
+<li><p>Install the CDS API client by running the following command in a command prompt window:
+<code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">cdsapi</span></code></p></li>
+<li><p>Once the CDS API client is installed, it can be used to request data from the datasets listed in the CDS and ADS
+catalogues. It is necessary to agree to the Terms of Use of every datasets that you intend to download. Attached
+to each dataset download form, the “Show API request” button displays the python code to be used.</p></li>
+</ul>
+</li>
+<li><p><b>For Linux users:</b></p>
+<ul>
+<li><p>If you don’t have an account, please self register at the <a class="reference external" href="https://cds.climate.copernicus.eu/user/register?destination=%2F%23%21%2Fhome/">CDS registration page</a></p></li>
+<li><p>If you are not logged, please <a class="reference external" href="https://cds.climate.copernicus.eu/user/login?destination=%2F%23%21%2Fhome">login</a> and           go to the step below.</p></li>
+<li><p>Copy the code displayed into HOME/.cdsapirc file (in your Unix/Linux environment).<br>
+<code class="docutils literal notranslate"><span class="pre">url:https://cds.climate.copernicus.eu/api/v2</span></code> <br><code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">{uid}:{api-key}</span></code>
+<br></p></li>
+<li><p>The CDS API client is a python based library. You can install the CDS API client via the package management system pip,
+by running on Unix/Linux the command <br>
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">cdsapi</span></code></p></li>
+</ul>
+</li>
+</ul>
 </li>
 </ol>
-<br>        
-  (ii)Copy a 2 line code, which shows a url and your own uid:API key details as followed:
-<p>a. For CDS users, Go to <a class="reference external" href="https://cds.climate.copernicus.eu/api-how-to/">this</a> page and copy the 2 line code                     displayed in the black box  as shown below:
-<br>
-<code class="docutils literal notranslate"><span class="pre">url:https://cds.climate.copernicus.eu/api/v2</span></code><br><code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">{uid}:{api-key}</span></code>
-<br></p>
-<p>b. For ADS users, Go to <a class="reference external" href="https://ads.atmosphere.copernicus.eu/api-how-to/">this</a>page and copy the 2 line code                   displayed in the black box in the “Install the CDS API key” section as shown below:
-<code class="docutils literal notranslate"><span class="pre">url:https://ads.atmosphere.copernicus.eu/api/v2</span></code> <br> <code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">{uid}:{api-key}</span></code>
-<br><br />
-(iii)Paste the 2 line code into a  %USERPROFILE%.cdsapirc file, where in your windows environment, %USERPROFILE% is             usually located at C:\Users\Username folder). The CDS API expects to find the .cdsapirc file in your home                   directory.
-<br><br />
-(iv)Install the CDS API client by running the following command in a Command Prompt window:
-a. For python 2.7
-<br>
-<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">cdsapi</span></code>
-<br>
-b.For Python 3
-<br>
-<code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">cdsapi</span></code>
-<br></p>
-<p>(v)Once the CDS API client is installed, it can be used to request data from the datasets listed in the CDS and ADS             catalogues. It is necessary to agree to the Terms of Use of every datasets that you intend to download. Attached             to each dataset download form, the “Show API request” button displays the python code to be used.</p>
-<br>      
-   <b><u>B. For Mac users:</u></b> 
-<p>(i)Login to <a class="reference external" href="https://cds.climate.copernicus.eu/user/143426/">CDS</a></p>
-<a class="bg-primary reference internal image-reference" href="../_images/AGRE5_Step2_CDSLogin.png"><img alt="CDSLogin" class="bg-primary" src="../_images/AGRE5_Step2_CDSLogin.png" style="width: 700px;" /></a>
-<br>        
-   (ii)Copy a 2 line code, which shows a url and your own uid:API key details as followed:
-<p>a. For CDS users, Go to <a class="reference external" href="https://cds.climate.copernicus.eu/api-how-to/">this</a> page and copy the 2 line code                     displayed in the black box as shown:<br><code class="docutils literal notranslate"><span class="pre">url:https://cds.climate.copernicus.eu/api/v2</span></code><br><code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">{uid}:{api-key}</span></code>
-<br>
-b. For ADS users, Go to <a class="reference external" href="https://ads.atmosphere.copernicus.eu/api-how-to/">this</a>page and copy the 2 line code                   displayed in the black box as shown:
-<br>
-<code class="docutils literal notranslate"><span class="pre">url:https://ads.atmosphere.copernicus.eu/api/v2</span></code> <br> <code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">{uid}:{api-key}</span></code>
-<br><br />
-(iii)Create your key file in your home directory in your Terminal window as follows:<br>
-<code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">~/.cdsapirc</span></code>
-<br><br />
-(iv)Edit your key file and paste the two lines you copied in Step 2 above to your .cdsapirc key file.
-<br><br />
-(v)Install the CDS API client using pip, by running the following command in your Terminal window:
-<br>
-<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">cdsapi</span></code> <br></p>
-<p>(vi)Once the CDS API client is installed, it can be used to request data from the datasets listed in the CDS and ADS             catalogues. It is necessary to agree to the Terms of Use of every datasets that you intend to download. Attached             to each dataset download form, the “Show API request” button displays the python code to be used.
-<br></p>
-<p><b><u>C. For Linux users:</u></b>
-<br>
-<code class="docutils literal notranslate"><span class="pre">Install</span> <span class="pre">the</span> <span class="pre">API</span> <span class="pre">Key</span></code>
-<br>
-(i)If you don’t have an account, please self register at the <a class="reference external" href="https://cds.climate.copernicus.eu/user/register?destination=%2F%23%21%2Fhome/">CDS registration page</a></p>
-<p>(ii)If you are not logged, please <a class="reference external" href="https://cds.climate.copernicus.eu/user/login?destination=%2F%23%21%2Fhome">login</a> and           go to the step below.</p>
-<p>(iii)Copy the code displayed into HOME/.cdsapirc file (in your Unix/Linux environment).<br>
-<code class="docutils literal notranslate"><span class="pre">url:https://cds.climate.copernicus.eu/api/v2</span></code> <br><code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">{uid}:{api-key}</span></code>
-<br><br />
-<b>Install the API Client</b><br></p>
-<p>(i)The CDS API client is a python based library. It provides support for both Python 2.7.x and Python 3.You can                Install the CDS API client via the package management system pip, by running on Unix/Linux the command shown in the          box beside <br>
-<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">cdsapi</span></code><br />
-<br><br />
-<b>Use the CDS API client for data access</b><br></p>
-<p>(i)Once the CDS API client is installed, it can be used to request data from the datasets listed in the CDS catalogue.          It is necessary to agree to the Terms of Use of every datasets that you intend to download.
-<br>
-(ii)Attached to each dataset download form, the following button[show API Request]displays the python code to be used.           The request can be formatted using the interactive form. The api call must follow the syntax:
-<br>
-<code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">cdsapi</span></code><br><code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">=</span> <span class="pre">cdsapi.Client()</span></code><br><code class="docutils literal notranslate"><span class="pre">c.retrieve(&quot;dataset-short-name&quot;,</span> <span class="pre">{...</span> <span class="pre">sub-selection</span> <span class="pre">request</span> <span class="pre">...},&quot;target-file&quot;)</span></code> <br></p>
-<p>(iii)If not already installed, install the <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> python library by typing <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">cdsapi</span></code> in
-the command prompt.</p>
+<ul class="simple">
+<li><p>If not already installed, install the <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> python library by typing <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">cdsapi</span></code> in
+the command prompt.</p></li>
+</ul>
 </div>
 </div>
 
