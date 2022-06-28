@@ -12,10 +12,10 @@ data = np.random.randn(3,100)
 data[0, :10]
 ```
 
-<html>
-    <p>output:</p>
-       <img src ="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/Sample_code1_output.png", alt = "output1" , width = "700px">
+<html>output
+<img src ="../images/Sample_code1_output.png", alt = "output1",class="bg-primary", width = "700px">
 </html>
+
 
 
 # A plot
@@ -25,6 +25,6 @@ plt.scatter(data[0],data[1],c=data[2], s=100*np.abs(c))
 ```
 <html>
     <p>output:</p>
-       <img src ="https://github.com/ritviksahajpal/yield_forecasting/blob/master/images/Sample_code2_output.png", alt = "output2" , width = "500px">
+       <img src ="../images/Sample_code2_output.png", alt = "output2" , width = "500px">
 </html>
 
