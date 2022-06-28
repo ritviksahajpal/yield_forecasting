@@ -27,7 +27,7 @@ parts:
     - file: content/background/machine_learning/model_tuning
     - file: content/background/machine_learning/validation
 
-  - file: content/background/mlops/overview.md  # Machine Learning Ops
+  - file: content/background/mlops/mlops.md  # Machine Learning Ops
     sections:
       - file: content/background/mlops/code_versioning.md
       - file: content/background/mlops/model_tracking.md
