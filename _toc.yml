@@ -28,7 +28,7 @@ parts:
 
 - caption: Crop Condition Assessment
   chapters:
-  - file: content/condition/agmet.md  # Data Preprocessing
+  - file: content/condition/agmet.md  # Data Preprocessing.
     sections:
     - file: content/condition/eo_data_plot_components.md
     - file: content/condition/ndvi.md
