@@ -42,7 +42,7 @@ conda install -c conda-forge arrow
 conda install -c anaconda netcdf4
 conda install -c conda-forge cartopy
 pip install wget pyModis merf tsfresh pyshp palettable geopy geocoder palettable forestci pangres sklearn-contrib-lightning wget pangres pycountry matplotlib-scalebar
-pip install --upgrade git+https://github.com/ritviksahajpal/pygeoutil.git` <br>
+pip install --upgrade git+https://github.com/ritviksahajpal/pygeoutil.git`
 ```
 
 ### Creating a NASA account to download MODIS NDVI
