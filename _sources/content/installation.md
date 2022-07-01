@@ -1,4 +1,4 @@
-# Install 
+# Installation Instructions 
 
 
 ### Setting up the Python environment
@@ -111,3 +111,7 @@ to install the CDS API key on your local machine/cluster
      by running on Unix/Linux the command <br>
            `pip install cdsapi`   
 
+### Install geoprepare library
+```python
+pip install --upgrade --no-deps --force-reinstall git+https://github.com/ritviksahajpal/geoprepare.git
+```
