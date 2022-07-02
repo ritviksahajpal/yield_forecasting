@@ -5,7 +5,7 @@
 On the UMD cluster, first load the anaconda module and create a clone environment by typing the 
 following commands on the terminal:
 ```python
-module load python/3.8/anaconda
+module load python/3.7/anaconda
 conda create -n UMD --clone=/apps/python/3.7/anaconda
 ```
 On a non-UMD cluster or local machine, download and install the latest anaconda package:
@@ -41,8 +41,22 @@ conda install -c conda-forge catboost
 conda install -c conda-forge arrow
 conda install -c anaconda netcdf4
 conda install -c conda-forge cartopy
-pip install wget pyModis merf tsfresh pyshp palettable geopy geocoder palettable forestci pangres sklearn-contrib-lightning wget pangres pycountry matplotlib-scalebar
-pip install --upgrade git+https://github.com/ritviksahajpal/pygeoutil.git`
+pip install wget 
+pip install pyModis 
+pip install merf 
+pip install tsfresh 
+pip install pyshp 
+pip install palettable 
+pip install geopy 
+pip install geocoder 
+pip install palettable 
+pip install forestci 
+pip install pangres 
+pip install sklearn-contrib-lightning 
+pip install pangres 
+pip install pycountry 
+pip install matplotlib-scalebar
+pip install --upgrade git+https://github.com/ritviksahajpal/pygeoutil.git
 ```
 
 ### Creating a NASA account to download MODIS NDVI
