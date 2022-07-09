@@ -41,10 +41,11 @@ conda install -c conda-forge catboost
 conda install -c conda-forge arrow
 conda install -c anaconda netcdf4
 conda install -c conda-forge cartopy
+conda install -c conda-forge tsfresh
+conda install -c conda-forge matplotlib-scalebar
 pip install wget 
 pip install pyModis 
 pip install merf 
-pip install tsfresh 
 pip install pyshp 
 pip install palettable 
 pip install geopy 
@@ -55,7 +56,6 @@ pip install pangres
 pip install sklearn-contrib-lightning 
 pip install pangres 
 pip install pycountry 
-pip install matplotlib-scalebar
 pip install --upgrade git+https://github.com/ritviksahajpal/pygeoutil.git
 ```
 
@@ -109,7 +109,7 @@ to install the CDS API key on your local machine/cluster
        * usually located at C:\Users\Username folder). The CDS API expects to find the .cdsapirc file in your home                   directory. 
 <br>         
        * Install the CDS API client by running the following command in a command prompt window:
-       `pip3 install cdsapi`
+       `pip install cdsapi`
                 
        * Once the CDS API client is installed, it can be used to request data from the datasets listed in the CDS and ADS 
        catalogues. It is necessary to agree to the Terms of Use of every datasets that you intend to download. Attached 
