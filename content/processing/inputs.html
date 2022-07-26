@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Processing Inputs &#8212; Yield Forecasting</title>
+    <title>Download, Process, Extract &#8212; Yield Forecasting</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -132,7 +132,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Processing Inputs
+   Download, Process, Extract
   </a>
  </li>
 </ul>
@@ -462,8 +462,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#config-files">
-   Config files
+  <a class="reference internal nav-link" href="#background-information">
+   Background Information
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-code">
+   Python code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configuration-files">
+   Configuration files
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -487,7 +497,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Processing Inputs</h1>
+                <h1>Download, Process, Extract</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -498,8 +508,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#config-files">
-   Config files
+  <a class="reference internal nav-link" href="#background-information">
+   Background Information
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-code">
+   Python code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configuration-files">
+   Configuration files
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -524,8 +544,19 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="processing-inputs">
-<h1>Processing Inputs<a class="headerlink" href="#processing-inputs" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="download-process-extract">
+<h1>Download, Process, Extract<a class="headerlink" href="#download-process-extract" title="Permalink to this headline">#</a></h1>
+<p>In this section, we will explore the steps required to download and process the input data  and then extract crop masks and EO variables
+needed for running a crop yield model or generating AgMet
+graphics.</p>
+<div class="section" id="background-information">
+<h2>Background Information<a class="headerlink" href="#background-information" title="Permalink to this headline">#</a></h2>
+<p>We will be using Python configuration files to separate our code and user configurable settings.
+Here is a <a class="reference external" href="https://docs.python.org/3/library/configparser.html">tutorial</a> on how Python handles configuration files.</p>
+</div>
+<div class="section" id="python-code">
+<h2>Python code<a class="headerlink" href="#python-code" title="Permalink to this headline">#</a></h2>
+<p>We will be using the <code class="docutils literal notranslate"><span class="pre">geoprepare</span></code> package.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">geoprepare</span> <span class="kn">import</span> <span class="n">geoprepare</span><span class="p">,</span> <span class="n">geoextract</span>
 
 <span class="c1"># Provide full path to the configuration files</span>
@@ -536,21 +567,130 @@ title="Print to PDF"
 <span class="n">geoextract</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;PATH_TO_geoprepare.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;PATH_TO_geoextract.txt&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
-<div class="section" id="config-files">
-<h2>Config files<a class="headerlink" href="#config-files" title="Permalink to this headline">#</a></h2>
+<p>Before running the code above, we need to specify the two configuration files. <code class="docutils literal notranslate"><span class="pre">geoprepare.txt</span></code> contains configuration settings for downloading and processing the input data.
+<code class="docutils literal notranslate"><span class="pre">geoextract.txt</span></code> contains configuration settings for extracting crop masks and EO variables.</p>
+</div>
+<div class="section" id="configuration-files">
+<h2>Configuration files<a class="headerlink" href="#configuration-files" title="Permalink to this headline">#</a></h2>
 <div class="section" id="geoprepare-txt">
 <h3>geoprepare.txt<a class="headerlink" href="#geoprepare-txt" title="Permalink to this headline">#</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">dir_base</span></code>: Path where to store the downloaded and processed files<br />
-<code class="docutils literal notranslate"><span class="pre">datasets</span></code>: Specify which datasets need to be downloaded and processed<br />
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>[DATASETS]
+datasets = [&#39;CPC&#39;, &#39;SOIL-MOISTURE&#39;, &#39;LST&#39;, &#39;CPC&#39;, &#39;AVHRR&#39;, &#39;AGERA5&#39;, &#39;CHIRPS&#39;, &#39;CHIRPS-GEFS&#39;]
+
+[PATHS]
+dir_base = D:\
+dir_input = ${dir_base}/input
+dir_log = ${dir_input}/log
+dir_interim = ${dir_input}/interim
+dir_download = ${dir_input}/download
+dir_output = ${dir_base}/output
+dir_global_datasets = ${dir_input}/global_datasets
+
+[AGERA5]
+start_year = 2022
+
+[AVHRR]
+data_dir = https://www.ncei.noaa.gov/data/avhrr-land-normalized-difference-vegetation-index/access
+
+[CHIRPS]
+fill_value = -2147483648
+prelim = /pub/org/chc/products/CHIRPS-2.0/prelim/global_daily/tifs/p05/
+final = /pub/org/chc/products/CHIRPS-2.0/global_daily/tifs/p05/
+start_year = 2022
+
+[CHIRPS-GEFS]
+fill_value = -2147483648
+data_dir = /pub/org/chc/products/EWX/data/forecasts/CHIRPS-GEFS_precip_v12/15day/precip_mean/
+
+[CPC]
+data_dir = ftp://ftp.cdc.noaa.gov/Datasets
+
+[ESI]
+data_dir = https://gis1.servirglobal.net//data//esi//
+
+[FLDAS]
+
+[LST]
+num_update_days = 7
+
+[NDVI]
+product = MOD09CMG
+vi = ndvi
+scale_glam = False
+scale_mark = True
+print_missing = False
+
+[SOIL-MOISTURE]
+data_dir = https://gimms.gsfc.nasa.gov/SMOS/SMAP/L03/
+
+[LOGGING]
+level = ERROR
+
+[DEFAULT]
+logfile = log
+parallel_process = False
+fraction_cpus = 0.5
+start_year = 2022
+end_year = 2022
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">datasets</span></code>: Specify which datasets need to be downloaded and processed<br />
+<code class="docutils literal notranslate"><span class="pre">dir_base</span></code>: Path where to store the downloaded and processed files<br />
 <code class="docutils literal notranslate"><span class="pre">start_year</span></code>, <code class="docutils literal notranslate"><span class="pre">end_year</span></code>: Specify time-period for which data should be downloaded and processed<br />
 <code class="docutils literal notranslate"><span class="pre">logfile</span></code>: What directory name to use for the log files<br />
+<code class="docutils literal notranslate"><span class="pre">level</span></code>: Which level to use for logging (https://www.loggly.com/ultimate-guide/python-logging-basics/)<br />
 <code class="docutils literal notranslate"><span class="pre">parallel_process</span></code>: Whether to use multiple CPUs<br />
 <code class="docutils literal notranslate"><span class="pre">fraction_cpus</span></code>: What fraction of available CPUs to use</p>
 </div>
 <div class="section" id="geoextract-txt">
 <h3>geoextract.txt<a class="headerlink" href="#geoextract-txt" title="Permalink to this headline">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">kenya</span><span class="p">]</span>
+<span class="n">category</span> <span class="o">=</span> <span class="n">EWCM</span>
+<span class="n">calendar_file</span> <span class="o">=</span> <span class="n">EWCM_2021</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mf">17.</span><span class="n">xlsx</span>
+<span class="n">shp_boundary</span> <span class="o">=</span> <span class="n">EWCM_Level_1</span><span class="o">.</span><span class="n">shp</span>
+<span class="n">crops</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mz&#39;</span><span class="p">,</span> <span class="s1">&#39;sr&#39;</span><span class="p">,</span> <span class="s1">&#39;ml&#39;</span><span class="p">,</span> <span class="s1">&#39;rc&#39;</span><span class="p">,</span> <span class="s1">&#39;ww&#39;</span><span class="p">,</span> <span class="s1">&#39;tf&#39;</span><span class="p">]</span>
+<span class="n">use_cropland_mask</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="p">[</span><span class="n">ww</span><span class="p">]</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">cropland_v9</span><span class="o">.</span><span class="n">tif</span>
+
+<span class="p">[</span><span class="n">mz</span><span class="p">]</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">cropland_v9</span><span class="o">.</span><span class="n">tif</span>
+
+<span class="p">[</span><span class="n">sb</span><span class="p">]</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">cropland_v9</span><span class="o">.</span><span class="n">tif</span>
+
+<span class="p">[</span><span class="n">rc</span><span class="p">]</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">cropland_v9</span><span class="o">.</span><span class="n">tif</span>
+
+<span class="p">[</span><span class="n">tf</span><span class="p">]</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">cropland_v9</span><span class="o">.</span><span class="n">tif</span>
+
+<span class="p">[</span><span class="n">sr</span><span class="p">]</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">cropland_v9</span><span class="o">.</span><span class="n">tif</span>
+
+<span class="p">[</span><span class="n">ml</span><span class="p">]</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">cropland_v9</span><span class="o">.</span><span class="n">tif</span>
+
+<span class="p">[</span><span class="n">DEFAULT</span><span class="p">]</span>
+<span class="n">redo</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">threshold</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">floor</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">ceil</span> <span class="o">=</span> <span class="mi">90</span>
+<span class="n">countries</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;kenya&#39;</span><span class="p">]</span>
+<span class="n">forecast_seasons</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2022</span><span class="p">]</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">cropland_v9</span><span class="o">.</span><span class="n">tif</span>
+<span class="n">eo_model</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ndvi&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_tmax&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_tmin&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_precip&#39;</span><span class="p">,</span> <span class="s1">&#39;esi_4wk&#39;</span><span class="p">,</span> <span class="s1">&#39;soil_moisture_as1&#39;</span><span class="p">,</span> <span class="s1">&#39;soil_moisture_as2&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
 <p><code class="docutils literal notranslate"><span class="pre">countries</span></code>: List of countries to process<br />
-<code class="docutils literal notranslate"><span class="pre">forecast_seasons</span></code>: List of seasons to process</p>
+<code class="docutils literal notranslate"><span class="pre">forecast_seasons</span></code>: List of seasons to process<br />
+<code class="docutils literal notranslate"><span class="pre">mask</span></code>: Name of file to use as a mask for cropland/croptype<br />
+<code class="docutils literal notranslate"><span class="pre">redo</span></code>: Whether to redo the processing for all days rather than process only days for which we have new data<br />
+<code class="docutils literal notranslate"><span class="pre">threshold</span></code>: Whether to use a <code class="docutils literal notranslate"><span class="pre">threshold</span></code> value (<code class="docutils literal notranslate"><span class="pre">floor</span></code>) or a <code class="docutils literal notranslate"><span class="pre">percentile</span></code> (<code class="docutils literal notranslate"><span class="pre">ceil</span></code>) on the cropland/croptype mask<br />
+<code class="docutils literal notranslate"><span class="pre">floor</span></code>: Value below which to set the mask to 0<br />
+<code class="docutils literal notranslate"><span class="pre">ceil</span></code>: Value above which to set the mask to 1<br />
+<code class="docutils literal notranslate"><span class="pre">eo_model</span></code>: List of datasets to extract from</p>
 </div>
 </div>
 </div>
