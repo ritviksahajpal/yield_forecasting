@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agrometeorological Earth Observation Indicators &#8212; Yield Forecasting</title>
+    <title>Processing Inputs &#8212; Yield Forecasting</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -51,8 +51,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="eo_data_plot_components.html" />
-    <link rel="prev" title="Model tracking" href="../background/mlops/model_tracking.html" />
+    <link rel="next" title="Scientific Python" href="../background/scientific_python/scientific_python.html" />
+    <link rel="prev" title="Installation Instructions" href="../installation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -129,9 +129,9 @@ const thebe_selector_output = ".output, .cell_output"
   Processing Inputs
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../processing/inputs.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Processing Inputs
   </a>
  </li>
@@ -229,34 +229,34 @@ const thebe_selector_output = ".output, .cell_output"
   Crop Condition Assessment
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../condition/agmet.html">
    Agrometeorological Earth Observation Indicators
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="ndvi.html">
+    <a class="reference internal" href="../condition/ndvi.html">
      Normalized Difference Vegetation Index (NDVI)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="precipitation.html">
+    <a class="reference internal" href="../condition/precipitation.html">
      Precipitation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="temperature.html">
+    <a class="reference internal" href="../condition/temperature.html">
      Temperature
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="soil_moisture.html">
+    <a class="reference internal" href="../condition/soil_moisture.html">
      Soil Moisture (Surface):
     </a>
    </li>
@@ -374,7 +374,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/condition/agmet.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/processing/inputs.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -402,7 +402,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/content/condition/agmet.md"
+        <a href="../../_sources/content/processing/inputs.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -462,23 +462,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#agmet-eo-indicators-explained">
-   AgMet EO Indicators Explained
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#eo-data-plot-components">
-   EO data plot components
+  <a class="reference internal nav-link" href="#config-files">
+   Config files
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#basic-components">
-     Basic components:
+    <a class="reference internal nav-link" href="#geoprepare-txt">
+     geoprepare.txt
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#crop-calendars">
-     Crop Calendars:
+    <a class="reference internal nav-link" href="#geoextract-txt">
+     geoextract.txt
     </a>
    </li>
   </ul>
@@ -492,7 +487,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Agrometeorological Earth Observation Indicators</h1>
+                <h1>Processing Inputs</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -503,23 +498,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#agmet-eo-indicators-explained">
-   AgMet EO Indicators Explained
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#eo-data-plot-components">
-   EO data plot components
+  <a class="reference internal nav-link" href="#config-files">
+   Config files
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#basic-components">
-     Basic components:
+    <a class="reference internal nav-link" href="#geoprepare-txt">
+     geoprepare.txt
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#crop-calendars">
-     Crop Calendars:
+    <a class="reference internal nav-link" href="#geoextract-txt">
+     geoextract.txt
     </a>
    </li>
   </ul>
@@ -534,54 +524,38 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="agrometeorological-earth-observation-indicators">
-<h1>Agrometeorological Earth Observation Indicators<a class="headerlink" href="#agrometeorological-earth-observation-indicators" title="Permalink to this headline">#</a></h1>
-<p>The Agrometeorological (AGMET) Earth Observations (EO) Indicators bring together a variety
-of Earth Observation (EO) data products on the sub-national scale, each of which provides
-valuable insights on in-season crop development and current crop conditions. Combined, the
-different EO data plots help tell the story of in-season crop conditions thought the use of
-different climate, environmental, and vegetative variables</p>
-<div class="section" id="agmet-eo-indicators-explained">
-<h2>AgMet EO Indicators Explained<a class="headerlink" href="#agmet-eo-indicators-explained" title="Permalink to this headline">#</a></h2>
-<p>The GEOGLAM-NASA Harvest Agrometeorological (AGMET) Earth Observation (EO) Indicators bring
-together a variety of Earth Observation (EO) data products on the sub-national scale, each of
-which provides valuable insights on in-season crop development and current crop conditions.
-Combined, each EO data plot helps tell the story of in-season crop conditions through the
-use of different climate, environmental, and vegetative variables. Detailed descriptions of
-the different components within the crop condition plots can be found below and in the
-corresponding NASA Harvest article.</p>
-<p>Further in-depth discussion on different EO data products for crop monitoring see
-<a class="reference external" href="https://cropmonitor.org/index.php/eodatatools/eodata/">EO Data</a>.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="processing-inputs">
+<h1>Processing Inputs<a class="headerlink" href="#processing-inputs" title="Permalink to this headline">#</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">geoprepare</span> <span class="kn">import</span> <span class="n">geoprepare</span><span class="p">,</span> <span class="n">geoextract</span>
+
+<span class="c1"># Provide full path to the configuration files</span>
+<span class="c1"># Download and preprocess data</span>
+<span class="n">geoprepare</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;PATH_TO_geoprepare.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;PATH_TO_geoextract.txt&#39;</span><span class="p">])</span>
+
+<span class="c1"># Extract crop masks and EO variables</span>
+<span class="n">geoextract</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;PATH_TO_geoprepare.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;PATH_TO_geoextract.txt&#39;</span><span class="p">])</span>
+</pre></div>
 </div>
-<div class="section" id="eo-data-plot-components">
-<h2>EO data plot components<a class="headerlink" href="#eo-data-plot-components" title="Permalink to this headline">#</a></h2>
-<div class="section" id="basic-components">
-<h3>Basic components:<a class="headerlink" href="#basic-components" title="Permalink to this headline">#</a></h3>
-<p>Within each plot, there are several main components. The light gray area shows the span of
-most recent 10-year minimum and maximum values across the season in order to provide a better
-understanding of the particular EO data product’s variability over time. The black lines
-show the most recent 5-year mean values across the season in order to demonstrate what
-average conditions usually represent. The purple lines show what the values were across
-the previous season. The blue lines show what the values are for the current season in
-near real-time as the season progresses.</p>
-<p><img alt="" src="content/condition/images/agmet/basic_component_ndvi.jpg" /></p>
+<div class="section" id="config-files">
+<h2>Config files<a class="headerlink" href="#config-files" title="Permalink to this headline">#</a></h2>
+<div class="section" id="geoprepare-txt">
+<h3>geoprepare.txt<a class="headerlink" href="#geoprepare-txt" title="Permalink to this headline">#</a></h3>
+<ol class="simple">
+<li><p>Path where to store the downloaded and processed files: <code class="docutils literal notranslate"><span class="pre">dir_base</span></code></p></li>
+<li><p>Specify which datasets need to be downloaded and processed: <code class="docutils literal notranslate"><span class="pre">datasets</span></code></p></li>
+<li><p>Specify time-period for which data should be downloaded and processed: <code class="docutils literal notranslate"><span class="pre">start_year</span></code>, <code class="docutils literal notranslate"><span class="pre">end_year</span></code></p></li>
+<li><p>What fraction of available CPUs to use: <code class="docutils literal notranslate"><span class="pre">fraction_cpus</span></code></p></li>
+<li><p>What directory name to use for the log files: <code class="docutils literal notranslate"><span class="pre">logfile</span></code></p></li>
+<li><p>Whether to use multiple CPUs: <code class="docutils literal notranslate"><span class="pre">parallel_process</span></code></p></li>
+</ol>
 </div>
-<div class="section" id="crop-calendars">
-<h3>Crop Calendars:<a class="headerlink" href="#crop-calendars" title="Permalink to this headline">#</a></h3>
-<p>Each plot consists of four vertical lines to provide a reference for where crops are in
-the development stage, based on the GEOGLAM Crop Monitor crop calendars. The brown dotted
-line represents the planting stage, the green solid line represents greenup
-(the beginning of plant growth), the brown solid line represents senescence
-(late development stage), and the red dotted line represents the end of harvest.
-By examining the main components of each plot within the context of where crops are in
-their development cycle, analysts can better interpret how current conditions may impact
-the remainder of the season and final crop outcomes.</p>
-<p>For more information, please see
-<a class="reference external" href="https://cropmonitor.org/index.php/eodatatools/baseline-data/">crop calendars</a>.</p>
-<p><img alt="" src="content/condition/images/agmet/basic_component_crop_calendar.jpg" /></p>
+<div class="section" id="geoextract-txt">
+<h3>geoextract.txt<a class="headerlink" href="#geoextract-txt" title="Permalink to this headline">#</a></h3>
+<ol class="simple">
+<li><p>List of countries to process: <code class="docutils literal notranslate"><span class="pre">countries</span></code></p></li>
+<li><p>List of seasons to process: <code class="docutils literal notranslate"><span class="pre">forecast_seasons</span></code></p></li>
+</ol>
 </div>
-</div>
-<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -598,7 +572,7 @@ the remainder of the season and final crop outcomes.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content\condition"
+            path: "./content\processing"
         },
         predefinedOutput: true
     }
@@ -612,17 +586,17 @@ the remainder of the season and final crop outcomes.</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../background/mlops/model_tracking.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../installation.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Model tracking</p>
+            <p class="prev-next-title">Installation Instructions</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="eo_data_plot_components.html" title="next page">
+    <a class='right-next' id="next-link" href="../background/scientific_python/scientific_python.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Scientific Python</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
