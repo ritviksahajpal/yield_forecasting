@@ -9,7 +9,7 @@ We will be using Python configuration files to separate our code and user config
 Here is a [tutorial](https://docs.python.org/3/library/configparser.html) on how Python handles configuration files.
 
 ## Python code 
-We will be using the `geoprepare` package.
+We will be using the [geoprepare](https://github.com/ritviksahajpal/geoprepare) package that you installed in the previous [section](../installation.md#Install geoprepare library).
 
 ```python
 from geoprepare import geoprepare, geoextract
@@ -27,6 +27,13 @@ Before running the code above, we need to specify the two configuration files. `
 
 ## Configuration files
 ### geoprepare.txt
+`datasets`: Specify which datasets need to be downloaded and processed   
+`dir_base`: Path where to store the downloaded and processed files  
+`start_year`, `end_year`: Specify time-period for which data should be downloaded and processed  
+`logfile`: What directory name to use for the log files  
+`level`: Which level to use for logging (https://www.loggly.com/ultimate-guide/python-logging-basics/)    
+`parallel_process`: Whether to use multiple CPUs  
+`fraction_cpus`: What fraction of available CPUs to use  
 ```python
 [DATASETS]
 datasets = ['CPC', 'SOIL-MOISTURE', 'LST', 'CPC', 'AVHRR', 'AGERA5', 'CHIRPS', 'CHIRPS-GEFS']
@@ -87,15 +94,16 @@ fraction_cpus = 0.5
 start_year = 2022
 end_year = 2022
 ```
-`datasets`: Specify which datasets need to be downloaded and processed   
-`dir_base`: Path where to store the downloaded and processed files  
-`start_year`, `end_year`: Specify time-period for which data should be downloaded and processed  
-`logfile`: What directory name to use for the log files  
-`level`: Which level to use for logging (https://www.loggly.com/ultimate-guide/python-logging-basics/)    
-`parallel_process`: Whether to use multiple CPUs  
-`fraction_cpus`: What fraction of available CPUs to use  
 
 ### geoextract.txt
+`countries`: List of countries to process  
+`forecast_seasons`: List of seasons to process  
+`mask`: Name of file to use as a mask for cropland/croptype  
+`redo`: Whether to redo the processing for all days rather than process only days for which we have new data  
+`threshold`: Whether to use a `threshold` value (`floor`) or a `percentile` (`ceil`) on the cropland/croptype mask  
+`floor`: Value below which to set the mask to 0  
+`ceil`: Value above which to set the mask to 1  
+`eo_model`: List of datasets to extract from  
 ```python
 [kenya]
 category = EWCM
@@ -135,13 +143,6 @@ forecast_seasons = [2022]
 mask = cropland_v9.tif
 eo_model = ['ndvi', 'cpc_tmax', 'cpc_tmin', 'cpc_precip', 'esi_4wk', 'soil_moisture_as1', 'soil_moisture_as2']
 ```
-`countries`: List of countries to process  
-`forecast_seasons`: List of seasons to process  
-`mask`: Name of file to use as a mask for cropland/croptype  
-`redo`: Whether to redo the processing for all days rather than process only days for which we have new data  
-`threshold`: Whether to use a `threshold` value (`floor`) or a `percentile` (`ceil`) on the cropland/croptype mask  
-`floor`: Value below which to set the mask to 0  
-`ceil`: Value above which to set the mask to 1  
-`eo_model`: List of datasets to extract from  
+
 
 
