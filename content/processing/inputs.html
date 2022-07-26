@@ -530,7 +530,7 @@ title="Print to PDF"
 
 <span class="c1"># Provide full path to the configuration files</span>
 <span class="c1"># Download and preprocess data</span>
-<span class="n">geoprepare</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;PATH_TO_geoprepare.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;PATH_TO_geoextract.txt&#39;</span><span class="p">])</span>
+<span class="n">geoprepare</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;PATH_TO_geoprepare.txt&#39;</span><span class="p">])</span>
 
 <span class="c1"># Extract crop masks and EO variables</span>
 <span class="n">geoextract</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;PATH_TO_geoprepare.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;PATH_TO_geoextract.txt&#39;</span><span class="p">])</span>
@@ -540,21 +540,17 @@ title="Print to PDF"
 <h2>Config files<a class="headerlink" href="#config-files" title="Permalink to this headline">#</a></h2>
 <div class="section" id="geoprepare-txt">
 <h3>geoprepare.txt<a class="headerlink" href="#geoprepare-txt" title="Permalink to this headline">#</a></h3>
-<ol class="simple">
-<li><p>Path where to store the downloaded and processed files: <code class="docutils literal notranslate"><span class="pre">dir_base</span></code></p></li>
-<li><p>Specify which datasets need to be downloaded and processed: <code class="docutils literal notranslate"><span class="pre">datasets</span></code></p></li>
-<li><p>Specify time-period for which data should be downloaded and processed: <code class="docutils literal notranslate"><span class="pre">start_year</span></code>, <code class="docutils literal notranslate"><span class="pre">end_year</span></code></p></li>
-<li><p>What fraction of available CPUs to use: <code class="docutils literal notranslate"><span class="pre">fraction_cpus</span></code></p></li>
-<li><p>What directory name to use for the log files: <code class="docutils literal notranslate"><span class="pre">logfile</span></code></p></li>
-<li><p>Whether to use multiple CPUs: <code class="docutils literal notranslate"><span class="pre">parallel_process</span></code></p></li>
-</ol>
+<p><code class="docutils literal notranslate"><span class="pre">dir_base</span></code>: Path where to store the downloaded and processed files<br />
+<code class="docutils literal notranslate"><span class="pre">datasets</span></code>: Specify which datasets need to be downloaded and processed<br />
+<code class="docutils literal notranslate"><span class="pre">start_year</span></code>, <code class="docutils literal notranslate"><span class="pre">end_year</span></code>: Specify time-period for which data should be downloaded and processed<br />
+<code class="docutils literal notranslate"><span class="pre">logfile</span></code>: What directory name to use for the log files<br />
+<code class="docutils literal notranslate"><span class="pre">parallel_process</span></code>: Whether to use multiple CPUs<br />
+<code class="docutils literal notranslate"><span class="pre">fraction_cpus</span></code>: What fraction of available CPUs to use</p>
 </div>
 <div class="section" id="geoextract-txt">
 <h3>geoextract.txt<a class="headerlink" href="#geoextract-txt" title="Permalink to this headline">#</a></h3>
-<ol class="simple">
-<li><p>List of countries to process: <code class="docutils literal notranslate"><span class="pre">countries</span></code></p></li>
-<li><p>List of seasons to process: <code class="docutils literal notranslate"><span class="pre">forecast_seasons</span></code></p></li>
-</ol>
+<p><code class="docutils literal notranslate"><span class="pre">countries</span></code>: List of countries to process<br />
+<code class="docutils literal notranslate"><span class="pre">forecast_seasons</span></code>: List of seasons to process</p>
 </div>
 </div>
 </div>
