@@ -9,6 +9,10 @@ parts:
   chapters:
   - file: content/installation.md
 
+- caption: Processing Inputs
+  chapters:
+  - file: content/processing/inputs.md
+
 - caption: Background
   chapters:
   - file: content/background/scientific_python/scientific_python.md  # Scientific Python

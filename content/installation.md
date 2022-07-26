@@ -1,11 +1,11 @@
-# Installation
+# Installation Instructions 
 
 
 ### Setting up the Python environment
 On the UMD cluster, first load the anaconda module and create a clone environment by typing the 
 following commands on the terminal:
 ```python
-module load python/3.8/anaconda
+module load python/3.7/anaconda
 conda create -n UMD --clone=/apps/python/3.7/anaconda
 ```
 On a non-UMD cluster or local machine, download and install the latest anaconda package:
@@ -41,8 +41,22 @@ conda install -c conda-forge catboost
 conda install -c conda-forge arrow
 conda install -c anaconda netcdf4
 conda install -c conda-forge cartopy
-pip install wget pyModis merf tsfresh pyshp palettable geopy geocoder palettable forestci pangres sklearn-contrib-lightning wget pangres pycountry matplotlib-scalebar
-pip install --upgrade git+https://github.com/ritviksahajpal/pygeoutil.git` <br>
+conda install -c conda-forge tsfresh
+conda install -c conda-forge matplotlib-scalebar
+pip install wget 
+pip install pyModis 
+pip install merf 
+pip install pyshp 
+pip install palettable 
+pip install geopy 
+pip install geocoder 
+pip install palettable 
+pip install forestci 
+pip install pangres 
+pip install sklearn-contrib-lightning 
+pip install pangres 
+pip install pycountry 
+pip install --upgrade git+https://github.com/ritviksahajpal/pygeoutil.git
 ```
 
 ### Creating a NASA account to download MODIS NDVI
@@ -73,10 +87,12 @@ install [octvi](https://pypi.org/project/octvi/)
 paste the token you copied earlier.
 
 ### Creating a Copernicus account to download AgERA5
-1. Create an account on the [CDS](https://cds.climate.copernicus.eu) website 
-2. Follow the instructions [here](https://cds.climate.copernicus.eu/api-how-to/)
+1. If not already installed, install the `cdsapi` python library by typing `pip install cdsapi` in 
+the command prompt.
+3. Create an account on the [CDS](https://cds.climate.copernicus.eu) website 
+3. Follow the instructions [here](https://cds.climate.copernicus.eu/api-how-to/)
 to install the CDS API key on your local machine/cluster
-3. Follow these instructions to install the CDS API Key on your local machine/cluster
+4. Follow these instructions to install the CDS API Key on your local machine/cluster
 
      * <b>For Windows users:</b> 
      <br>
@@ -93,7 +109,7 @@ to install the CDS API key on your local machine/cluster
        * usually located at C:\Users\Username folder). The CDS API expects to find the .cdsapirc file in your home                   directory. 
 <br>         
        * Install the CDS API client by running the following command in a command prompt window:
-       `pip3 install cdsapi`
+       `pip install cdsapi`
                 
        * Once the CDS API client is installed, it can be used to request data from the datasets listed in the CDS and ADS 
        catalogues. It is necessary to agree to the Terms of Use of every datasets that you intend to download. Attached 
@@ -109,5 +125,8 @@ to install the CDS API key on your local machine/cluster
      by running on Unix/Linux the command <br>
            `pip install cdsapi`   
 
-* If not already installed, install the `cdsapi` python library by typing `pip install cdsapi` in 
-the command prompt.
+### Install geoprepare library
+A Python package to prepare (download, extract, process input data) for GEOCIF and related models
+```python
+pip install --upgrade --no-deps --force-reinstall git+https://github.com/ritviksahajpal/geoprepare.git
+```
