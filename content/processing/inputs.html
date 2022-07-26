@@ -578,7 +578,7 @@ Here is a <a class="reference external" href="https://docs.python.org/3/library/
 <code class="docutils literal notranslate"><span class="pre">dir_base</span></code>: Path where to store the downloaded and processed files<br />
 <code class="docutils literal notranslate"><span class="pre">start_year</span></code>, <code class="docutils literal notranslate"><span class="pre">end_year</span></code>: Specify time-period for which data should be downloaded and processed<br />
 <code class="docutils literal notranslate"><span class="pre">logfile</span></code>: What directory name to use for the log files<br />
-<code class="docutils literal notranslate"><span class="pre">level</span></code>: Which level to use for logging (https://www.loggly.com/ultimate-guide/python-logging-basics/)<br />
+<code class="docutils literal notranslate"><span class="pre">level</span></code>: Which level to use for <a class="reference external" href="https://www.loggly.com/ultimate-guide/python-logging-basics/">logging</a><br />
 <code class="docutils literal notranslate"><span class="pre">parallel_process</span></code>: Whether to use multiple CPUs<br />
 <code class="docutils literal notranslate"><span class="pre">fraction_cpus</span></code>: What fraction of available CPUs to use</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>[DATASETS]
@@ -647,8 +647,8 @@ end_year = 2022
 <p><code class="docutils literal notranslate"><span class="pre">countries</span></code>: List of countries to process<br />
 <code class="docutils literal notranslate"><span class="pre">forecast_seasons</span></code>: List of seasons to process<br />
 <code class="docutils literal notranslate"><span class="pre">mask</span></code>: Name of file to use as a mask for cropland/croptype<br />
-<code class="docutils literal notranslate"><span class="pre">redo</span></code>: Whether to redo the processing for all days rather than process only days for which we have new data<br />
-<code class="docutils literal notranslate"><span class="pre">threshold</span></code>: Whether to use a <code class="docutils literal notranslate"><span class="pre">threshold</span></code> value (<code class="docutils literal notranslate"><span class="pre">floor</span></code>) or a <code class="docutils literal notranslate"><span class="pre">percentile</span></code> (<code class="docutils literal notranslate"><span class="pre">ceil</span></code>) on the cropland/croptype mask<br />
+<code class="docutils literal notranslate"><span class="pre">redo</span></code>: Redo the processing for all days (<code class="docutils literal notranslate"><span class="pre">True</span></code>) or only days with new data (<code class="docutils literal notranslate"><span class="pre">False</span></code>)<br />
+<code class="docutils literal notranslate"><span class="pre">threshold</span></code>: Use a <code class="docutils literal notranslate"><span class="pre">threshold</span></code> value (<code class="docutils literal notranslate"><span class="pre">True</span></code>) or a <code class="docutils literal notranslate"><span class="pre">percentile</span></code> (<code class="docutils literal notranslate"><span class="pre">False</span></code>) on the cropland/croptype mask<br />
 <code class="docutils literal notranslate"><span class="pre">floor</span></code>: Value below which to set the mask to 0<br />
 <code class="docutils literal notranslate"><span class="pre">ceil</span></code>: Value above which to set the mask to 1<br />
 <code class="docutils literal notranslate"><span class="pre">eo_model</span></code>: List of datasets to extract from</p>

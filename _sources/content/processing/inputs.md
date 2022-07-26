@@ -31,7 +31,7 @@ Before running the code above, we need to specify the two configuration files. `
 `dir_base`: Path where to store the downloaded and processed files  
 `start_year`, `end_year`: Specify time-period for which data should be downloaded and processed  
 `logfile`: What directory name to use for the log files  
-`level`: Which level to use for logging (https://www.loggly.com/ultimate-guide/python-logging-basics/)    
+`level`: Which level to use for [logging](https://www.loggly.com/ultimate-guide/python-logging-basics/)    
 `parallel_process`: Whether to use multiple CPUs  
 `fraction_cpus`: What fraction of available CPUs to use  
 ```python
@@ -99,8 +99,8 @@ end_year = 2022
 `countries`: List of countries to process  
 `forecast_seasons`: List of seasons to process  
 `mask`: Name of file to use as a mask for cropland/croptype  
-`redo`: Whether to redo the processing for all days rather than process only days for which we have new data  
-`threshold`: Whether to use a `threshold` value (`floor`) or a `percentile` (`ceil`) on the cropland/croptype mask  
+`redo`: Redo the processing for all days (`True`) or only days with new data (`False`)  
+`threshold`: Use a `threshold` value (`True`) or a `percentile` (`False`) on the cropland/croptype mask  
 `floor`: Value below which to set the mask to 0  
 `ceil`: Value above which to set the mask to 1  
 `eo_model`: List of datasets to extract from  
