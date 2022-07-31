@@ -125,8 +125,14 @@ to install the CDS API key on your local machine/cluster
      by running on Unix/Linux the command <br>
            `pip install cdsapi`   
 
-### Install geoprepare library
-A Python package to prepare (download, extract, process input data) for GEOCIF and related models
+### Installing geoprepare library
+A Python library to prepare (download, extract, process input data) for GEOCIF and related models
 ```python
 pip install --upgrade --no-deps --force-reinstall git+https://github.com/ritviksahajpal/geoprepare.git
+```
+
+### Installing geocif library
+A Python library for models built to visualize and forecast crop conditions and yields
+```python
+pip install git+https://github.com/ritviksahajpal/geocif.git
 ```
