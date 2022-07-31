@@ -1,15 +1,13 @@
 # Download, Process, Extract
 
-In this section, we will explore the steps required to download and process the input data  and then extract crop masks and EO variables 
-needed for running a crop yield model or generating AgMet 
-graphics.
+We have developed a Python library called `geoprepare` to download and process the input data  and then extract crop masks and EO variables 
+needed for running a crop yield model or generating AgMet graphics.
 
-## Background Information
-We will be using Python configuration files to separate our code and user configurable settings.
+To execute this library, we will be using Python configuration files to separate our code and user configurable settings.
 Here is a [tutorial](https://docs.python.org/3/library/configparser.html) on how Python handles configuration files.
 
 ## Python code 
-We will be using the [geoprepare](https://github.com/ritviksahajpal/geoprepare) package that you installed in the [section on installing the geoprepare library](../installation.md#Installing-geoprepare-library).
+We will be using the [geoprepare](https://github.com/ritviksahajpal/geoprepare) package that you installed [here](installation:install-geoprepare-library).
 
 ```python
 from geoprepare import geoprepare, geoextract
