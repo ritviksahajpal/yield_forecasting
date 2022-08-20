@@ -481,6 +481,11 @@ title="Print to PDF"
      geoextract.txt
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geocif-txt">
+     geocif.txt
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -520,6 +525,11 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#geoextract-txt">
      geoextract.txt
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geocif-txt">
+     geocif.txt
     </a>
    </li>
   </ul>
@@ -675,6 +685,26 @@ end_year = 2022
 <span class="n">forecast_seasons</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2022</span><span class="p">]</span>
 <span class="n">mask</span> <span class="o">=</span> <span class="n">cropland_v9</span><span class="o">.</span><span class="n">tif</span>
 <span class="n">eo_model</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ndvi&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_tmax&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_tmin&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_precip&#39;</span><span class="p">,</span> <span class="s1">&#39;esi_4wk&#39;</span><span class="p">,</span> <span class="s1">&#39;soil_moisture_as1&#39;</span><span class="p">,</span> <span class="s1">&#39;soil_moisture_as2&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="geocif-txt">
+<h3>geocif.txt<a class="headerlink" href="#geocif-txt" title="Permalink to this headline">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">seasons</span></code>: List of seasons to process: 1 (first/long season), 2 (second/short season)
+<code class="docutils literal notranslate"><span class="pre">region</span></code>: admin0: country, admin1: state, admin2: county</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">kenya</span><span class="p">]</span>
+<span class="n">crops</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mz&#39;</span><span class="p">]</span>
+<span class="n">seasons</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">region</span> <span class="o">=</span> <span class="n">admin1</span>  <span class="p">;</span> <span class="n">admin0</span><span class="p">:</span> <span class="n">country</span><span class="p">,</span> <span class="n">admin1</span><span class="p">:</span> <span class="n">state</span><span class="p">,</span> <span class="n">admin2</span><span class="p">:</span> <span class="n">county</span>
+
+<span class="p">[</span><span class="n">AGMET</span><span class="p">]</span>
+<span class="n">eo_plot</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ndvi&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_tmax&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_tmin&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_precip&#39;</span><span class="p">,</span> <span class="s1">&#39;esi_4wk&#39;</span><span class="p">,</span> <span class="s1">&#39;soil_moisture_as1&#39;</span><span class="p">,</span> <span class="s1">&#39;soil_moisture_as2&#39;</span><span class="p">]</span>
+
+<span class="p">[</span><span class="n">DEFAULT</span><span class="p">]</span>
+<span class="n">countries</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;kenya&#39;</span><span class="p">]</span>
+<span class="n">forecast_seasons</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2022</span><span class="p">]</span>
+<span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;merf&#39;</span><span class="p">]</span>
+<span class="n">eo_model</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ndvi&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_tmax&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_tmin&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_precip&#39;</span><span class="p">,</span> <span class="s1">&#39;esi_4wk&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>

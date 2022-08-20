@@ -15,6 +15,11 @@ bash Anaconda3-2022.05-Linux-x86_64.sh
 conda create --name UMD
 ```
 
+from IPython.display import HTML
+
+# Youtube
+HTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/S_f2qV2_U00?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>')
+
 
 ```{note}
 You can replace UMD with a different environment name of your choice

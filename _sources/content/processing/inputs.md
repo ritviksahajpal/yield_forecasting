@@ -142,5 +142,23 @@ mask = cropland_v9.tif
 eo_model = ['ndvi', 'cpc_tmax', 'cpc_tmin', 'cpc_precip', 'esi_4wk', 'soil_moisture_as1', 'soil_moisture_as2']
 ```
 
+### geocif.txt
+`seasons`: List of seasons to process: 1 (first/long season), 2 (second/short season)
+`region`: admin0: country, admin1: state, admin2: county
+```python
+[kenya]
+crops = ['mz']
+seasons = [1]
+region = admin1  ; admin0: country, admin1: state, admin2: county
+
+[AGMET]
+eo_plot = ['ndvi', 'cpc_tmax', 'cpc_tmin', 'cpc_precip', 'esi_4wk', 'soil_moisture_as1', 'soil_moisture_as2']
+
+[DEFAULT]
+countries = ['kenya']
+forecast_seasons = [2022]
+models = ['merf']
+eo_model = ['ndvi', 'cpc_tmax', 'cpc_tmin', 'cpc_precip', 'esi_4wk']
+```
 
 
