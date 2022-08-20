@@ -16,10 +16,6 @@ conda create --name UMD
 ```
 
 
-# Youtube
-<iframe width="560" height="315" src="https://www.youtube.com/embed/S_f2qV2_U00?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-
-
 ```{note}
 You can replace UMD with a different environment name of your choice
 ```
