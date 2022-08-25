@@ -1,4 +1,4 @@
-# Using AgMet Indicators
+# How to use AgMet graphics for Crop Condition analysis?
 
 The AgMet indicators are available [here](https://cropmonitor.org/tools/agmet/
 ). These indicators include analysis ready suite of crop condition indicators: NDVI, Precipitation, Temperature, 
