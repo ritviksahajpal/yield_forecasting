@@ -62,7 +62,7 @@ Maize 2020 season started with onset rains in October and above average rains fr
 Maize 2021 started with normal onset rains in October with near-average rainfall amounts through November, precipitation levels dropped significantly below average until the end of February 2021 and erratic and below average rainfall combined with high temperatures resulted in below average conditions 
 
 ### 4. What might have caused the dip in ESI values in January in Mashonaland West?
-![](../../images/agmet/GAUL-Zimbabwe-Mashonaland West-Maize 1-2020.png)
+![](../../images/agmet/GAUL_Zimbabwe_Mashonaland_West_Maize_1_2020.png)
 
 While the season started with normal onset and above average rains, a dry spell in December to January caused significant stress on crops followed by erratic rains through the season. Below average yields resulted for the 2020 cropping season in Mashonaland West
 
