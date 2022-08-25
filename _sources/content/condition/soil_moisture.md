@@ -1,4 +1,4 @@
-# Soil Moisture (Surface):
+# Soil Moisture (Surface)
 
 Surface Soil Moisture measures the amount of available water held in the top five-to-ten 
 centimeters of the soil (depth dependent on soil texture). The plot shows the current season’s 
@@ -10,6 +10,3 @@ and root depth. However, lower values typically any time before senescence can c
 the crops and stunt development.
 
 ![](../../images/agmet/soil_moisture.jpg)
-
-For more information on using soil moisture data for crop monitoring please see the Soil Moisture 
-section of the EO Data.

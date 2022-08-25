@@ -17,6 +17,3 @@ During the course of the season, the timing and the amount of rainfall surpluses
 have different effects. As an example, too much rainfall during sowing can prevent farms from 
 planting crops and flooding events can cause dramatic yield reductions. Alternatively, not enough 
 rainfall early in the season can prevent sown crops from emerging and properly developing.
-
-For more information on using precipitation data for crop monitoring please see the Precipitation 
-section of the EO Data.
