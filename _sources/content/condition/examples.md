@@ -26,7 +26,7 @@ Maize 2020 season had a poor start to the rains and below average rainfall throu
 * From April NDVI tracking at the lowest in the last 5 years  
 **Final Outcome: Poor**
 
-![](../../images/agmet/GAUL_Zimbabwe_Mashonaland_East-Maize_1_2021.png)
+![](../../images/agmet/GAUL_Zimbabwe_Mashonaland_East_Maize_1_2021.png)
 Maize 2021 season had a timely start to the rains and consistent rainfall throughout resulting in a bumper harvest of over 2.7 million tonnes, 3x larger than 2020 output
 
 * NDVI tracking above the 5 year average from mid-December and at the 10 year max
