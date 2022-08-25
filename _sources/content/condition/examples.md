@@ -51,7 +51,7 @@ Maize 2021 season started with a normal onset in November and above average rain
 * NDVI above 2020 level and close to the 5 year average
 * Cumulative precipitation above average throughout the season 
 * Soil Moisture above the 5 year average and near the 10 year max
-* Daily Precipitation  shows precipitation well distributed throughout key points in the season
+* Daily Precipitation  shows precipitation well distributed throughout key points in the season  
 **Final Outcome: Favourable** 
 
 ### 3. Huila, Angola 2020 vs 2021 season comparison
