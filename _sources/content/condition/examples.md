@@ -38,14 +38,14 @@ Maize 2021 season had a timely start to the rains and consistent rainfall throug
 
 ### 2. Central Zambia, 2020 vs 2021 season comparison
 
-![](../../images/agmet/GAUL-Zambia-Central-Maize 1-2020.png)
+![](../../images/agmet/GAUL_Zambia_Central_Maize_1_2020.png)
 Maize 2020 season started with normal rainfall onset in November and slightly below average cumulative precipitation while NDVI and cumulative rains were slightly below average. However, above average harvest resulted 3.4 mt maize at national level
 * NDVI tracking below the 5 year average 
 * Cumulative Rainfall below the 5 year average from mid-December and remains below average throughout 
 * ESI and soil moisture showing normal to above average conditions throughout much of the season and soil moisture above average   
 **Final Outcome: Favourable**
 
-![](../../images/agmet/GAUL-Zambia-Central-Maize 1-2021.png)
+![](../../images/agmet/GAUL_Zambia_Central_Maize_1_2021.png)
 Maize 2021 season started with a normal onset in November and above average rains continued through much of the season average to above average national production resulted 3.6 mt maize at national level 
 2021 production slightly higher YoY
 * NDVI above 2020 level and close to the 5 year average
@@ -55,10 +55,10 @@ Maize 2021 season started with a normal onset in November and above average rain
 **Final Outcome: Favourable** 
 
 ### 3. Huila, Angola 2020 vs 2021 season comparison
-![](../../images/agmet/GAUL_Angola_Huila_Maize_1_2020.jpg)
+![](../../images/agmet/GAUL_Angola_Huila_Maize_1_2020.png)
 Maize 2020 season started with onset rains in October and above average rains from December, all indicators showing above average conditions
 
-![](../../images/agmet/GAUL-Angola-Huila-Maize 1-2021.png)
+![](../../images/agmet/GAUL_Angola_Huila_Maize_1_2021.png)
 Maize 2021 started with normal onset rains in October with near-average rainfall amounts through November, precipitation levels dropped significantly below average until the end of February 2021 and erratic and below average rainfall combined with high temperatures resulted in below average conditions 
 
 ### 4. What might have caused the dip in ESI values in January in Mashonaland West?
@@ -68,5 +68,5 @@ While the season started with normal onset and above average rains, a dry spell 
 
 ### 5. How will you interpret the crop conditions in Free State, South Africa in the following AgMet plot?
 
-![](../../images/agmet/GAUL-South Africa-Free State-Maize 1-2020.png)
+![](../../images/agmet/GAUL_South_Africa_Free_State_Maize_1_2020.png)
 Average start to the season with onset rains in November. ESI showing no stress on crops and above average conditions. From December consistent rains throughout the season tracking at above average levels and NDVI above average from February. Above average yields resulted for the 2020 cropping season in Free State 
