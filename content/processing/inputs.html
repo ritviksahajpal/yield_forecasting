@@ -191,12 +191,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../background/machine_learning/scikit-learn.html">
-     Scikit-Learn
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../background/machine_learning/validation.html">
-     Cross Validation
+     Scikit-learn
     </a>
    </li>
   </ul>
@@ -650,6 +645,7 @@ end_year = 2022
 <code class="docutils literal notranslate"><span class="pre">eo_model</span></code>: List of datasets to extract from</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">kenya</span><span class="p">]</span>
 <span class="n">category</span> <span class="o">=</span> <span class="n">EWCM</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;admin1&#39;</span><span class="p">]</span>  <span class="p">;</span> <span class="n">can</span> <span class="n">be</span> <span class="n">admin1</span> <span class="p">(</span><span class="n">state</span> <span class="n">level</span><span class="p">)</span> <span class="ow">or</span> <span class="n">admin2</span> <span class="p">(</span><span class="n">county</span> <span class="n">level</span><span class="p">)</span>
 <span class="n">calendar_file</span> <span class="o">=</span> <span class="n">EWCM_2021</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mf">17.</span><span class="n">xlsx</span>
 <span class="n">shp_boundary</span> <span class="o">=</span> <span class="n">EWCM_Level_1</span><span class="o">.</span><span class="n">shp</span>
 <span class="n">crops</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mz&#39;</span><span class="p">,</span> <span class="s1">&#39;sr&#39;</span><span class="p">,</span> <span class="s1">&#39;ml&#39;</span><span class="p">,</span> <span class="s1">&#39;rc&#39;</span><span class="p">,</span> <span class="s1">&#39;ww&#39;</span><span class="p">,</span> <span class="s1">&#39;tf&#39;</span><span class="p">]</span>
@@ -681,6 +677,7 @@ end_year = 2022
 <span class="n">threshold</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">floor</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">ceil</span> <span class="o">=</span> <span class="mi">90</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;admin1&#39;</span><span class="p">]</span>
 <span class="n">countries</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;kenya&#39;</span><span class="p">]</span>
 <span class="n">forecast_seasons</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2022</span><span class="p">]</span>
 <span class="n">mask</span> <span class="o">=</span> <span class="n">cropland_v9</span><span class="o">.</span><span class="n">tif</span>
@@ -690,7 +687,7 @@ end_year = 2022
 </div>
 <div class="section" id="geocif-txt">
 <h3>geocif.txt<a class="headerlink" href="#geocif-txt" title="Permalink to this headline">#</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">seasons</span></code>: List of seasons to process: 1 (first/long season), 2 (second/short season)
+<p><code class="docutils literal notranslate"><span class="pre">seasons</span></code>: List of seasons to process: 1 (first/long season), 2 (second/short season)<br />
 <code class="docutils literal notranslate"><span class="pre">region</span></code>: admin0: country, admin1: state, admin2: county</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">kenya</span><span class="p">]</span>
 <span class="n">crops</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mz&#39;</span><span class="p">]</span>

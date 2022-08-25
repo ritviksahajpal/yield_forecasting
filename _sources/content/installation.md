@@ -16,6 +16,10 @@ conda create --name UMD
 ```
 
 
+# Youtube
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S_f2qV2_U00?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+
 ```{note}
 You can replace UMD with a different environment name of your choice
 ```
@@ -51,11 +55,6 @@ pip install palettable
 pip install geopy 
 pip install geocoder 
 pip install palettable 
-pip install forestci 
-pip install pangres 
-pip install sklearn-contrib-lightning 
-pip install pangres 
-pip install pycountry 
 pip install --upgrade git+https://github.com/ritviksahajpal/pygeoutil.git
 ```
 
@@ -128,12 +127,17 @@ to install the CDS API key on your local machine/cluster
 (installation:install-geoprepare-library)=
 ### Installing geoprepare library
 A Python library to prepare (download, extract, process input data) for GEOCIF and related models
+#### Using PyPi (default)
+```python
+pip install --upgrade geoprepare
+```
+#### Using Github repository (for development)
 ```python
 pip install --upgrade --no-deps --force-reinstall git+https://github.com/ritviksahajpal/geoprepare.git
 ```
 
 ### Installing geocif library
-A Python library for models built to visualize and forecast crop conditions and yields
+A Python library for models built to forecast and visualize crop conditions and yields
 ```python
 pip install git+https://github.com/ritviksahajpal/geocif.git
 ```

@@ -105,6 +105,7 @@ end_year = 2022
 ```python
 [kenya]
 category = EWCM
+scale = ['admin1']  ; can be admin1 (state level) or admin2 (county level)
 calendar_file = EWCM_2021-6-17.xlsx
 shp_boundary = EWCM_Level_1.shp
 crops = ['mz', 'sr', 'ml', 'rc', 'ww', 'tf']
@@ -136,6 +137,7 @@ redo = False
 threshold = True
 floor = 20
 ceil = 90
+scale = ['admin1']
 countries = ['kenya']
 forecast_seasons = [2022]
 mask = cropland_v9.tif
@@ -143,7 +145,7 @@ eo_model = ['ndvi', 'cpc_tmax', 'cpc_tmin', 'cpc_precip', 'esi_4wk', 'soil_moist
 ```
 
 ### geocif.txt
-`seasons`: List of seasons to process: 1 (first/long season), 2 (second/short season)
+`seasons`: List of seasons to process: 1 (first/long season), 2 (second/short season)  
 `region`: admin0: country, admin1: state, admin2: county
 ```python
 [kenya]
