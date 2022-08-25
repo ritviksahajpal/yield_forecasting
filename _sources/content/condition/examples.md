@@ -55,7 +55,7 @@ Maize 2021 season started with a normal onset in November and above average rain
 **Final Outcome: Favourable** 
 
 ### 3. Huila, Angola 2020 vs 2021 season comparison
-![](../../images/agmet/GAUL-Angola-Huila-Maize 1-2020.png)
+![](../../images/agmet/GAUL_Angola_Huila_Maize_1_2020.jpg)
 Maize 2020 season started with onset rains in October and above average rains from December, all indicators showing above average conditions
 
 ![](../../images/agmet/GAUL-Angola-Huila-Maize 1-2021.png)
