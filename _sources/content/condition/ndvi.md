@@ -10,6 +10,4 @@ course of the season and the individual peak values can help predict the product
 crops. The second NDVI plot shows the comparison of the current season NDVI values with the 
 previous five seasons along with the resulting average crop yields from those seasons.
 
-![](images/agmet/ndvi.jpg)
-
-For more information on using NDVI data for crop monitoring please see the NDVI section of the EO Data.
+![](../../images/agmet/ndvi.jpg)

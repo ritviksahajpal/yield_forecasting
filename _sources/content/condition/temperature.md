@@ -9,7 +9,7 @@ increased evapotranspiration, slow plant growth, reduce yields, pollen abortion,
 thermal death. Very low temperatures can also affect crops through the slowing in crop growth, 
 frost or chilling injury, reduced seed quality, and possible yield reductions.
 
-![](images/agmet/temperature.jpg)
+![](../../images/agmet/temperature.jpg)
 
 For more information on using temperature data for crop monitoring please see the Temperature 
 section of the EO Data.
