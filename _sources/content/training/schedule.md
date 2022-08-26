@@ -1,5 +1,6 @@
 # Schedule
 
+## Day 1
 |     | **Friday August 26, Day 1/3 - Introduction to Crop Condition Analysis**                         |
 |-----|-------------------------------------------------------------------------------------------------|
 |     | _Activity_                                                                                      |
@@ -17,7 +18,7 @@
 |     | **BREAK**                                                                                       |
 | 10. | * Assignment<br/>* Check geoprepare installation on RCMRD and NASA servers with Benson and Sara |
 
-## Assignment
+### Assignment
 |  | Group                                            | Year (Kenya) | Country  |
 |---|--------------------------------------------------|--------------|----------|
 | 1 | aparnapm16@gmail.com makarem@umd.edu             | 2017         | Tanzania |
