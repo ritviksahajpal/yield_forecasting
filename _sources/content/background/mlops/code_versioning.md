@@ -1,4 +1,4 @@
 # Code versioning
 
-[Github](www.github.com)
+[Github](https://education.github.com/git-cheat-sheet-education.pdf)
 
