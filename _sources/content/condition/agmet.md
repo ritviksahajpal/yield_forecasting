@@ -6,6 +6,8 @@ valuable insights on in-season crop development and current crop conditions. Com
 different EO data plots help tell the story of in-season crop conditions thought the use of
 different climate, environmental, and vegetative variables
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aWa8OxpMHI4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## AgMet EO Indicators Explained
 
 The GEOGLAM-NASA Harvest Agrometeorological (AGMET) Earth Observation (EO) Indicators bring 
