@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Scientific Python" href="../background/scientific_python/scientific_python.html" />
+    <link rel="next" title="Machine Learning" href="../background/machine_learning/machine_learning.html" />
     <link rel="prev" title="Installation Instructions" href="../installation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -143,48 +143,11 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../background/scientific_python/scientific_python.html">
-   Scientific Python
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../background/scientific_python/python.html">
-     Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../background/scientific_python/numpy.html">
-     Numpy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../background/scientific_python/matplotlib.html">
-     Matplotlib
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../background/scientific_python/pandas.html">
-     Pandas
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../background/scientific_python/seaborn.html">
-     Seaborn
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
   <a class="reference internal" href="../background/machine_learning/machine_learning.html">
    Machine Learning
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -200,8 +163,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../background/mlops/mlops.html">
    MLOPS
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -229,8 +192,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../condition/agmet.html">
    Agrometeorological Earth Observation Indicators
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -252,7 +215,17 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../condition/soil_moisture.html">
-     Soil Moisture (Surface):
+     Soil Moisture (Surface)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../condition/examples.html">
+     How to use AgMet graphics for Crop Condition analysis?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../condition/partner_resources.html">
+     Partner resources
     </a>
    </li>
   </ul>
@@ -260,23 +233,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Crop Yield Forecasting
+  NASA SERVIR Training
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../yield/introduction.html">
-   Introduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../yield/basic.html">
-   Basic Crop Yield Forecasting Model
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../yield/geocif.html">
-   GEOCIF
+  <a class="reference internal" href="../training/schedule.html">
+   Schedule
   </a>
  </li>
 </ul>
@@ -547,8 +510,9 @@ needed for running a crop yield model or generating AgMet graphics.</p>
 Here is a <a class="reference external" href="https://docs.python.org/3/library/configparser.html">tutorial</a> on how Python handles configuration files.</p>
 <div class="section" id="python-code">
 <h2>Python code<a class="headerlink" href="#python-code" title="Permalink to this headline">#</a></h2>
-<p>We will be using the <a class="reference external" href="https://github.com/ritviksahajpal/geoprepare">geoprepare</a> package that you installed <a class="reference internal" href="../installation.html#installation-install-geoprepare-library"><span class="std std-ref">here</span></a>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">geoprepare</span> <span class="kn">import</span> <span class="n">geoprepare</span><span class="p">,</span> <span class="n">geoextract</span>
+<p>We will be using the <a class="reference external" href="https://github.com/ritviksahajpal/geoprepare">geoprepare</a> package that you installed <a class="reference internal" href="../installation.html#installation-install-geoprepare-library"><span class="std std-ref">here</span></a>.
+Before running any code, consider using <code class="docutils literal notranslate"><span class="pre">tmux</span></code> or <code class="docutils literal notranslate"><span class="pre">screen</span></code> to retain access to the terminal even if you are accidentally logged out.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">geoprepare</span> <span class="kn">import</span> <span class="n">geoprepare</span><span class="p">,</span> <span class="n">geoextract</span><span class="p">,</span> <span class="n">geomerge</span>
 
 <span class="c1"># Provide full path to the configuration files</span>
 <span class="c1"># Download and preprocess data</span>
@@ -556,6 +520,9 @@ Here is a <a class="reference external" href="https://docs.python.org/3/library/
 
 <span class="c1"># Extract crop masks and EO variables</span>
 <span class="n">geoextract</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;PATH_TO_geoprepare.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;PATH_TO_geoextract.txt&#39;</span><span class="p">])</span>
+
+<span class="c1"># Merge EO files into one, this is needed to create AgMet graphics and to run the crop yield model</span>
+<span class="n">geomerge</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;PATH_TO_geoprepare.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;PATH_TO_geoextract.txt&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>Before running the code above, we need to specify the two configuration files. <code class="docutils literal notranslate"><span class="pre">geoprepare.txt</span></code> contains configuration settings for downloading and processing the input data.
@@ -576,13 +543,18 @@ Here is a <a class="reference external" href="https://docs.python.org/3/library/
 datasets = [&#39;CPC&#39;, &#39;SOIL-MOISTURE&#39;, &#39;LST&#39;, &#39;CPC&#39;, &#39;AVHRR&#39;, &#39;AGERA5&#39;, &#39;CHIRPS&#39;, &#39;CHIRPS-GEFS&#39;]
 
 [PATHS]
-dir_base = D:\
+dir_base = /home/servir/GEOCIF
 dir_input = ${dir_base}/input
-dir_log = ${dir_input}/log
+dir_log = ${dir_base}/log
 dir_interim = ${dir_input}/interim
 dir_download = ${dir_input}/download
 dir_output = ${dir_base}/output
 dir_global_datasets = ${dir_input}/global_datasets
+dir_masks = ${dir_global_datasets}/masks
+dir_regions = ${dir_global_datasets}/regions
+dir_regions_shp = ${dir_regions}/shps
+dir_crop_masks = ${dir_input}/crop_masks
+dir_models = ${dir_input}/models
 
 [AGERA5]
 start_year = 2022
@@ -642,12 +614,13 @@ end_year = 2022
 <code class="docutils literal notranslate"><span class="pre">threshold</span></code>: Use a <code class="docutils literal notranslate"><span class="pre">threshold</span></code> value (<code class="docutils literal notranslate"><span class="pre">True</span></code>) or a <code class="docutils literal notranslate"><span class="pre">percentile</span></code> (<code class="docutils literal notranslate"><span class="pre">False</span></code>) on the cropland/croptype mask<br />
 <code class="docutils literal notranslate"><span class="pre">floor</span></code>: Value below which to set the mask to 0<br />
 <code class="docutils literal notranslate"><span class="pre">ceil</span></code>: Value above which to set the mask to 1<br />
-<code class="docutils literal notranslate"><span class="pre">eo_model</span></code>: List of datasets to extract from</p>
+<code class="docutils literal notranslate"><span class="pre">eo_model</span></code>: List of datasets to extract from<br />
+<code class="docutils literal notranslate"><span class="pre">calendar_file</span></code>: File with crop calendar information<br />
+<code class="docutils literal notranslate"><span class="pre">statistics_file</span></code>: File with crop yield, production and area statistics</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">kenya</span><span class="p">]</span>
 <span class="n">category</span> <span class="o">=</span> <span class="n">EWCM</span>
 <span class="n">scale</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;admin1&#39;</span><span class="p">]</span>  <span class="p">;</span> <span class="n">can</span> <span class="n">be</span> <span class="n">admin1</span> <span class="p">(</span><span class="n">state</span> <span class="n">level</span><span class="p">)</span> <span class="ow">or</span> <span class="n">admin2</span> <span class="p">(</span><span class="n">county</span> <span class="n">level</span><span class="p">)</span>
-<span class="n">calendar_file</span> <span class="o">=</span> <span class="n">EWCM_2021</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mf">17.</span><span class="n">xlsx</span>
-<span class="n">shp_boundary</span> <span class="o">=</span> <span class="n">EWCM_Level_1</span><span class="o">.</span><span class="n">shp</span>
+<span class="n">season</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="p">;</span> <span class="mi">1</span> <span class="ow">is</span> <span class="n">primary</span><span class="o">/</span><span class="n">long</span> <span class="n">season</span><span class="p">,</span> <span class="mi">2</span> <span class="ow">is</span> <span class="n">secondary</span><span class="o">/</span><span class="n">short</span> <span class="n">season</span>
 <span class="n">crops</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mz&#39;</span><span class="p">,</span> <span class="s1">&#39;sr&#39;</span><span class="p">,</span> <span class="s1">&#39;ml&#39;</span><span class="p">,</span> <span class="s1">&#39;rc&#39;</span><span class="p">,</span> <span class="s1">&#39;ww&#39;</span><span class="p">,</span> <span class="s1">&#39;tf&#39;</span><span class="p">]</span>
 <span class="n">use_cropland_mask</span> <span class="o">=</span> <span class="kc">True</span>
 
@@ -678,10 +651,15 @@ end_year = 2022
 <span class="n">floor</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">ceil</span> <span class="o">=</span> <span class="mi">90</span>
 <span class="n">scale</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;admin1&#39;</span><span class="p">]</span>
+<span class="n">season</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">countries</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;kenya&#39;</span><span class="p">]</span>
 <span class="n">forecast_seasons</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2022</span><span class="p">]</span>
 <span class="n">mask</span> <span class="o">=</span> <span class="n">cropland_v9</span><span class="o">.</span><span class="n">tif</span>
+<span class="n">calendar_file</span> <span class="o">=</span> <span class="n">crop_calendar</span><span class="o">.</span><span class="n">xlsx</span>
+<span class="n">shp_boundary</span> <span class="o">=</span> <span class="n">EWCM_Level_1</span><span class="o">.</span><span class="n">shp</span>
+<span class="n">statistics_file</span> <span class="o">=</span> <span class="s1">&#39;statistics.csv&#39;</span>
 <span class="n">eo_model</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ndvi&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_tmax&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_tmin&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_precip&#39;</span><span class="p">,</span> <span class="s1">&#39;esi_4wk&#39;</span><span class="p">,</span> <span class="s1">&#39;soil_moisture_as1&#39;</span><span class="p">,</span> <span class="s1">&#39;soil_moisture_as2&#39;</span><span class="p">]</span>
+
 </pre></div>
 </div>
 </div>
@@ -742,10 +720,10 @@ end_year = 2022
             <p class="prev-next-title">Installation Instructions</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../background/scientific_python/scientific_python.html" title="next page">
+    <a class='right-next' id="next-link" href="../background/machine_learning/machine_learning.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Scientific Python</p>
+        <p class="prev-next-title">Machine Learning</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

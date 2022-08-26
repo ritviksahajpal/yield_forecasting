@@ -71,4 +71,3 @@ While the season started with normal onset and above average rains, a dry spell 
 ![](../../images/agmet/GAUL_South_Africa_Free_State_Maize_1_2020.png)
 Average start to the season with onset rains in November. ESI showing no stress on crops and above average conditions. From December consistent rains throughout the season tracking at above average levels and NDVI above average from February. Above average yields resulted for the 2020 cropping season in Free State 
 
-### 6. AgMet plots for Kenya maize from 2001 - 2022
