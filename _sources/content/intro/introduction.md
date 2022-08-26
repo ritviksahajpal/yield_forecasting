@@ -10,4 +10,4 @@ it is critical to provide accurate and explainable forecasts of pre-harvest loss
 that the same information is available at the same time to all the actors in this situation: 
 the farmers, the policy makers and the insurance companies (Kramer et al., 2021). 
 
-<iframe width="560" height="315" src="https://umd.box.com/s/c7tauca76caggowglsi0w0tm6w6846ql" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XKrpg0UN5h0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
