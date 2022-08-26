@@ -1,4 +1,4 @@
-# Schedule
+# Schedule August 26 - 30, 2022
 
 ## Day 1
 |     | **Friday August 26, Day 1/3 - Introduction to Crop Condition Analysis**                         |
