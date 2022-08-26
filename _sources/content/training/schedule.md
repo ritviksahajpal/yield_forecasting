@@ -17,6 +17,12 @@
 |     | **BREAK**                                                            |
 | 10. | Check geoprepare installation on RCMRD and NASA servers              |
 
-## Resources
-Johnson, D.M.; Rosales, A.; Mueller, R.; Reynolds, C.; Frantz, R.; Anyamba, A.; Pak, E.; Tucker, C. USA Crop Yield Estimation with MODIS NDVI: 
-Are Remotely Sensed Models Better than Simple Trend Analyses? Remote Sens. 2021, 13, 4227. https://doi.org/10.3390/rs13214227
+## Assignment
+|  | Group                                            | Year (Kenya) | Country  |
+|---|--------------------------------------------------|--------------|----------|
+| 1 | aparnapm16@gmail.com makarem@umd.edu             | 2017         | Tanzania |
+| 2 | bensonkemboi@gmail.com majamboj@gmail.com        | 2018         | Rwanda   |
+| 3 | anastasiamumbi@gmail.com meunicewangui@gmail.com | 2019         | Malawi   |
+| 4 | didarul.ku.14@gmail.com sem0029@uah.edu          | 2020         | Zambia   |
+
+[Day 1](https://docs.google.com/document/d/1OJ8OLKgkwkwweRfim9aTKz2NFm6P9GLRvgFOaW2WQf0/edit?usp=sharing)
