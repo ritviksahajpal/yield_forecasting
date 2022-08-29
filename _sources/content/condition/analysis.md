@@ -17,7 +17,7 @@ Here we examine how to put together a basic crop condition analysis using the Ag
 
 ### Percentile analysis of crop condition
 These graphics show the progress of EO variable over the growing season. The progress is measured using percentile of the EO variable by comparing 
-the present season value to those from the previous seasons (last 5 years). A percentile score of 51 in a particular month means that the EO variable value 
+the present season value to those from the previous seasons. A percentile score of 51 in a particular month means that the EO variable value 
 is more than 51% of the values of the same EO variable in the same month from the previous seasons. Higher percentile scores indicate a high value 
 for the EO variable as compared to previous seasons and vice versa. In these graphics, we use the following variables:
 * Area under the NDVI curve
