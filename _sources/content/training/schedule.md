@@ -20,3 +20,16 @@
 
 ### Assignment
 [Day 1 assignment](https://docs.google.com/document/d/1OJ8OLKgkwkwweRfim9aTKz2NFm6P9GLRvgFOaW2WQf0/edit?usp=sharing)
+
+## Day 2
+|     | **Monday August 29, Day 2/3 - Crop Condition Analysis**                                         |
+|-----|-------------------------------------------------------------------------------------------------|
+|     | _Activity_                                                                                      |
+| 1.  | Review of day 1                                                                                 
+| 2.  | Install https://mobaxterm.mobatek.net/, access RCMRD cluster                                    |
+|     | **BREAK**                                                                                       |
+| 3.  | Creating a crop condition report                                                                |
+| 4.  | Assignment                                                                                      |
+|     | **LUNCH**                                                                                       |
+| 5.  | Building a simple crop yield forecast model                                                     |
+| 6.  | Assignment                                                                                      |
