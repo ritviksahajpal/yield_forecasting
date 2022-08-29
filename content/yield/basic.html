@@ -795,22 +795,32 @@ following code first to connect to google drive:</p>
 </div>
 <div class="section" id="temporal-validation-of-model-3">
 <h2>Temporal validation of Model 3<a class="headerlink" href="#temporal-validation-of-model-3" title="Permalink to this headline">#</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">temp_validate_lreg2</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#import relevant functions</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span><span class="p">,</span> <span class="n">mean_squared_error</span><span class="p">,</span> <span class="n">r2_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="k">def</span> <span class="nf">temporal_validation</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
   <span class="c1"># Set aside 1 year as test data, leave all other years for training</span>
-  <span class="n">train</span> <span class="o">=</span> <span class="n">df1</span><span class="p">[</span><span class="n">df1</span><span class="p">[</span><span class="s1">&#39;Season&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">year</span><span class="p">]</span>
-  <span class="n">test</span> <span class="o">=</span> <span class="n">df1</span><span class="p">[</span><span class="n">df1</span><span class="p">[</span><span class="s1">&#39;Season&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">year</span><span class="p">]</span>
-  <span class="n">feature_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;accu_ndvi&#39;</span><span class="p">]</span>
-  <span class="n">X</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="n">feature_names</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>       <span class="c1"># training feature matri</span>
+  <span class="n">train</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Season&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">year</span><span class="p">]</span>
+  <span class="n">test</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Season&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">year</span><span class="p">]</span>
+
+  <span class="n">feature_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;auc_NDVI&#39;</span><span class="p">]</span>
+  <span class="n">X</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="n">feature_names</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>       <span class="c1"># training feature matrix</span>
   <span class="n">y</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="s1">&#39;yield&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>            <span class="c1"># training target array</span>
   <span class="n">X_test</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="n">feature_names</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>   <span class="c1"># test feature matrix</span>
   <span class="n">y_test</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="s1">&#39;yield&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
-  <span class="c1">#Instantiate lin reg</span>
-  <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+
+  <span class="c1">#Instantiate model</span>
   <span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span> 
+
   <span class="c1"># Fit the model</span>
   <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+  
   <span class="c1"># Predict based on the model</span>
   <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+  
   <span class="c1">#Calculate all metrics in a dataframe friendly format for simple viewing</span>
   <span class="n">stat_array</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="n">year</span><span class="p">],</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Intercept&#39;</span><span class="p">,</span><span class="s1">&#39;Coefficient&#39;</span><span class="p">,</span> <span class="s1">&#39;Mean Absolute Error&#39;</span><span class="p">,</span> <span class="s1">&#39;Mean Squared Error&#39;</span><span class="p">,</span> <span class="s1">&#39;Coefficient of Determination&#39;</span><span class="p">])</span>
   <span class="n">stat_array</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">year</span><span class="p">,</span><span class="s1">&#39;Intercept&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">intercept_</span>
@@ -818,18 +828,19 @@ following code first to connect to google drive:</p>
   <span class="n">stat_array</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">year</span><span class="p">,</span> <span class="s1">&#39;Mean Absolute Error&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
   <span class="n">stat_array</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">year</span><span class="p">,</span> <span class="s1">&#39;Mean Squared Error&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
   <span class="n">stat_array</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">year</span><span class="p">,</span> <span class="s1">&#39;Coefficient of Determination&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-  
-  <span class="k">return</span> <span class="n">model</span><span class="p">,</span> <span class="n">stat_array</span>
+
+  <span class="k">return</span> <span class="n">stat_array</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate and view temporal validation results</span>
-<span class="n">years</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2002</span><span class="p">,</span><span class="mi">2017</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#array of all yields where there is data</span>
-<span class="n">temporal_validation</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span> <span class="c1">#empty dataframe that results of temp validation will be appended to</span>
-<span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">years</span><span class="p">:</span> 
-  <span class="n">model</span><span class="p">,</span> <span class="n">stat_array</span> <span class="o">=</span> <span class="n">temp_validate_lreg2</span><span class="p">(</span><span class="n">df_ac</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1">#build model for each year and calculate statistics</span>
-  <span class="n">temporal_validation</span> <span class="o">=</span> <span class="n">temporal_validation</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stat_array</span><span class="p">)</span> 
+<span class="n">years</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2002</span><span class="p">,</span> <span class="mi">2017</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">#array of all yields where there is data</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span> <span class="c1">#empty dataframe that results of temp validation will be appended to</span>
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years</span><span class="p">:</span> 
+  <span class="n">stat_array</span> <span class="o">=</span> <span class="n">temporal_validation</span><span class="p">(</span><span class="n">df_ac</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span> <span class="c1">#build model for each year and calculate statistics</span>
+  <span class="n">results</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stat_array</span><span class="p">)</span> 
+
 <span class="c1">#view results</span>
-<span class="n">temporal_validation</span>
+<span class="n">results</span>
 </pre></div>
 </div>
 </div>

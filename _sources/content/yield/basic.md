@@ -316,22 +316,32 @@ Kurtosis:                       2.920   Cond. No.                         3.79
 
 ## Temporal validation of Model 3
 ```python
-def temp_validate_lreg2(df1, year):
+#import relevant functions
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+from sklearn.linear_model import LinearRegression
+import numpy as np
+import pandas as pd
+
+def temporal_validation(df, year):
   # Set aside 1 year as test data, leave all other years for training
-  train = df1[df1['Season'] != year]
-  test = df1[df1['Season'] == year]
-  feature_names = ['accu_ndvi']
-  X = train[feature_names].values       # training feature matri
+  train = df[df['Season'] != year]
+  test = df[df['Season'] == year]
+
+  feature_names = ['auc_NDVI']
+  X = train[feature_names].values       # training feature matrix
   y = train['yield'].ravel()            # training target array
   X_test = test[feature_names].values   # test feature matrix
   y_test = test['yield'].ravel()
-  #Instantiate lin reg
-  from sklearn.linear_model import LinearRegression
+
+  #Instantiate model
   model = LinearRegression() 
+
   # Fit the model
   model.fit(X, y)
+  
   # Predict based on the model
   y_pred = model.predict(X_test)
+  
   #Calculate all metrics in a dataframe friendly format for simple viewing
   stat_array = pd.DataFrame(index=[year],columns=['Intercept','Coefficient', 'Mean Absolute Error', 'Mean Squared Error', 'Coefficient of Determination'])
   stat_array.loc[year,'Intercept'] = model.intercept_
@@ -339,19 +349,20 @@ def temp_validate_lreg2(df1, year):
   stat_array.loc[year, 'Mean Absolute Error'] = mean_absolute_error(y_test, y_pred)
   stat_array.loc[year, 'Mean Squared Error'] = mean_squared_error(y_test, y_pred)
   stat_array.loc[year, 'Coefficient of Determination'] =  model.score(X,y)
-  
-  return model, stat_array
+
+  return stat_array
 ```
 
 ```python
 #Calculate and view temporal validation results
-years = np.arange(2002,2017,1) #array of all yields where there is data
-temporal_validation = pd.DataFrame() #empty dataframe that results of temp validation will be appended to
-for y in years: 
-  model, stat_array = temp_validate_lreg2(df_ac, y) #build model for each year and calculate statistics
-  temporal_validation = temporal_validation.append(stat_array) 
+years = np.arange(2002, 2017, 1) #array of all yields where there is data
+results = pd.DataFrame() #empty dataframe that results of temp validation will be appended to
+for year in years: 
+  stat_array = temporal_validation(df_ac, year) #build model for each year and calculate statistics
+  results = results.append(stat_array) 
+
 #view results
-temporal_validation
+results
 ```
 
 ```{Questions}
