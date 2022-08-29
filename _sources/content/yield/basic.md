@@ -260,8 +260,8 @@ df_temp = df_ac.groupby(['adm1_name','Season']).apply(lambda x: integrate.trapz(
 To find the area under a curve we must integrate the function used to draw this curve from a starting point to an ending point. 
 Similarly, to find the area under the NDVI curve, we will use the beginning of each season as the starting point and the ending of the season as the ending point.
 ```python
-df_ac = df_ac.groupby(['adm1_name','Season']).agg({'accu_ndvi':'max','yield':'mean'}).reset_index() # Grouping rows of NDVI by Region and Season to find NDVI.
-df_ac['accu_ndvi'] = df_temp[0] # setting the column of AUC NDVI values in df_ac equal to the calculated accumulated NDVI values
+df_ac = df_ac.groupby(['adm1_name','Season']).agg({'auc_NDVI':'max','yield':'mean'}).reset_index() # Grouping rows of NDVI by Region and Season to find NDVI.
+df_ac['auc_NDVI'] = df_temp[0] # setting the column of AUC NDVI values in df_ac equal to the calculated accumulated NDVI values
 round(df_ac, 2) # Rounding the whole dataset to two decimal places.
 ```
 To avoid having any errors when running the linear regression model, we drop the missing values.
@@ -283,7 +283,7 @@ test
 ```
 
 ```python
-feature_names = ['accu_ndvi']
+feature_names = ['auc_NDVI']
 X = train[feature_names].values       # training feature matrix
 y = train['yield'].ravel()            # training target array
 X_test = test[feature_names].values   # test feature matrix
