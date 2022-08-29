@@ -11,14 +11,24 @@ Here we examine how to put together a basic crop condition analysis using the Ag
 
 ### Temporal and Spatial Analysis of Crop Condition Analysis
 
-```{note}
-```{glue:figure} ![](../../images/agmet/GAUL_Kenya_Rift_Valley_Maize_1_2022.jpg) 
-```
-
+![](../../images/agmet/GAUL_Kenya_Rift_Valley_Maize_1_2022.jpg) 
 
 ![img.png](img.png)
 
 ### Percentile analysis of crop condition
+These graphics show the progress of EO variable over the growing season. The progress is measured using percentile of the EO variable by comparing 
+the present season value to those from the previous seasons (last 5 years). A percentile score of 51 in a particular month means that the EO variable value 
+is more than 51% of the values of the same EO variable in the same month from the previous seasons. Higher percentile scores indicate a high value 
+for the EO variable as compared to previous seasons and vice versa. In these graphics, we use the following variables:
+* Area under the NDVI curve
+* Precipitation
+* Surface soil moisture
+* Evaporative stress index
+* Growing degree days
+
+As an example, in Rift Valley in 2022, the area under the NDVI curve was consistently at the 0th percentile indicating below average crop conditions.
+This can be corroborated from the AgMet graphic above as well. Similarly, these other rows in this graphic follow the trends evident in the AgMet graphic.
+
 ![](../../images/agmet/rift_valley_mz.png)
 ![](../../images/agmet/western_mz.png)
 ![](../../images/agmet/nyanza_mz.png)
@@ -26,3 +36,14 @@ Here we examine how to put together a basic crop condition analysis using the Ag
 ![](../../images/agmet/eastern_mz.png)
 ![](../../images/agmet/coast_mz.png)
 ![](../../images/agmet/central_mz.png)
+
+```{admonition} Key questions for crop condition analysis
+For each region try to answer the following questions:
+: How does the NDVI level in the current season compare to the 5 year average?
+: Is cumulative precipitation above or below the 5 year average?
+: Is daily precipitation well distributed throughout the growing season?
+: What is the percentile score of the surface soil moisture in the current season?
+: What is the percentile score of the evaporation stress index in the current season?
+
+Based on the answers to the above questions, we can then determine the crop condition for each region.
+```
