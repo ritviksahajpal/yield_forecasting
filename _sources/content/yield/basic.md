@@ -416,6 +416,7 @@ results
     Put all the results from the 4 models and 5 countries in a table and compare them?
 
 2. Use a Random Forest model instead of linear regression for all 4 models and 5 countries. What are the results?
+
 HINT 1: A random forest regressor is non-parametric model and does not have any coef_ and intercept_ attributes.
 
 HINT 2:
