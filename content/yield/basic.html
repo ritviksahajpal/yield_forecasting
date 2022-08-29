@@ -507,6 +507,12 @@ title="Print to PDF"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="basic-crop-yield-forecasting-model">
 <h1>Basic Crop Yield Forecasting Model<a class="headerlink" href="#basic-crop-yield-forecasting-model" title="Permalink to this headline">#</a></h1>
+<p>How can we best estimate crop yields? Should we use satellite data or would a simple trend analysis suffice? Based on
+<a class="reference external" href="https://www.mdpi.com/2072-4292/13/21/4227">Johnson et al., 2021</a>, we attempt to answer this question here:
+Three linear regression modeling methods were examined and performed identically. The models were fit at the administrative 1 level. The
+predictor variable for the first model was year, monthly maximum NDVI for the second. and area under the NDVI curve for the third model.
+To test the validity of the model’s different metrics were used such as the Mean Squared Error (MSE), Mean Absolute Error (MAE), and Coefficient of
+Determination (R-Squared). Each method is explained more in detail in the following subsections.</p>
 <p>If you are using google colab to execute the code and your data is stored in the google drive, then execute the
 following code first to connect to google drive:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
@@ -518,6 +524,9 @@ following code first to connect to google drive:</p>
 <span class="kn">import</span> <span class="nn">datetime</span>
 </pre></div>
 </div>
+<p>Read the csv file with the data as df and start the data cleaning process. Here we set the crop calendar greater than 0 to make sure
+that the crop is actively growing. We then rescale the NDVI values to be between 0 and 1 using the following formula formula:
+Rescaled NDVI = (NDVI - 50)/200.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read in data, compute features, train model</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/PATH_TO_DATA.csv&#39;</span><span class="p">)</span>
 
@@ -540,6 +549,8 @@ following code first to connect to google drive:</p>
 <span class="n">df_ml</span>
 </pre></div>
 </div>
+<p>To create a model, we must train it using part of the data and test the model on a different portion of the data.
+A good way to do this is to split the data into 80% training and 20% testing using <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code> function from Scikit-learn.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Split the dataframe such that we use 80% of the data for training and predict the remaining 20%</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df_ml</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
@@ -548,6 +559,8 @@ following code first to connect to google drive:</p>
 </div>
 <div class="section" id="model-1-yield-as-function-of-year">
 <h2>Model 1: Yield as  function of Year<a class="headerlink" href="#model-1-yield-as-function-of-year" title="Permalink to this headline">#</a></h2>
+<p>For this model, Season (representing year) is the independent variable. So we will call the X values of the training data the Season column,
+and the dependent variable of the training data will be yield. Similarly, we will use Season as the X_test values and the yield is y_test.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">feature_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Season&#39;</span><span class="p">]</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="n">feature_names</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>       <span class="c1"># training feature matrix</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="s1">&#39;yield&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>            <span class="c1"># training target array</span>
@@ -555,6 +568,7 @@ following code first to connect to google drive:</p>
 <span class="n">y_test</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="s1">&#39;yield&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>        <span class="c1"># test target array</span>
 </pre></div>
 </div>
+<p>Next we fit the model linearly with the X as Season and y as yield.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Instantiate a Linear Regression Model</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
@@ -563,15 +577,19 @@ following code first to connect to google drive:</p>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Now we predict the data based on the model we just created, and the model will give its predictions of the 20% of the tested data using X_test.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Predict based on the model</span>
 <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 <span class="n">y_pred</span>
 </pre></div>
 </div>
+<p>The linear model has an intercept which represents yield if the Season is 0, and a coefficient which is the slope of the relationship between Season and Yield.
+The following line will show the model intercept and coefficient.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show model intercept and coefficient</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Finally we print all the metrics that measure the validity of our model: Mean Absolute Error, Mean Squared Error and Coefficient of Determination (R-Squared).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Estimate model performance using different metrics</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span><span class="p">,</span> <span class="n">mean_squared_error</span><span class="p">,</span> <span class="n">r2_score</span>
 
@@ -581,6 +599,8 @@ following code first to connect to google drive:</p>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Coefficient of Determination: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Another way to show the results is using statsmodels.api. This library gives us different metrics about the model, but it presumes the
+intercept is zero. So, we must add sm.add_constant(X) to ensure the results are accurate.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show OLS Regression Results using Statsmodel</span>
 <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -614,9 +634,14 @@ following code first to connect to google drive:</p>
 <span class="o">==============================================================================</span>
 </pre></div>
 </div>
+<p>For 2002-2016 the maize yield of each month was linearly regressed against the corresponding month. For the linear regression model,
+80% of the data was used for training of the model while 20% was used for testing. The MAE of this model is 0.69 while the MSE is 0.67.
+The R-squared value is 0.01 which means that 1% of the variance yield is explained by the variance in the months.</p>
 </div>
 <div class="section" id="model-2-yield-as-a-function-of-maximum-ndvi">
 <h2>Model 2: Yield as a function of maximum NDVI<a class="headerlink" href="#model-2-yield-as-a-function-of-maximum-ndvi" title="Permalink to this headline">#</a></h2>
+<p>For this model, peak NDVI is the independent variable. So we will call the X values of the training data the NDVI column,
+and the dependent variable of the training data will be yield. Similarly, we will use peak NDVI as the X_test values and the yield is y_test.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">feature_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ndvi&#39;</span><span class="p">]</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="n">feature_names</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>       <span class="c1"># training feature matrix</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="s1">&#39;yield&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>            <span class="c1"># training target array</span>
@@ -628,6 +653,7 @@ following code first to connect to google drive:</p>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Now we predict the data based on the model we just created.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Predict based on the model</span>
 <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 <span class="n">y_pred</span>
@@ -679,9 +705,16 @@ following code first to connect to google drive:</p>
 <span class="o">==============================================================================</span>
 </pre></div>
 </div>
+<p>For 2002-2016 the maximum NDVI was obtained from the time series, and each month’s maize yield was linearly regressed against the maximum
+NDVI of the corresponding month. For the linear regression model, 80% of the data was used for training of the model while 20% was used
+for testing. The MAE of this model is 0.61 while the MSE is 0.50. The R-squared value is 0.38 which means that 38% of the variance yield is
+explained by the variance in the peak NDVI.</p>
 </div>
 <div class="section" id="model-3-yield-as-a-function-of-area-under-the-ndvi-curve-auc">
 <h2>Model 3: Yield as a function of Area under the NDVI curve (AUC)<a class="headerlink" href="#model-3-yield-as-a-function-of-area-under-the-ndvi-curve-auc" title="Permalink to this headline">#</a></h2>
+<p>In this model, we use area under the NDVI curve as a predictor for crop yield. We start by importing the data and applying the crop mask when the
+crop calendar is greater than 1 since we want to measure the accumulated NDVI when the crop is growing. Next we rescale the NDVI to be between
+0 and 1 and subset the data to the columns needed.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/PATH_TO_DATA.csv&#39;</span><span class="p">)</span>
 
 <span class="c1"># Subset to when crop is actively growing i.e. crop_cal != 0</span>
@@ -694,14 +727,17 @@ following code first to connect to google drive:</p>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;adm1_name&#39;</span><span class="p">,</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;yield&#39;</span><span class="p">,</span> <span class="s1">&#39;ndvi&#39;</span><span class="p">,</span><span class="s1">&#39;Season&#39;</span><span class="p">,</span> <span class="s1">&#39;Month&#39;</span><span class="p">]]</span>
 </pre></div>
 </div>
+<p>Since the datetime column is given as a string, it would be helpful for us to convert that to datetime format.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change datetime column from data type str to a datetime</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
+<p>This groupby function is similar to the groupby used in models 1 and 2. However, this time we are not grouping only by region and season, but also by month.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculating Peak NDVI by month</span>
 <span class="n">df_ac</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;adm1_name&#39;</span><span class="p">,</span><span class="s1">&#39;Season&#39;</span><span class="p">,</span><span class="s1">&#39;Month&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;ndvi&#39;</span><span class="p">:</span><span class="s1">&#39;max&#39;</span><span class="p">,</span><span class="s1">&#39;yield&#39;</span><span class="p">:</span><span class="s1">&#39;mean&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
 </pre></div>
 </div>
+<p>We start calculating the area under the NDVI curve by inserting a column to fill in with those values later.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inserting empty column to fill with AUC NDVI values later</span>
 <span class="n">df_ac</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;auc_NDVI&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 </pre></div>
@@ -711,11 +747,14 @@ following code first to connect to google drive:</p>
 <span class="n">df_temp</span> <span class="o">=</span> <span class="n">df_ac</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;adm1_name&#39;</span><span class="p">,</span><span class="s1">&#39;Season&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">integrate</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;ndvi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;Month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">))</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
 </pre></div>
 </div>
+<p>To find the area under a curve we must integrate the function used to draw this curve from a starting point to an ending point.
+Similarly, to find the area under the NDVI curve, we will use the beginning of each season as the starting point and the ending of the season as the ending point.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_ac</span> <span class="o">=</span> <span class="n">df_ac</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;adm1_name&#39;</span><span class="p">,</span><span class="s1">&#39;Season&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;accu_ndvi&#39;</span><span class="p">:</span><span class="s1">&#39;max&#39;</span><span class="p">,</span><span class="s1">&#39;yield&#39;</span><span class="p">:</span><span class="s1">&#39;mean&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span> <span class="c1"># Grouping rows of NDVI by Region and Season to find NDVI.</span>
 <span class="n">df_ac</span><span class="p">[</span><span class="s1">&#39;accu_ndvi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_temp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># setting the column of AUC NDVI values in df_ac equal to the calculated accumulated NDVI values</span>
 <span class="nb">round</span><span class="p">(</span><span class="n">df_ac</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># Rounding the whole dataset to two decimal places.</span>
 </pre></div>
 </div>
+<p>To avoid having any errors when running the linear regression model, we drop the missing values.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_ac</span> <span class="o">=</span> <span class="n">df_ac</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span> <span class="c1"># dropping missing values</span>
 </pre></div>
 </div>
@@ -795,6 +834,9 @@ following code first to connect to google drive:</p>
 </div>
 <div class="section" id="temporal-validation-of-model-3">
 <h2>Temporal validation of Model 3<a class="headerlink" href="#temporal-validation-of-model-3" title="Permalink to this headline">#</a></h2>
+<p>We used an 80-20 train-test split. However, as a result, it is possible that for some years there is data both in the train and the test split.
+This results in a bias in the model, also termed as a <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">leakage</span></code>. To avoid data leakage, we perform temporal validation i.e. the year in the test set
+is not in the train set. We repeat the temporal validation for each year in the test set.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#import relevant functions</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span><span class="p">,</span> <span class="n">mean_squared_error</span><span class="p">,</span> <span class="n">r2_score</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
@@ -842,6 +884,23 @@ following code first to connect to google drive:</p>
 <span class="c1">#view results</span>
 <span class="n">results</span>
 </pre></div>
+</div>
+<div class="admonition-questions admonition">
+<p class="admonition-title">Questions</p>
+<ol>
+<li><p>Repeat all the 4 models above for each of the following countries:
+a. Malawi
+b. Zambia
+c. Rwanda
+d. United Republic of Tanzania</p>
+<p>Put all the results from the 4 models and 5 countries in a table and compare them?</p>
+</li>
+<li><p>Use a Random Forest model instead of linear regression for all 4 models and 5 countries. What are the results?
+HINT 1: A random forest regressor is non-parametric model and does not have any coef_ and intercept_ attributes.</p></li>
+</ol>
+<p>HINT 2:
+from sklearn.ensemble import RandomForestRegressor
+model = RandomForestRegressor(n_estimators=250, random_state=0)</p>
 </div>
 </div>
 </div>
