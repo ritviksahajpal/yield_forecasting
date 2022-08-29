@@ -422,4 +422,6 @@ HINT 2:
 from sklearn.ensemble import RandomForestRegressor
 model = RandomForestRegressor(n_estimators=250, random_state=0)
 
-```
+3. Which model performs better and under what conditions?
+``` 
+
