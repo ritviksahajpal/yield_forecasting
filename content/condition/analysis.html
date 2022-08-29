@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction &#8212; Yield Forecasting</title>
+    <title>Crop Condition Analysis &#8212; Yield Forecasting</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -51,7 +51,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Installation Instructions" href="../installation.html" />
+    <link rel="next" title="Agrometeorological Earth Observation Indicators" href="agmet.html" />
+    <link rel="prev" title="Model tracking" href="../background/mlops/model_tracking.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -105,8 +106,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro/introduction.html">
                     Introduction
                 </a>
             </li>
@@ -186,14 +187,14 @@ const thebe_selector_output = ".output, .cell_output"
   Crop Condition Assessment
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../condition/analysis.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Crop Condition Analysis
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../condition/agmet.html">
+  <a class="reference internal" href="agmet.html">
    Agrometeorological Earth Observation Indicators
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -203,32 +204,32 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../condition/ndvi.html">
+    <a class="reference internal" href="ndvi.html">
      Normalized Difference Vegetation Index (NDVI)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../condition/precipitation.html">
+    <a class="reference internal" href="precipitation.html">
      Precipitation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../condition/temperature.html">
+    <a class="reference internal" href="temperature.html">
      Temperature
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../condition/soil_moisture.html">
+    <a class="reference internal" href="soil_moisture.html">
      Soil Moisture (Surface)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../condition/examples.html">
+    <a class="reference internal" href="examples.html">
      How to use AgMet graphics for Crop Condition analysis?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../condition/partner_resources.html">
+    <a class="reference internal" href="partner_resources.html">
      Partner resources
     </a>
    </li>
@@ -348,7 +349,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/intro/introduction.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/condition/analysis.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -376,7 +377,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/content/intro/introduction.md"
+        <a href="../../_sources/content/condition/analysis.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -425,7 +426,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Introduction</h1>
+                <h1>Crop Condition Analysis</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -437,29 +438,11 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h1>
-<p>Yield forecasting and estimation is key to almost all food security and agricultural
-analysis, including ensuring market transparency, trade decisions, triggering anticipatory
-actions in the face of impending shortfalls, informing farmer best practices, insurance payouts,
-designing effective adaptation, and mitigation strategies in the face of a warming climate.
-Provision of insurance services can ensure that all farmers, especially the least privileged,
-are buffered from the vagaries of nature. For an optimally functioning insurance marketplace,
-it is critical to provide accurate and explainable forecasts of pre-harvest losses, and ensure
-that the same information is available at the same time to all the actors in this situation:
-the farmers, the policy makers and the insurance companies (Kramer et al., 2021).</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XKrpg0UN5h0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="crop-condition-analysis">
+<h1>Crop Condition Analysis<a class="headerlink" href="#crop-condition-analysis" title="Permalink to this headline">#</a></h1>
+<p><img alt="" src="../../_images/GAUL_Kenya_Rift_Valley_Maize_1_2022.jpg" /></p>
+<p><img alt="" src="../../_images/kenya_percentile_march_june.png" /></p>
+<p><img alt="" src="../../_images/kenya_percentile_jul_oct.png" /></p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -475,7 +458,7 @@ the farmers, the policy makers and the insurance companies (Kramer et al., 2021)
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content\intro"
+            path: "./content\condition"
         },
         predefinedOutput: true
     }
@@ -489,10 +472,17 @@ the farmers, the policy makers and the insurance companies (Kramer et al., 2021)
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="../installation.html" title="next page">
+    <a class='left-prev' id="prev-link" href="../background/mlops/model_tracking.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Model tracking</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="agmet.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Installation Instructions</p>
+        <p class="prev-next-title">Agrometeorological Earth Observation Indicators</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
