@@ -417,11 +417,11 @@ results
 
 2. Use a Random Forest model instead of linear regression for all 4 models and 5 countries. What are the results?  
 
-HINT 1: A random forest regressor is non-parametric model and does not have any coef_ and intercept_ attributes.  
+    HINT 1: A random forest regressor is non-parametric model and does not have any coef_ and intercept_ attributes.  
 
-HINT 2:  
-from sklearn.ensemble import RandomForestRegressor  
-model = RandomForestRegressor(n_estimators=250, random_state=0)  
+    HINT 2:  
+    from sklearn.ensemble import RandomForestRegressor  
+    model = RandomForestRegressor(n_estimators=250, random_state=0)  
 
 3. Which model performs better and under what conditions?  
 ``` 
