@@ -888,18 +888,18 @@ is not in the train set. We repeat the temporal validation for each year in the 
 <div class="admonition-questions admonition">
 <p class="admonition-title">Questions</p>
 <ol>
-<li><p>Repeat all the 4 models above for each of the following countries:
-a. Malawi
-b. Zambia
-c. Rwanda
+<li><p>Repeat all the 4 models above for each of the following countries:<br />
+a. Malawi<br />
+b. Zambia<br />
+c. Rwanda<br />
 d. United Republic of Tanzania</p>
 <p>Put all the results from the 4 models and 5 countries in a table and compare them?</p>
 </li>
 <li><p>Use a Random Forest model instead of linear regression for all 4 models and 5 countries. What are the results?</p></li>
 </ol>
 <p>HINT 1: A random forest regressor is non-parametric model and does not have any coef_ and intercept_ attributes.</p>
-<p>HINT 2:
-from sklearn.ensemble import RandomForestRegressor
+<p>HINT 2:<br />
+from sklearn.ensemble import RandomForestRegressor<br />
 model = RandomForestRegressor(n_estimators=250, random_state=0)</p>
 <ol class="simple">
 <li><p>Which model performs better and under what conditions?</p></li>
