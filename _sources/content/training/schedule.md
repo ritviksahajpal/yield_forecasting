@@ -33,3 +33,25 @@
 |     | **LUNCH**                                                                                       |
 | 5.  | Building a simple crop yield forecast model                                                     |
 | 6.  | Assignment                                                                                      |
+
+### Assignment
+
+* Perform crop condition analysis for Kenya, Malawi, Rwanda, Zambia and United Republic of Tanzania using the graphics and questions outlined 
+[here](https://ritviksahajpal.github.io/yield_forecasting/content/condition/analysis.html)
+
+* Repeat all the 4 models from [here](https://ritviksahajpal.github.io/yield_forecasting/content/yield/basic.html) for each of the following countries:  
+    Malawi  
+    Zambia   
+    Rwanda   
+    United Republic of Tanzania    
+Put all the results from the 4 models and 5 countries in a table and compare them.  
+
+* Use a Random Forest model instead of linear regression for all 4 models and 5 countries. What are the results?  
+    _HINT 1_: A random forest regressor is non-parametric model and does not have any coef_ and intercept_ attributes.  
+
+    _HINT 2_:  
+    ```python
+    from sklearn.ensemble import RandomForestRegressor  
+    model = RandomForestRegressor(n_estimators=250, random_state=0)
+  ```  
+Which model performs better and under what conditions?  

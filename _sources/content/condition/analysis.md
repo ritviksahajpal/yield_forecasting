@@ -47,4 +47,5 @@ For each region try to answer the following questions:
 : * What is the percentile score of the growing degree days in the current season? 
 
 Based on the answers to the above questions, we can then determine the crop condition for each region.
+  
 ```
