@@ -35,6 +35,8 @@
 | 6.  | Assignment                                                                |
 
 ### Assignment
+Link to AgMet and percentile plots: https://www.dropbox.com/sh/40343f0zvyidsbm/AADjkiwtEpLY5bAs395w3rTya?dl=0  
+Document: https://docs.google.com/document/d/1Nz5x-R7Kl4DDxZ0uEe453QrhXwci7K8tpu3ZYGl6G4I/edit?usp=sharing  
 
 * Perform crop condition analysis for Kenya, Malawi, Rwanda, Zambia and United Republic of Tanzania using the graphics and questions outlined 
 [here](https://ritviksahajpal.github.io/yield_forecasting/content/condition/analysis.html)
