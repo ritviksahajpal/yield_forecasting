@@ -9,7 +9,7 @@ that users are provided with the most up-to-date information.
 
 Here we examine how to put together a basic crop condition analysis using the AgMet Indicators and related graphics.
 
-### Temporal and Spatial Analysis of Crop Condition Analysis
+### Temporal and Spatial Crop Condition Analysis in Kenya
 
 ![](../../images/agmet/GAUL_Kenya_Rift_Valley_Maize_1_2022.jpg) 
 
@@ -39,11 +39,12 @@ This can be corroborated from the AgMet graphic above as well. Similarly, these 
 
 ```{admonition} Key questions for crop condition analysis
 For each region try to answer the following questions:
-: How does the NDVI level in the current season compare to the 5 year average?
-: Is cumulative precipitation above or below the 5 year average?
-: Is daily precipitation well distributed throughout the growing season?
-: What is the percentile score of the surface soil moisture in the current season?
-: What is the percentile score of the evaporation stress index in the current season?
+: * How does the NDVI level in the current season compare to the 5 year average?
+: * Is cumulative precipitation above or below the 5 year average?
+: * Is daily precipitation well distributed throughout the growing season?
+: * What is the percentile score of the surface soil moisture in the current season?
+: * What is the percentile score of the evaporation stress index in the current season?
+: * What is the percentile score of the growing degree days in the current season? 
 
 Based on the answers to the above questions, we can then determine the crop condition for each region.
 ```

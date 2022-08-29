@@ -887,22 +887,30 @@ is not in the train set. We repeat the temporal validation for each year in the 
 </div>
 <div class="admonition-questions admonition">
 <p class="admonition-title">Questions</p>
-<ol>
-<li><p>Repeat all the 4 models above for each of the following countries:<br />
-a. Malawi<br />
-b. Zambia<br />
-c. Rwanda<br />
-d. United Republic of Tanzania</p>
-<p>Put all the results from the 4 models and 5 countries in a table and compare them?</p>
-</li>
-<li><p>Use a Random Forest model instead of linear regression for all 4 models and 5 countries. What are the results?</p>
-<p><em>HINT 1</em>: A random forest regressor is non-parametric model and does not have any coef_ and intercept_ attributes.</p>
-<p><em>HINT 2</em>:<br />
-from sklearn.ensemble import RandomForestRegressor<br />
-model = RandomForestRegressor(n_estimators=250, random_state=0)</p>
-</li>
-<li><p>Which model performs better and under what conditions?</p></li>
-</ol>
+<dl class="simple myst">
+<dt>Repeat all the 4 models above for each of the following countries:</dt><dd><p>Malawi</p>
+</dd>
+<dd><p>Zambia</p>
+</dd>
+<dd><p>Rwanda</p>
+</dd>
+<dd><p>United Republic of Tanzania</p>
+</dd>
+</dl>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Put all the results from the 4 models and 5 countries in a table and compare them?  
+</pre></div>
+</div>
+<dl class="simple myst">
+<dt>Use a Random Forest model instead of linear regression for all 4 models and 5 countries. What are the results?</dt><dd><p><em>HINT 1</em>: A random forest regressor is non-parametric model and does not have any coef_ and intercept_ attributes.</p>
+</dd>
+<dd><p><em>HINT 2</em>:</p>
+</dd>
+<dd><p>from sklearn.ensemble import RandomForestRegressor</p>
+</dd>
+<dd><p>model = RandomForestRegressor(n_estimators=250, random_state=0)</p>
+</dd>
+</dl>
+<p>Which model performs better and under what conditions?</p>
 </div>
 </div>
 </div>

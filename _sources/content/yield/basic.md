@@ -407,22 +407,22 @@ results
 ```
 
 ```{admonition} Questions
-1. Repeat all the 4 models above for each of the following countries:  
-    a. Malawi  
-    b. Zambia  
-    c. Rwanda  
-    d. United Republic of Tanzania  
+Repeat all the 4 models above for each of the following countries:  
+    : Malawi  
+    : Zambia  
+    : Rwanda  
+    : United Republic of Tanzania  
        
     Put all the results from the 4 models and 5 countries in a table and compare them?  
 
-2. Use a Random Forest model instead of linear regression for all 4 models and 5 countries. What are the results?  
+Use a Random Forest model instead of linear regression for all 4 models and 5 countries. What are the results?  
 
-    _HINT 1_: A random forest regressor is non-parametric model and does not have any coef_ and intercept_ attributes.  
+    : _HINT 1_: A random forest regressor is non-parametric model and does not have any coef_ and intercept_ attributes.  
 
-    _HINT 2_:  
-    from sklearn.ensemble import RandomForestRegressor  
-    model = RandomForestRegressor(n_estimators=250, random_state=0)  
+    : _HINT 2_:  
+    : from sklearn.ensemble import RandomForestRegressor  
+    : model = RandomForestRegressor(n_estimators=250, random_state=0)  
 
-3. Which model performs better and under what conditions?  
+Which model performs better and under what conditions?  
 ``` 
 
