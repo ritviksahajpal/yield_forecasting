@@ -37,7 +37,7 @@ Before running the code above, we need to specify the two configuration files. `
 `fraction_cpus`: What fraction of available CPUs to use  
 ```python
 [DATASETS]
-datasets = ['CPC', 'SOIL-MOISTURE', 'LST', 'CPC', 'AVHRR', 'AGERA5', 'CHIRPS', 'CHIRPS-GEFS']
+datasets = ['CPC', 'SOIL-MOISTURE', 'NDVI', 'CHIRPS', 'CHIRPS-GEFS', 'ESI']
 
 [PATHS]
 dir_base = /home/servir/GEOCIF
