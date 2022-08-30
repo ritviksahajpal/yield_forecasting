@@ -168,12 +168,19 @@ seasons = [1]
 region = admin1  ; admin0: country, admin1: state, admin2: county
 
 [AGMET]
-eo_plot = ['ndvi', 'cpc_tmax', 'cpc_tmin', 'cpc_precip', 'esi_4wk', 'soil_moisture_as1', 'soil_moisture_as2']
+eo_plot = ['ndvi', 'cpc_tmax', 'cpc_tmin', 'chirps', 'esi_4wk', 'soil_moisture_as1', 'soil_moisture_as2']
+
+[ML]
+models = ['merf']
+
+[MLOPS]
+neptune_username = ritvik
+neptune_project = geocif
 
 [DEFAULT]
 countries = ['kenya']
 forecast_seasons = [2022]
-models = ['merf']
+model = ['merf']
 eo_model = ['ndvi', 'cpc_tmax', 'cpc_tmin', 'cpc_precip', 'esi_4wk']
 ```
 

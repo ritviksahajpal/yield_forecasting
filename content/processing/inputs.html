@@ -690,12 +690,19 @@ end_year = 2022
 <span class="n">region</span> <span class="o">=</span> <span class="n">admin1</span>  <span class="p">;</span> <span class="n">admin0</span><span class="p">:</span> <span class="n">country</span><span class="p">,</span> <span class="n">admin1</span><span class="p">:</span> <span class="n">state</span><span class="p">,</span> <span class="n">admin2</span><span class="p">:</span> <span class="n">county</span>
 
 <span class="p">[</span><span class="n">AGMET</span><span class="p">]</span>
-<span class="n">eo_plot</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ndvi&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_tmax&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_tmin&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_precip&#39;</span><span class="p">,</span> <span class="s1">&#39;esi_4wk&#39;</span><span class="p">,</span> <span class="s1">&#39;soil_moisture_as1&#39;</span><span class="p">,</span> <span class="s1">&#39;soil_moisture_as2&#39;</span><span class="p">]</span>
+<span class="n">eo_plot</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ndvi&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_tmax&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_tmin&#39;</span><span class="p">,</span> <span class="s1">&#39;chirps&#39;</span><span class="p">,</span> <span class="s1">&#39;esi_4wk&#39;</span><span class="p">,</span> <span class="s1">&#39;soil_moisture_as1&#39;</span><span class="p">,</span> <span class="s1">&#39;soil_moisture_as2&#39;</span><span class="p">]</span>
+
+<span class="p">[</span><span class="n">ML</span><span class="p">]</span>
+<span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;merf&#39;</span><span class="p">]</span>
+
+<span class="p">[</span><span class="n">MLOPS</span><span class="p">]</span>
+<span class="n">neptune_username</span> <span class="o">=</span> <span class="n">ritvik</span>
+<span class="n">neptune_project</span> <span class="o">=</span> <span class="n">geocif</span>
 
 <span class="p">[</span><span class="n">DEFAULT</span><span class="p">]</span>
 <span class="n">countries</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;kenya&#39;</span><span class="p">]</span>
 <span class="n">forecast_seasons</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2022</span><span class="p">]</span>
-<span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;merf&#39;</span><span class="p">]</span>
+<span class="n">model</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;merf&#39;</span><span class="p">]</span>
 <span class="n">eo_model</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ndvi&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_tmax&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_tmin&#39;</span><span class="p">,</span> <span class="s1">&#39;cpc_precip&#39;</span><span class="p">,</span> <span class="s1">&#39;esi_4wk&#39;</span><span class="p">]</span>
 </pre></div>
 </div>

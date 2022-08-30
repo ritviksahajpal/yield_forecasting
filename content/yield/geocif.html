@@ -412,12 +412,36 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-code">
+   Python code
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -429,6 +453,19 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-code">
+   Python code
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -438,6 +475,18 @@ title="Print to PDF"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="geocif">
 <h1>GEOCIF<a class="headerlink" href="#geocif" title="Permalink to this headline">#</a></h1>
+<div class="section" id="python-code">
+<h2>Python code<a class="headerlink" href="#python-code" title="Permalink to this headline">#</a></h2>
+<p>We will be using the <a class="reference external" href="https://github.com/ritviksahajpal/geocif">geocif</a> package.
+Before running any code, consider using <code class="docutils literal notranslate"><span class="pre">tmux</span></code> or <code class="docutils literal notranslate"><span class="pre">screen</span></code> to retain access to the terminal even if you are accidentally logged out.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">geocif</span> <span class="kn">import</span> <span class="n">geocif</span>
+
+<span class="c1"># Provide full path to the configuration files</span>
+<span class="c1"># Merge EO files into one, this is needed to create AgMet graphics and to run the crop yield model</span>
+<span class="n">geocif</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;PATH_TO_geoprepare.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;PATH_TO_geoextract.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;PATH_TO_geocif.txt&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
