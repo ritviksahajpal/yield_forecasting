@@ -23,7 +23,10 @@ import datetime
 
 Read the csv file with the data as df and start the data cleaning process. Here we set the crop calendar greater than 0 to make sure 
 that the crop is actively growing. We then rescale the NDVI values to be between 0 and 1 using the following formula formula: 
-Rescaled NDVI = (NDVI - 50)/200. 
+Rescaled NDVI = (NDVI - 50)/200. You can use either of the following data files:
+* [Kenya data file](https://www.dropbox.com/s/gd3q9fiz4um626d/kenya_maize_s1.csv?dl=0)
+* [Argentina data file](https://www.dropbox.com/s/25ti2fuu7v2h67s/argentina_maize_s1.csv?dl=0)
+
 ```python
 # Read in data, compute features, train model
 df = pd.read_csv('/content/drive/PATH_TO_DATA.csv')
@@ -233,7 +236,7 @@ df = df[df['crop_cal'] > 1]
 df['ndvi'] = (df['ndvi'] - 50)/200
 
 # Subset to the following columns: adm1_name, datetime, yield, ndvi
-df = df[['adm1_name', 'datetime', 'yield', 'ndvi','Season', 'Month']]
+df = df[['adm1_name', 'datetime', 'yield', 'ndvi', 'Season', 'Month']]
 ```
 Since the datetime column is given as a string, it would be helpful for us to convert that to datetime format.
 ```python

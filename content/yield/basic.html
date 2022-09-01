@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Schedule August 26 - 30, 2022" href="../training/schedule.html" />
+    <link rel="next" title="GEOCIF" href="geocif.html" />
     <link rel="prev" title="Partner resources" href="../condition/partner_resources.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -245,6 +245,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Basic Crop Yield Forecasting Model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="geocif.html">
+   GEOCIF
   </a>
  </li>
 </ul>
@@ -526,7 +531,11 @@ following code first to connect to google drive:</p>
 </div>
 <p>Read the csv file with the data as df and start the data cleaning process. Here we set the crop calendar greater than 0 to make sure
 that the crop is actively growing. We then rescale the NDVI values to be between 0 and 1 using the following formula formula:
-Rescaled NDVI = (NDVI - 50)/200.</p>
+Rescaled NDVI = (NDVI - 50)/200. You can use either of the following data files:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.dropbox.com/s/gd3q9fiz4um626d/kenya_maize_s1.csv?dl=0">Kenya data file</a></p></li>
+<li><p><a class="reference external" href="https://www.dropbox.com/s/25ti2fuu7v2h67s/argentina_maize_s1.csv?dl=0">Argentina data file</a></p></li>
+</ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read in data, compute features, train model</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/PATH_TO_DATA.csv&#39;</span><span class="p">)</span>
 
@@ -724,7 +733,7 @@ crop calendar is greater than 1 since we want to measure the accumulated NDVI wh
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ndvi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ndvi&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">50</span><span class="p">)</span><span class="o">/</span><span class="mi">200</span>
 
 <span class="c1"># Subset to the following columns: adm1_name, datetime, yield, ndvi</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;adm1_name&#39;</span><span class="p">,</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;yield&#39;</span><span class="p">,</span> <span class="s1">&#39;ndvi&#39;</span><span class="p">,</span><span class="s1">&#39;Season&#39;</span><span class="p">,</span> <span class="s1">&#39;Month&#39;</span><span class="p">]]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;adm1_name&#39;</span><span class="p">,</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;yield&#39;</span><span class="p">,</span> <span class="s1">&#39;ndvi&#39;</span><span class="p">,</span> <span class="s1">&#39;Season&#39;</span><span class="p">,</span> <span class="s1">&#39;Month&#39;</span><span class="p">]]</span>
 </pre></div>
 </div>
 <p>Since the datetime column is given as a string, it would be helpful for us to convert that to datetime format.</p>
@@ -922,10 +931,10 @@ is not in the train set. We repeat the temporal validation for each year in the 
             <p class="prev-next-title">Partner resources</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../training/schedule.html" title="next page">
+    <a class='right-next' id="next-link" href="geocif.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Schedule August 26 - 30, 2022</p>
+        <p class="prev-next-title">GEOCIF</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
