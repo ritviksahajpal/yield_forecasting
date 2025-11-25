@@ -5,8 +5,8 @@
 On the UMD cluster, first load the anaconda module and create a clone environment by typing the 
 following commands on the terminal:
 ```python
-module load python/3.7/anaconda
-conda create -n UMD --clone=/apps/python/3.7/anaconda
+module load python/3.11.7/anaconda
+conda create -n UMD --clone=/apps/python/3.11.7/anaconda
 ```
 On a non-UMD cluster or local machine, download and install the latest anaconda package:
 ```python
@@ -51,11 +51,6 @@ pip install palettable
 pip install geopy 
 pip install geocoder 
 pip install palettable 
-pip install forestci 
-pip install pangres 
-pip install sklearn-contrib-lightning 
-pip install pangres 
-pip install pycountry 
 pip install --upgrade git+https://github.com/ritviksahajpal/pygeoutil.git
 ```
 
@@ -125,8 +120,20 @@ to install the CDS API key on your local machine/cluster
      by running on Unix/Linux the command <br>
            `pip install cdsapi`   
 
-### Install geoprepare library
-A Python package to prepare (download, extract, process input data) for GEOCIF and related models
+(installation:install-geoprepare-library)=
+### Installing geoprepare library
+A Python library to prepare (download, extract, process input data) for GEOCIF and related models
+#### Using PyPi (default)
+```python
+pip install --upgrade geoprepare
+```
+#### Using Github repository (for development)
 ```python
 pip install --upgrade --no-deps --force-reinstall git+https://github.com/ritviksahajpal/geoprepare.git
+```
+
+### Installing geocif library
+A Python library for models built to forecast and visualize crop conditions and yields
+```python
+pip install git+https://github.com/ritviksahajpal/geocif.git
 ```
